@@ -1,2 +1,2 @@
-# react-training-movies-database
-Movies Database application
+# Movies Database application
+A single page application, which allows users to search the Movies database.
