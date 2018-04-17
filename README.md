@@ -3,7 +3,7 @@ A single page application, which allows users to search the Movies database.
 
 ## Demo
 
-[Movies Database Demopage](https://teddy-b.github.io/react-training-movies-database/dist/)
+[Movies Database Demopage](https://teddy-b.github.io/react-training-movies-database/dist)
 
 ## Setup
 
@@ -32,3 +32,7 @@ Builds the app for production to the `dist` folder.
 * Express.js
 * Webpack
 * Babel
+
+## Source
+
+[Movies Database Git repository](https://github.com/teddy-b/react-training-movies-database)
