@@ -1,6 +1,10 @@
 # Movies Database application
 A single page application, which allows users to search the Movies database.
 
+## Demo
+
+[Movies Database Demopage](https://teddy-b.github.io/react-training-movies-database/dist/)
+
 ## Setup
 
 * Run `npm install` to install dependencies. You need to have **node.js** and **Webpack** installed globally.
