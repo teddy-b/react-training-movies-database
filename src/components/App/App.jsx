@@ -1,39 +1,48 @@
-import React from 'react'
+import React, { Component } from 'react'
 
+import * as movies from '../../data.json'
+import MoviesList from '../MoviesList'
+import Movie from '../Movie'
+import Header from '../Header'
+import Footer from '../Footer'
 import './App.scss'
 
-import {
-  HelloWorldCreateElement,
-  HelloWorldReactComponent,
-  HelloWorldReactPureComponent,
-  HelloWorldFunctionalComponent
-} from '../helloWorld'
-import Link from '../Link'
-import CheckboxWithLabel from '../CheckboxWithLabel'
+class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      movies: movies.data,
+      searchBy: 'title',
+      sortBy: 'release date'
+    }
+  }
 
-const App = () => (
-  <div className='container'>
-    <header className='header'>
-      <h1>Hello World from React!</h1>
-    </header>
-    <div className='helloWorld'>
-      <HelloWorldCreateElement />
-      <HelloWorldReactComponent />
-      <HelloWorldReactPureComponent />
-      <HelloWorldFunctionalComponent />
-    </div>
-    <div className='tests'>
-      <h2 >Tests</h2>
-      <div className='link'>
-        <h3>Snapshot testing</h3>
-        <Link page="http://www.facebook.com">Facebook</Link>
+  search(searchBy) {
+    console.log(`Search by ${searchBy}`)
+  }
+
+  sort(sortBy) {
+    console.log(`Sort by ${sortBy}`)
+  }
+
+  selectMovie(movieId) {
+    console.log(`Select movie ${movieId}`)
+  }
+
+  render() {
+    const { movies } = this.state
+    const singleMovie = movies[0]
+
+    return (
+      <div className='container'>
+        <Header count={movies.length} onSearch={this.search} onSort={this.sort} />
+        <MoviesList movies={movies} onSelectMovie={this.selectMovie} />
+        <Movie {...singleMovie} />
+        <MoviesList movies={movies} />
+        <Footer />
       </div>
-      <div className='checkbox'>
-        <h3>DOM testing</h3>
-        <CheckboxWithLabel labelOn="On" labelOff="Off" />
-      </div>
-    </div>
-  </div>
-)
+    )
+  }
+}
 
 export default App

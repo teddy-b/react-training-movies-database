@@ -1,0 +1,37 @@
+.movieSection {
+  background-color: dimgrey;
+  color: white;
+  padding: .5em;
+}
+
+.movie {
+  display: flex;
+  justify-content: space-between;
+}
+
+.moviePoster {
+  margin: 2%;
+  width: 26%;
+
+  img {
+    width: 100%;
+  }
+}
+
+.movieDetails {
+  margin: 2%;
+  width: 66%;
+
+  h2 {
+    color: red;
+  }
+
+  span {
+    padding-right: 1em;
+  }
+}
+
+.filmsBy {
+  background-color: lightgrey;
+  padding: .5em;
+}
