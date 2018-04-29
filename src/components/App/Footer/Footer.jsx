@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Logo from '../Logo'
+import Logo from '../../shared/Logo'
 import './Footer.scss'
 
 const Footer = ({ count }) => (

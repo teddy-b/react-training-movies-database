@@ -1,24 +1,33 @@
 import React, { Component } from 'react'
 
+import Details from './Details'
+import Footer from './Footer'
+import Home from './Home'
+import ErrorBoundary from '../shared/ErrorBoundary'
+import { SEARCH_BY, SORT_BY } from '../../constants'
 import * as movies from '../../data.json'
-import MoviesList from '../MoviesList'
-import Movie from '../Movie'
-import Header from '../Header'
-import Footer from '../Footer'
-import './App.scss'
 
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
       movies: movies.data,
-      searchBy: 'title',
-      sortBy: 'release date'
+      selectedMovie: null,
+      searchBy: SEARCH_BY.title,
+      sortBy: SORT_BY.releaseDate
     }
+    this.search = this.search.bind(this)
+    this.changeSearchParam = this.changeSearchParam.bind(this)
+    this.sort = this.sort.bind(this)
+    this.selectMovie = this.selectMovie.bind(this)
   }
 
-  search(searchBy) {
-    console.log(`Search by ${searchBy}`)
+  search(searchInput) {
+    console.log(`Search for ${searchInput}`)
+  }
+
+  changeSearchParam(searchParam) {
+    console.log(`Search by ${searchParam}`)
   }
 
   sort(sortBy) {
@@ -26,20 +35,35 @@ class App extends Component {
   }
 
   selectMovie(movieId) {
+    this.setState({ selectedMovie: movieId })
     console.log(`Select movie ${movieId}`)
   }
 
   render() {
-    const { movies } = this.state
-    const singleMovie = movies[0]
+    const { movies, selectedMovie } = this.state
+    const singleMovie = movies.find(m => m.id === selectedMovie)
 
     return (
-      <div className='container'>
-        <Header count={movies.length} onSearch={this.search} onSort={this.sort} />
-        <MoviesList movies={movies} onSelectMovie={this.selectMovie} />
-        <Movie {...singleMovie} />
-        <MoviesList movies={movies} />
-        <Footer />
+      <div className="container">
+        <ErrorBoundary>
+          {!selectedMovie && <Home
+            movies={movies}
+            onSearch={this.search}
+            onChangeSearchParam={this.changeSearchParam}
+            onSelectMovie={this.selectMovie}
+            onSort={this.sort}
+          />}
+        </ErrorBoundary>
+        <ErrorBoundary>
+          {selectedMovie && <Details
+            singleMovie={singleMovie}
+            movies={movies}
+            onSelectMovie={this.selectMovie}
+          />}
+        </ErrorBoundary>
+        <ErrorBoundary>
+          <Footer />
+        </ErrorBoundary>
       </div>
     )
   }

@@ -2,10 +2,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-}
 
-.noMovies {
-  margin: auto;
-  padding-top: 30vh;
-  font-size: 3em;
+  .noMovies {
+    margin: auto;
+    padding-top: 30vh;
+    font-size: 3em;
+  }
 }
