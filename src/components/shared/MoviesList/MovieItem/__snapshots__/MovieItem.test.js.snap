@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Movie renders correctly 1`] = `
+<figure
+  className="movieItem"
+  onClick={[Function]}
+>
+  <img
+    alt="Fifty Shades Freed"
+    className="poster"
+    src="https: //image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
+  />
+  <figcaption
+    className="movieInfo"
+  >
+    <div
+      className="movieYear"
+    >
+      2018
+    </div>
+    <div
+      className="movieTitle"
+    >
+      Fifty Shades Freed
+    </div>
+    <div
+      className="movieGenre"
+    >
+      Drama, Romance
+    </div>
+  </figcaption>
+</figure>
+`;
