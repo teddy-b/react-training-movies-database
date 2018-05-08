@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SortInfo renders correctly 1`] = `
+<div
+  className="sortInfo"
+>
+  <div>
+    10
+     movies found
+  </div>
+  <div>
+    <span>
+      Sort by 
+    </span>
+    <a
+      onClick={[Function]}
+    >
+      Release date
+    </a>
+    <a
+      onClick={[Function]}
+    >
+      Rating
+    </a>
+  </div>
+</div>
+`;

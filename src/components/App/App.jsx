@@ -14,7 +14,8 @@ class App extends Component {
       movies: movies.data,
       selectedMovie: null,
       searchBy: SEARCH_BY.title,
-      sortBy: SORT_BY.releaseDate
+      sortBy: SORT_BY.releaseDate,
+      searchText: ''
     }
     this.search = this.search.bind(this)
     this.changeSearchParam = this.changeSearchParam.bind(this)
@@ -23,14 +24,17 @@ class App extends Component {
   }
 
   search(searchInput) {
+    this.setState({ searchText: searchInput })
     console.log(`Search for ${searchInput}`)
   }
 
   changeSearchParam(searchParam) {
+    this.setState({ searchBy: searchParam })
     console.log(`Search by ${searchParam}`)
   }
 
   sort(sortBy) {
+    this.setState({ sortBy: sortBy })
     console.log(`Sort by ${sortBy}`)
   }
 

@@ -4,8 +4,8 @@ class ErrorBoundary extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      error: null,
-      errorInfo: null
+      error: false,
+      errorInfo: ''
     }
   }
 
@@ -17,7 +17,7 @@ class ErrorBoundary extends Component {
   }
 
   render() {
-    if (this.state.hasError) {
+    if (this.state.error) {
       return (
         <div>
           <h2>Something went wrong.</h2>
