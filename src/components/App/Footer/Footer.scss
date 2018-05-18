@@ -4,4 +4,8 @@
   background-color: $dimgrey;
   color: $white;
   padding: .5em;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: $footer-height;
 }

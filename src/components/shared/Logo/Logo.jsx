@@ -2,7 +2,7 @@ import React from 'react'
 
 import './Logo.scss'
 
-const Logo = ({ count }) => (
+const Logo = () => (
   <p className="logo">netflixroulette</p>
 )
 

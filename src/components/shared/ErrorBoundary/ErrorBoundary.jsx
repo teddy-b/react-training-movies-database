@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 class ErrorBoundary extends Component {
   constructor(props) {
@@ -33,5 +34,8 @@ class ErrorBoundary extends Component {
     return this.props.children
   }
 }
+
+ErrorBoundary.propTypes = { children: PropTypes.node }
+ErrorBoundary.defaultProps = { children: null }
 
 export default ErrorBoundary

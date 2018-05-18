@@ -1,11 +1,10 @@
 const path = require('path')
-const webpack = require('webpack')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
-module.exports = (env) => ({
-  entry: './src/index.js',
+module.exports = env => ({
+  entry: './src/index.jsx',
   output: {
     filename: env.prod ? '[name].bundle.[hash].js' : '[name].bundle.js',
     path: path.resolve(__dirname, 'dist')
@@ -15,25 +14,21 @@ module.exports = (env) => ({
       cacheGroups: {
         commons: {
           test: /[\\/]node_modules[\\/]/,
-          name: "vendor",
-          chunks: "all",
-        },
-      },
-    },
+          name: 'vendor',
+          chunks: 'all'
+        }
+      }
+    }
   },
-  mode: env.dev ? "development" : "production",
-  resolve: {
-    extensions: ['.js', '.jsx']
-  },
-  devtool: env.dev ? "source-map" : "none",
+  mode: env.dev ? 'development' : 'production',
+  resolve: { extensions: ['.js', '.jsx'] },
+  devtool: env.dev ? 'source-map' : 'none',
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         exclude: /(node_modules)/,
-        use: {
-          loader: 'babel-loader'
-        }
+        use: { loader: 'babel-loader' }
       },
       {
         test: /\.(css|scss)$/,
@@ -48,12 +43,10 @@ module.exports = (env) => ({
                 minimize: env.prod,
                 sourceMap: env.dev
               }
-            }, 
+            },
             {
               loader: 'sass-loader',
-              options: {
-                sourceMap: env.dev
-              }
+              options: { sourceMap: env.dev }
             }
           ]
         })
@@ -63,13 +56,11 @@ module.exports = (env) => ({
         use: [
           {
             loader: 'file-loader',
-            options: {
-              name: env.prod ? '[path][name].[hash].[ext]' : '[path][name].[ext]'
-            }  
+            options: { name: env.prod ? '[path][name].[hash].[ext]' : '[path][name].[ext]' }
           }
         ]
       }
-    ],
+    ]
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
@@ -82,12 +73,10 @@ module.exports = (env) => ({
         removeRedundantAttributes: true
       }
     }),
-    new ExtractTextPlugin({
-      filename: env.prod ? 'styles.[hash].css' : 'styles.css'
-    }),
+    new ExtractTextPlugin({ filename: env.prod ? 'styles.[hash].css' : 'styles.css' })
   ],
   devServer: {
-    contentBase: path.join(__dirname, "dist"),
+    contentBase: path.join(__dirname, 'dist'),
     compress: true,
     port: 9000
   },

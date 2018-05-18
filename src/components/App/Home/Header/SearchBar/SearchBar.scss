@@ -32,14 +32,21 @@
   .searchByBtns {
     flex-grow: 2;
   }
-  
+
   .searchByTitleBtn, .searchByGenreBtn, .searchBtn {
-    margin: .3em;
-    padding: .6em;
-    background-color: $red;
     color: $white;
     border: none;
     cursor: pointer;
+  }
+  
+  .searchByTitleBtn, .searchByGenreBtn {
+    margin: .3em;
+    padding: .6em;
+    background-color: $darkgrey;
+
+    &.selected {
+      background-color: $red;
+    }
   }
   
   .searchBtn {
@@ -47,7 +54,5 @@
     padding: .8em;
     width: 15vw;
     background-color: $red;
-    color: $white;
-    border: none;
   }
 }

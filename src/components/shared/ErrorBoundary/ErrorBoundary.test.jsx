@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { shallow, mount } from 'enzyme'
+import { mount } from 'enzyme'
 
 import ErrorBoundary from './ErrorBoundary'
 
@@ -22,15 +22,11 @@ describe('ErrorBoundary', () => {
   it('should catch errors with componentDidCatch', () => {
     const SomeComponent = () => {
       throw new Error('Error thrown from problem child')
-
-      return (
-        <div>Some data</div>
-      )
     }
 
-    const spy = jest.spyOn(ErrorBoundary.prototype, 'componentDidCatch')
+    jest.spyOn(ErrorBoundary.prototype, 'componentDidCatch')
 
-    const component = mount(
+    mount(
       <ErrorBoundary>
         <SomeComponent />
       </ErrorBoundary>

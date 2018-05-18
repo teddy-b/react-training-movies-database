@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+<header
+  className="header"
+>
+  <SearchBar
+    onSearch={[MockFunction]}
+    onSearchMoviesByGenre={[MockFunction]}
+    onSearchMoviesByTitle={[MockFunction]}
+    searchBy="title"
+  />
+  <SortInfo
+    count={10}
+    onSortMoviesByRating={[MockFunction]}
+    onSortMoviesByRelaseDate={[MockFunction]}
+    sortBy="release_date"
+  />
+</header>
+`;
