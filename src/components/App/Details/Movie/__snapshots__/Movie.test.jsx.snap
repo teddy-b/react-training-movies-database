@@ -19,9 +19,18 @@ exports[`Movie renders correctly 1`] = `
     <figcaption
       className="movieDetails"
     >
-      <h2>
-        Fifty Shades Freed
-      </h2>
+      <div
+        className="heading"
+      >
+        <h2>
+          Fifty Shades Freed
+        </h2>
+        <span
+          className="voteAverage"
+        >
+          6.1
+        </span>
+      </div>
       <h4>
         Don't miss the climax
       </h4>

@@ -6,8 +6,14 @@
   background-color: $lightgrey;
   padding: .5em;
 
-  a {
-    margin: .5em;
+  button {
+    border: none;
+    background-color: inherit;
+    font-size: inherit;
     cursor: pointer;
+
+    &.selected {
+      color: $red
+    }
   }
 }

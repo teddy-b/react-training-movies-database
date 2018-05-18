@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SortInfo renders correctly with sort by release_date 1`] = `
+<div
+  className="sortInfo"
+>
+  <div>
+    10
+     movies found
+  </div>
+  <div>
+    <span>
+      Sort by 
+    </span>
+    <button
+      className="selected"
+      onClick={[Function]}
+    >
+      Release date
+    </button>
+    <button
+      className="false"
+      onClick={[Function]}
+    >
+      Rating
+    </button>
+  </div>
+</div>
+`;
+
+exports[`SortInfo renders correctly with sort by vote_average 1`] = `
+<div
+  className="sortInfo"
+>
+  <div>
+    10
+     movies found
+  </div>
+  <div>
+    <span>
+      Sort by 
+    </span>
+    <button
+      className="false"
+      onClick={[Function]}
+    >
+      Release date
+    </button>
+    <button
+      className="selected"
+      onClick={[Function]}
+    >
+      Rating
+    </button>
+  </div>
+</div>
+`;

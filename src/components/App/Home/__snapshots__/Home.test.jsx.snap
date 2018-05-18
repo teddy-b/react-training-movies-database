@@ -6,9 +6,13 @@ exports[`Home renders correctly 1`] = `
 >
   <Header
     count={10}
-    onChangeSearchParam={[MockFunction]}
     onSearch={[MockFunction]}
-    onSort={[MockFunction]}
+    onSearchMoviesByGenre={[MockFunction]}
+    onSearchMoviesByTitle={[MockFunction]}
+    onSortMoviesByRating={[MockFunction]}
+    onSortMoviesByRelaseDate={[MockFunction]}
+    searchBy="title"
+    sortBy="release_date"
   />
   <MoviesList
     movies={
@@ -198,5 +202,23 @@ exports[`Home renders correctly 1`] = `
     }
     onSelectMovie={[MockFunction]}
   />
+</div>
+`;
+
+exports[`Home renders correctly while fetching 1`] = `
+<div
+  className="home"
+>
+  <Header
+    count={10}
+    onSearch={[MockFunction]}
+    onSearchMoviesByGenre={[MockFunction]}
+    onSearchMoviesByTitle={[MockFunction]}
+    onSortMoviesByRating={[MockFunction]}
+    onSortMoviesByRelaseDate={[MockFunction]}
+    searchBy="title"
+    sortBy="release_date"
+  />
+  <Loading />
 </div>
 `;

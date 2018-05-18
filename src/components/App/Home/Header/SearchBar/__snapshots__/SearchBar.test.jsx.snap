@@ -1,0 +1,164 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBar renders correctly with search by genres 1`] = `
+<div
+  className="searchBar"
+>
+  <data-logo />
+  <p
+    className="searchBarTitle"
+  >
+    Find your movie
+  </p>
+  <input
+    className="searchInput"
+    list="genres"
+    onKeyPress={[Function]}
+    placeholder="Start typing movie title or genre"
+    type="text"
+  />
+  <datalist
+    id="genres"
+  >
+    <option
+      value="Action"
+    />
+    <option
+      value="Adventure"
+    />
+    <option
+      value="Animation"
+    />
+    <option
+      value="Comedy"
+    />
+    <option
+      value="Crime"
+    />
+    <option
+      value="Documentary"
+    />
+    <option
+      value="Drama"
+    />
+    <option
+      value="Family"
+    />
+    <option
+      value="Fantasy"
+    />
+    <option
+      value="History"
+    />
+    <option
+      value="Horror"
+    />
+    <option
+      value="Music"
+    />
+    <option
+      value="Mystery"
+    />
+    <option
+      value="Romance"
+    />
+    <option
+      value="Science Fiction"
+    />
+    <option
+      value="Thriller"
+    />
+    <option
+      value="TV Movie"
+    />
+    <option
+      value="War"
+    />
+    <option
+      value="Western"
+    />
+  </datalist>
+  <div
+    className="searchFooter"
+  >
+    <div
+      className="searchBy"
+    >
+      Search by 
+    </div>
+    <div
+      className="searchByBtns"
+    >
+      <button
+        className="searchByTitleBtn false"
+        onClick={[MockFunction]}
+      >
+        Title
+      </button>
+      <button
+        className="searchByGenreBtn selected"
+        onClick={[MockFunction]}
+      >
+        Genre
+      </button>
+    </div>
+    <button
+      className="searchBtn"
+      onClick={[Function]}
+    >
+      Search
+    </button>
+  </div>
+</div>
+`;
+
+exports[`SearchBar renders correctly with search by title 1`] = `
+<div
+  className="searchBar"
+>
+  <data-logo />
+  <p
+    className="searchBarTitle"
+  >
+    Find your movie
+  </p>
+  <input
+    className="searchInput"
+    list="genres"
+    onKeyPress={[Function]}
+    placeholder="Start typing movie title or genre"
+    type="text"
+  />
+  <div
+    className="searchFooter"
+  >
+    <div
+      className="searchBy"
+    >
+      Search by 
+    </div>
+    <div
+      className="searchByBtns"
+    >
+      <button
+        className="searchByTitleBtn selected"
+        onClick={[MockFunction]}
+      >
+        Title
+      </button>
+      <button
+        className="searchByGenreBtn false"
+        onClick={[MockFunction]}
+      >
+        Genre
+      </button>
+    </div>
+    <button
+      className="searchBtn"
+      onClick={[Function]}
+    >
+      Search
+    </button>
+  </div>
+</div>
+`;

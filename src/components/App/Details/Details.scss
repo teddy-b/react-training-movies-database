@@ -1,5 +1,9 @@
 @import '../../../styles/constants.scss';
 
+.details {
+  margin-bottom: $footer-height;
+}
+
 .filmsBy {
   background-color: $lightgrey;
   padding: .5em;
