@@ -1,12 +1,14 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
+import { MemoryRouter } from 'react-router-dom'
+
 import { shallow } from 'enzyme'
+import renderer from 'react-test-renderer'
 
 import MovieItem from './MovieItem'
 import moviesMock from '../../../../mocks/movies-mocks'
 
-describe('Movie', () => {
-  const singleMovieMock = moviesMock[0]
+describe('MovieItem', () => {
+  const singleMovieMock = moviesMock.data[0]
   const onSelectMovieMock = jest.fn()
   const props = {
     ...singleMovieMock,
@@ -15,7 +17,11 @@ describe('Movie', () => {
   }
 
   it('renders correctly', () => {
-    const component = renderer.create(<MovieItem {...props} />)
+    const component = renderer.create(
+      <MemoryRouter>
+        <MovieItem {...props} />
+      </MemoryRouter>
+    )
     const tree = component.toJSON()
 
     expect(tree).toMatchSnapshot()
@@ -24,7 +30,7 @@ describe('Movie', () => {
   it('should trigger onSelectMovie onClick', () => {
     const component = shallow(<MovieItem {...props} />)
 
-    component.find('figure').at(0).simulate('click')
+    component.find('Link').at(0).simulate('click')
 
     expect(onSelectMovieMock).toHaveBeenCalled()
   })

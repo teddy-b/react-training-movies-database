@@ -27,7 +27,10 @@
     }],
     "import/no-extraneous-dependencies": false,
     "function-paren-newline": ["error", "consistent"],
-    "jsx-a11y/click-events-have-key-events": false,
-    "jsx-a11y/no-noninteractive-element-interactions": false
+    "jsx-a11y/anchor-is-valid": ["error", {
+      "components": ["Link"],
+      "specialLink": ["hrefLeft", "hrefRight", "to"],
+      "aspects": ["noHref", "invalidHref", "preferButton"]
+    }]
   }
 }

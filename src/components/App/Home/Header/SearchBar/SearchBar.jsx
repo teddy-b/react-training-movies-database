@@ -1,14 +1,17 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+
 import PropTypes from 'prop-types'
 
-import './SearchBar.scss'
 import Logo from '../../../../shared/Logo'
 import { SEARCH_BY, GENRES } from '../../../../../constants/global'
+
+import './SearchBar.scss'
 
 class SearchBar extends Component {
   constructor(props) {
     super(props)
-    this.inputRef = React.createRef()
+    this.state = { searchText: '' }
   }
 
   render() {
@@ -27,8 +30,7 @@ class SearchBar extends Component {
           placeholder="Start typing movie title or genre"
           className="searchInput"
           type="text"
-          ref={this.inputRef}
-          onKeyPress={event => event.key === 'Enter' && onSearch(event.target.value, searchBy)}
+          onChange={event => this.setState({ searchText: event.target.value })}
           list="genres"
         />
         {searchBy === SEARCH_BY.genre &&
@@ -52,12 +54,14 @@ class SearchBar extends Component {
               Genre
             </button>
           </div>
-          <button
-            className="searchBtn"
-            onClick={() => onSearch(this.inputRef.current.value, searchBy)}
+          <Link
+            to={`/search/${searchBy}/${this.state.searchText}`}
+            onClick={() => onSearch(this.state.searchText, searchBy)}
           >
-            Search
-          </button>
+            <button className="searchBtn">
+              Search
+            </button>
+          </Link>
         </div>
       </div>
     )

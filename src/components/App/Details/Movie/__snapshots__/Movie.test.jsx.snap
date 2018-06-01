@@ -48,3 +48,52 @@ exports[`Movie renders correctly 1`] = `
   </figure>
 </div>
 `;
+
+exports[`Movie renders correctly with invalid date 1`] = `
+<div
+  className="movieSection"
+>
+  <Logo />
+  <figure
+    className="movie"
+  >
+    <div
+      className="moviePoster"
+    >
+      <img
+        alt="Fifty Shades Freed"
+        src="https: //image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
+      />
+    </div>
+    <figcaption
+      className="movieDetails"
+    >
+      <div
+        className="heading"
+      >
+        <h2>
+          Fifty Shades Freed
+        </h2>
+        <span
+          className="voteAverage"
+        >
+          6.1
+        </span>
+      </div>
+      <h4>
+        Don't miss the climax
+      </h4>
+      <span>
+        
+      </span>
+      <span>
+        106
+         min
+      </span>
+      <p>
+        Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins.
+      </p>
+    </figcaption>
+  </figure>
+</div>
+`;

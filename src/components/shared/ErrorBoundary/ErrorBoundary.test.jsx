@@ -1,6 +1,7 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
+
 import { mount } from 'enzyme'
+import renderer from 'react-test-renderer'
 
 import ErrorBoundary from './ErrorBoundary'
 

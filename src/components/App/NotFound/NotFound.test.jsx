@@ -2,13 +2,11 @@ import React from 'react'
 
 import renderer from 'react-test-renderer'
 
-import Loading from './Loading'
+import NotFound from './NotFound'
 
-jest.mock('react-loading', () => 'ReactLoading')
-
-describe('Loading', () => {
+describe('NotFound', () => {
   it('renders correctly', () => {
-    const component = renderer.create(<Loading />)
+    const component = renderer.create(<NotFound />)
     const tree = component.toJSON()
 
     expect(tree).toMatchSnapshot()
