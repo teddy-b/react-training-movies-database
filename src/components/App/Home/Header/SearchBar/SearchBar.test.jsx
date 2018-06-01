@@ -1,6 +1,8 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
+import { MemoryRouter } from 'react-router-dom'
+
 import { shallow, mount } from 'enzyme'
+import renderer from 'react-test-renderer'
 
 import SearchBar from './SearchBar'
 
@@ -15,7 +17,11 @@ describe('SearchBar', () => {
   }
 
   it('renders correctly with search by title', () => {
-    const component = renderer.create(<SearchBar {...props} />)
+    const component = renderer.create(
+      <MemoryRouter>
+        <SearchBar {...props} />
+      </MemoryRouter>
+    )
     const tree = component.toJSON()
 
     expect(tree).toMatchSnapshot()
@@ -23,10 +29,12 @@ describe('SearchBar', () => {
 
   it('renders correctly with search by genres', () => {
     const component = renderer.create(
-      <SearchBar
-        {...props}
-        searchBy="genres"
-      />
+      <MemoryRouter>
+        <SearchBar
+          {...props}
+          searchBy="genres"
+        />
+      </MemoryRouter>
     )
     const tree = component.toJSON()
 
@@ -54,6 +62,7 @@ describe('SearchBar', () => {
       <SearchBar
         {...props}
         onSearchMoviesByGenre={onSearchMoviesByGenreMock}
+        searchBy="title"
       />
     )
 
@@ -65,31 +74,16 @@ describe('SearchBar', () => {
   it('should trigger onSearch onClick', () => {
     const onSearchMock = jest.fn()
     const component = mount(
-      <SearchBar
-        {...props}
-        onSearch={onSearchMock}
-      />
+      <MemoryRouter>
+        <SearchBar
+          {...props}
+          onSearch={onSearchMock}
+        />
+      </MemoryRouter>
     )
 
     component.find('input').at(0).simulate('change', { target: { value: 'New value' } })
     component.find('button').at(2).simulate('click')
-
-    expect(onSearchMock).toBeCalled()
-  })
-
-  it('should trigger onSearch onKeyPress', () => {
-    const onSearchMock = jest.fn()
-    const component = mount(
-      <SearchBar
-        {...props}
-        onSearch={onSearchMock}
-        searchBy="title"
-      />
-    )
-
-    component.find('input').at(0)
-      .simulate('change', { target: { value: 'New value' } })
-      .simulate('keypress', { key: 'Enter' })
 
     expect(onSearchMock).toBeCalled()
   })

@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
+import { withRouter } from 'react-router-dom'
 
 import {
-  fetchMovies,
   searchMovies,
   searchMoviesByGenre,
   searchMoviesByTitle,
@@ -10,23 +10,20 @@ import {
   sortMoviesByRating,
   sortMoviesByRelaseDate
 } from '../../actions'
-import App from '../../components/App'
+import Home from '../../components/App/Home'
 import { SORT_BY } from '../../constants/global'
 
 const mapStateToProps = state => ({
+  count: state.movies.total,
   fetching: state.fetching,
-  movies: state.movies,
+  movies: state.movies.data,
   searchBy: state.searchBy,
-  selectedMovie: state.selectedMovie,
   sortBy: state.sortBy
 })
 
 const mapDispatchToProps = dispatch => ({
-  onFetchMovies() {
-    dispatch(fetchMovies())
-  },
-  onSearch(text, searchBy) {
-    dispatch(searchMovies({ text, searchBy }))
+  onSearch(query, searchBy) {
+    dispatch(searchMovies(query, searchBy))
   },
   onSearchMoviesByGenre() {
     dispatch(searchMoviesByGenre())
@@ -47,6 +44,6 @@ const mapDispatchToProps = dispatch => ({
   }
 })
 
-const ConnectedApp = connect(mapStateToProps, mapDispatchToProps)(App)
+const ConnectedHome = withRouter(connect(mapStateToProps, mapDispatchToProps)(Home))
 
-export default ConnectedApp
+export default ConnectedHome

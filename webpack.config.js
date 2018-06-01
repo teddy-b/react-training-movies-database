@@ -7,7 +7,8 @@ module.exports = env => ({
   entry: './src/index.jsx',
   output: {
     filename: env.prod ? '[name].bundle.[hash].js' : '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/'
   },
   optimization: {
     splitChunks: {
@@ -78,7 +79,8 @@ module.exports = env => ({
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
-    port: 9000
+    port: 9000,
+    historyApiFallback: true
   },
   watch: env.dev
 })

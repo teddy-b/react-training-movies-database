@@ -22,6 +22,8 @@ export const GENRES = [
   'Western'
 ]
 
+export const ITEMS_TO_SHOW = 24
+
 export const SEARCH_BY = {
   title: 'title',
   genre: 'genres'
@@ -30,4 +32,9 @@ export const SEARCH_BY = {
 export const SORT_BY = {
   releaseDate: 'release_date',
   rating: 'vote_average'
+}
+
+export const SORT_ORDER = {
+  asc: 'asc',
+  desc: 'desc'
 }
