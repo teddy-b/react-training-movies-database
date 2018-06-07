@@ -4,7 +4,17 @@ exports[`Movie renders correctly 1`] = `
 <div
   className="movieSection"
 >
-  <Logo />
+  <a
+    href="/"
+    onClick={[Function]}
+    style={
+      Object {
+        "textDecoration": "none",
+      }
+    }
+  >
+    <Logo />
+  </a>
   <figure
     className="movie"
   >
@@ -13,7 +23,7 @@ exports[`Movie renders correctly 1`] = `
     >
       <img
         alt="Fifty Shades Freed"
-        src="https: //image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
+        src="https://image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
       />
     </div>
     <figcaption
@@ -53,7 +63,17 @@ exports[`Movie renders correctly with invalid date 1`] = `
 <div
   className="movieSection"
 >
-  <Logo />
+  <a
+    href="/"
+    onClick={[Function]}
+    style={
+      Object {
+        "textDecoration": "none",
+      }
+    }
+  >
+    <Logo />
+  </a>
   <figure
     className="movie"
   >
@@ -62,7 +82,7 @@ exports[`Movie renders correctly with invalid date 1`] = `
     >
       <img
         alt="Fifty Shades Freed"
-        src="https: //image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
+        src="https://image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
       />
     </div>
     <figcaption

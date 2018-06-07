@@ -4,7 +4,17 @@ exports[`SearchBar renders correctly with search by genres 1`] = `
 <div
   className="searchBar"
 >
-  <data-logo />
+  <a
+    href="/"
+    onClick={[Function]}
+    style={
+      Object {
+        "textDecoration": "none",
+      }
+    }
+  >
+    <data-logo />
+  </a>
   <p
     className="searchBarTitle"
   >
@@ -120,7 +130,17 @@ exports[`SearchBar renders correctly with search by title 1`] = `
 <div
   className="searchBar"
 >
-  <data-logo />
+  <a
+    href="/"
+    onClick={[Function]}
+    style={
+      Object {
+        "textDecoration": "none",
+      }
+    }
+  >
+    <data-logo />
+  </a>
   <p
     className="searchBarTitle"
   >

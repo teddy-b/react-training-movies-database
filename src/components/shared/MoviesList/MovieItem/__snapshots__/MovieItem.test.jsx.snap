@@ -16,7 +16,7 @@ exports[`MovieItem renders correctly 1`] = `
     <img
       alt="Fifty Shades Freed"
       className="poster"
-      src="https: //image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
+      src="https://image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
     />
     <figcaption
       className="movieInfo"

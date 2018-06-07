@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import PropTypes from 'prop-types'
 
@@ -19,7 +20,9 @@ const Movie = (props) => {
   const year = new Date(releaseDate).getFullYear() || ''
   return (
     <div className="movieSection">
-      <Logo />
+      <Link style={{ textDecoration: 'none' }} to="/">
+        <Logo />
+      </Link>
       <figure className="movie">
         {posterPath &&
           <div className="moviePoster">

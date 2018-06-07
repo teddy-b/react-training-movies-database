@@ -4,7 +4,7 @@ import { persistStore, persistReducer } from 'redux-persist'
 import sessionStorage from 'redux-persist/lib/storage/session'
 import thunk from 'redux-thunk'
 
-import rootReducer from './reducers/rootReducer'
+import rootReducer from '../reducers/rootReducer'
 
 const persistConfig = {
   key: 'mdbRoot',

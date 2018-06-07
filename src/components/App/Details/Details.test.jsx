@@ -10,13 +10,14 @@ jest.mock('../../shared/ErrorBoundary', () => 'ErrorBoundary')
 jest.mock('../../shared/MoviesList', () => 'MoviesList')
 
 describe('Details', () => {
+  const selectedMovie = moviesMock.data[0]
   const props = {
     count: moviesMock.total,
     fetching: false,
-    match: { params: { id: '1' } },
+    match: { params: { id: selectedMovie.id.toString() } },
     movies: moviesMock.data,
     onSelectMovie: jest.fn(),
-    selectedMovie: moviesMock.data[0]
+    selectedMovie
   }
 
   it('renders correctly', () => {

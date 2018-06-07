@@ -5,7 +5,7 @@ exports[`SortInfo renders correctly with sort by release_date 1`] = `
   className="sortInfo"
 >
   <div>
-    10
+    24
      movies found
   </div>
   <div>
@@ -33,7 +33,7 @@ exports[`SortInfo renders correctly with sort by vote_average 1`] = `
   className="sortInfo"
 >
   <div>
-    10
+    24
      movies found
   </div>
   <div>

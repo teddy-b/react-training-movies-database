@@ -5,6 +5,7 @@ import { shallow, mount } from 'enzyme'
 import renderer from 'react-test-renderer'
 
 import SearchBar from './SearchBar'
+import { SEARCH_BY } from '../../../../../constants/global'
 
 jest.mock('../../../../shared/Logo', () => 'data-logo')
 
@@ -13,13 +14,16 @@ describe('SearchBar', () => {
     onSearch: jest.fn(),
     onSearchMoviesByGenre: jest.fn(),
     onSearchMoviesByTitle: jest.fn(),
-    searchBy: 'title'
+    searchBy: SEARCH_BY.title
   }
 
   it('renders correctly with search by title', () => {
     const component = renderer.create(
       <MemoryRouter>
-        <SearchBar {...props} />
+        <SearchBar
+          {...props}
+          searchBy={SEARCH_BY.title}
+        />
       </MemoryRouter>
     )
     const tree = component.toJSON()
@@ -32,7 +36,7 @@ describe('SearchBar', () => {
       <MemoryRouter>
         <SearchBar
           {...props}
-          searchBy="genres"
+          searchBy={SEARCH_BY.genre}
         />
       </MemoryRouter>
     )
@@ -47,7 +51,7 @@ describe('SearchBar', () => {
       <SearchBar
         {...props}
         onSearchMoviesByTitle={onSearchMoviesByTitleMock}
-        searchBy="genres"
+        searchBy={SEARCH_BY.genre}
       />
     )
 
@@ -62,7 +66,7 @@ describe('SearchBar', () => {
       <SearchBar
         {...props}
         onSearchMoviesByGenre={onSearchMoviesByGenreMock}
-        searchBy="title"
+        searchBy={SEARCH_BY.title}
       />
     )
 

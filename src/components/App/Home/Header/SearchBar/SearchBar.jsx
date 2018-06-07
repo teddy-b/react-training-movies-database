@@ -24,7 +24,9 @@ class SearchBar extends Component {
 
     return (
       <div className="searchBar">
-        <Logo />
+        <Link style={{ textDecoration: 'none' }} to="/">
+          <Logo />
+        </Link>
         <p className="searchBarTitle">Find your movie</p>
         <input
           placeholder="Start typing movie title or genre"
