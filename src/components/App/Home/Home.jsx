@@ -1,14 +1,33 @@
-import React, { Component } from 'react'
+/* @flow */
 
-import PropTypes from 'prop-types'
+import React, { Component } from 'react'
 
 import Header from './Header'
 import ErrorBoundary from '../../shared/ErrorBoundary'
 import MoviesList from '../../shared/MoviesList'
+import { Movies } from '../../../types'
 
 import './Home.scss'
 
-class Home extends Component {
+type Props = {
+  count: number,
+  fetching: boolean,
+  match: { params: {
+    query?: string,
+    searchBy?: string
+  }},
+  movies: Movies,
+  onSearch: (query?: string, searchBy?: string) => void,
+  onSearchMoviesByGenre: () => void,
+  onSearchMoviesByTitle: () => void,
+  onSelectMovie: () => void,
+  onSortMoviesByRating: () => void,
+  onSortMoviesByRelaseDate: () => void,
+  searchBy: string,
+  sortBy: string
+}
+
+class Home extends Component<Props> {
   componentDidMount() {
     const { match: { params: { query, searchBy } }, onSearch } = this.props
     if (query) {
@@ -55,35 +74,6 @@ class Home extends Component {
         </ErrorBoundary>
       </div>
     )
-  }
-}
-
-Home.propTypes = {
-  count: PropTypes.number.isRequired,
-  fetching: PropTypes.bool.isRequired,
-  match: PropTypes.shape({
-    params: PropTypes.shape({
-      query: PropTypes.string,
-      searchBy: PropTypes.string
-    })
-  }),
-  movies: PropTypes.arrayOf(PropTypes.object).isRequired,
-  onSearch: PropTypes.func.isRequired,
-  onSearchMoviesByGenre: PropTypes.func.isRequired,
-  onSearchMoviesByTitle: PropTypes.func.isRequired,
-  onSelectMovie: PropTypes.func.isRequired,
-  onSortMoviesByRating: PropTypes.func.isRequired,
-  onSortMoviesByRelaseDate: PropTypes.func.isRequired,
-  searchBy: PropTypes.string.isRequired,
-  sortBy: PropTypes.string.isRequired
-}
-
-Home.defaultProps = {
-  match: {
-    params: {
-      query: '',
-      searchBy: ''
-    }
   }
 }
 

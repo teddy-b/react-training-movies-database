@@ -1,6 +1,9 @@
-import { SEARCH_BY, SORT_BY } from '../constants/global'
+/* @flow */
 
-const INITIAL_STATE = {
+import { SEARCH_BY, SORT_BY } from '../constants/global'
+import { State } from '../types'
+
+const INITIAL_STATE: State = {
   movies: {
     data: [],
     total: 0

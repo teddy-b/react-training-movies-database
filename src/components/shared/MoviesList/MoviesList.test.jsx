@@ -39,7 +39,9 @@ describe('MoviesList', () => {
 
   it('renders correctly with more items to show', () => {
     const movies = []
-    Array.from({ length: ITEMS_TO_SHOW + 1 }).forEach((v, i) => {
+    Array.from({
+      length: ITEMS_TO_SHOW + 1
+    }).forEach((v, i) => {
       movies.push({
         key: i,
         ...moviesMock.data[0]

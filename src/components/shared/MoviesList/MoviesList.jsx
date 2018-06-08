@@ -1,37 +1,41 @@
-import React from 'react'
+/* @flow */
 
-import PropTypes from 'prop-types'
+import React from 'react'
 
 import Loading from '../Loading'
 import MovieItem from './MovieItem'
 import { ITEMS_TO_SHOW } from '../../../constants/global'
+import { Movies } from '../../../types'
 
 import './MoviesList.scss'
 
-const MoviesList = ({ count, fetching, movies, onSelectMovie }) => (
-  <div className="movies">
-    {fetching ?
-      <Loading /> :
-      <div className="moviesList">
-        {count === 0 && <div className="noMovies">No films found</div>}
-        {movies.slice(0, ITEMS_TO_SHOW).map(movie => (
-          <MovieItem
-            key={movie.id}
-            onSelectMovie={onSelectMovie}
-            {...movie}
-          />
-        ))}
-        {count > ITEMS_TO_SHOW && <button className="moreBtn">Show more</button>}
-      </div>
-    }
-  </div>
-)
+type Props = {
+  count: number,
+  fetching: boolean,
+  movies: Movies,
+  onSelectMovie: () => void
+}
 
-MoviesList.propTypes = {
-  count: PropTypes.number.isRequired,
-  fetching: PropTypes.bool.isRequired,
-  movies: PropTypes.arrayOf(PropTypes.object).isRequired,
-  onSelectMovie: PropTypes.func.isRequired
+const MoviesList = (props: Props) => {
+  const { count, fetching, movies, onSelectMovie } = props
+  return (
+    <div className="movies">
+      {fetching ?
+        <Loading /> :
+        <div className="moviesList">
+          {count === 0 && <div className="noMovies">No films found</div>}
+          {movies.slice(0, ITEMS_TO_SHOW).map(movie => (
+            <MovieItem
+              key={movie.id}
+              onSelectMovie={onSelectMovie}
+              {...movie}
+            />
+          ))}
+          {count > ITEMS_TO_SHOW && <button className="moreBtn">Show more</button>}
+        </div>
+      }
+    </div>
+  )
 }
 
 export default MoviesList

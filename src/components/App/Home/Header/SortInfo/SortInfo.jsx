@@ -1,38 +1,41 @@
-import React from 'react'
+/* @flow */
 
-import PropTypes from 'prop-types'
+import React from 'react'
 
 import { SORT_BY } from '../../../../../constants/global'
 
 import './SortInfo.scss'
 
-const SortInfo = ({ count, onSortMoviesByRelaseDate, onSortMoviesByRating, sortBy }) => (
-  <div className="sortInfo">
-    {count > 0 && <div>{count} movies found</div>}
-    {count > 0 &&
-      <div>
-        <span>Sort by </span>
-        <button
-          className={`${sortBy === SORT_BY.releaseDate && 'selected'}`}
-          onClick={() => onSortMoviesByRelaseDate()}
-        >
-          Release date
-        </button>
-        <button
-          className={`${sortBy === SORT_BY.rating && 'selected'}`}
-          onClick={() => onSortMoviesByRating()}
-        >
-          Rating
-        </button>
-      </div>}
-  </div>
-)
+type Props = {
+  count: number,
+  onSortMoviesByRating: () => void,
+  onSortMoviesByRelaseDate: () => void,
+  sortBy: string
+}
 
-SortInfo.propTypes = {
-  count: PropTypes.number.isRequired,
-  onSortMoviesByRating: PropTypes.func.isRequired,
-  onSortMoviesByRelaseDate: PropTypes.func.isRequired,
-  sortBy: PropTypes.string.isRequired
+const SortInfo = (props: Props) => {
+  const { count, onSortMoviesByRelaseDate, onSortMoviesByRating, sortBy } = props
+  return (
+    <div className="sortInfo">
+      {count > 0 && <div>{count} movies found</div>}
+      {count > 0 &&
+        <div>
+          <span>Sort by </span>
+          <button
+            className={`${sortBy === SORT_BY.releaseDate ? 'selected' : ''}`}
+            onClick={() => onSortMoviesByRelaseDate()}
+          >
+            Release date
+          </button>
+          <button
+            className={`${sortBy === SORT_BY.rating ? 'selected' : ''}`}
+            onClick={() => onSortMoviesByRating()}
+          >
+            Rating
+          </button>
+        </div>}
+    </div>
+  )
 }
 
 export default SortInfo

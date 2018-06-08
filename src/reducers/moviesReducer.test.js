@@ -26,7 +26,8 @@ describe('movies reducer', () => {
   const initialState = INITIAL_STATE.movies
 
   it('should return the initial state', () => {
-    expect(movies(undefined, {})).toEqual(initialState)
+    expect(movies(undefined, {
+    })).toEqual(initialState)
   })
 
   it('should handle FETCH_MOVIES_SUCCESS', () => {
@@ -41,31 +42,44 @@ describe('fetching reducer', () => {
   const initialState = INITIAL_STATE.fetching
 
   it('should return the initial state', () => {
-    expect(fetching(undefined, {})).toEqual(initialState)
+    expect(fetching(undefined, {
+    })).toEqual(initialState)
   })
 
   it('should handle FETCH_MOVIES_START', () => {
-    expect(fetching(initialState, { type: FETCH_MOVIES_START })).toEqual(true)
+    expect(fetching(initialState, {
+      type: FETCH_MOVIES_START
+    })).toEqual(true)
   })
 
   it('should handle FETCH_SINGLE_MOVIE_START', () => {
-    expect(fetching(initialState, { type: FETCH_SINGLE_MOVIE_START })).toEqual(true)
+    expect(fetching(initialState, {
+      type: FETCH_SINGLE_MOVIE_START
+    })).toEqual(true)
   })
 
   it('should handle FETCH_MOVIES_SUCCESS', () => {
-    expect(fetching(initialState, { type: FETCH_MOVIES_SUCCESS })).toEqual(false)
+    expect(fetching(initialState, {
+      type: FETCH_MOVIES_SUCCESS
+    })).toEqual(false)
   })
 
   it('should handle FETCH_MOVIES_FAIL', () => {
-    expect(fetching(initialState, { type: FETCH_MOVIES_FAIL })).toEqual(false)
+    expect(fetching(initialState, {
+      type: FETCH_MOVIES_FAIL
+    })).toEqual(false)
   })
 
   it('should handle FETCH_SINGLE_MOVIE_SUCCESS', () => {
-    expect(fetching(initialState, { type: FETCH_SINGLE_MOVIE_SUCCESS })).toEqual(false)
+    expect(fetching(initialState, {
+      type: FETCH_SINGLE_MOVIE_SUCCESS
+    })).toEqual(false)
   })
 
   it('should handle FETCH_SINGLE_MOVIE_FAIL', () => {
-    expect(fetching(initialState, { type: FETCH_SINGLE_MOVIE_FAIL })).toEqual(false)
+    expect(fetching(initialState, {
+      type: FETCH_SINGLE_MOVIE_FAIL
+    })).toEqual(false)
   })
 })
 
@@ -73,15 +87,20 @@ describe('sortBy reducer', () => {
   const initialState = INITIAL_STATE.sortBy
 
   it('should return the initial state', () => {
-    expect(sortBy(undefined, {})).toEqual(initialState)
+    expect(sortBy(undefined, {
+    })).toEqual(initialState)
   })
 
   it('should handle SORT_MOVIES_BY_RELEASE_DATE', () => {
-    expect(sortBy(initialState, { type: SORT_MOVIES_BY_RELEASE_DATE })).toEqual(SORT_BY.releaseDate)
+    expect(sortBy(initialState, {
+      type: SORT_MOVIES_BY_RELEASE_DATE
+    })).toEqual(SORT_BY.releaseDate)
   })
 
   it('should handle SORT_MOVIES_BY_RATING', () => {
-    expect(sortBy(initialState, { type: SORT_MOVIES_BY_RATING })).toEqual(SORT_BY.rating)
+    expect(sortBy(initialState, {
+      type: SORT_MOVIES_BY_RATING
+    })).toEqual(SORT_BY.rating)
   })
 })
 
@@ -89,15 +108,20 @@ describe('searchBy reducer', () => {
   const initialState = INITIAL_STATE.searchBy
 
   it('should return the initial state', () => {
-    expect(searchBy(undefined, {})).toEqual(initialState)
+    expect(searchBy(undefined, {
+    })).toEqual(initialState)
   })
 
   it('should handle SORT_MOVIES_BY_RELEASE_DATE', () => {
-    expect(searchBy(initialState, { type: SEARCH_MOVIES_BY_TITLE })).toEqual(SEARCH_BY.title)
+    expect(searchBy(initialState, {
+      type: SEARCH_MOVIES_BY_TITLE
+    })).toEqual(SEARCH_BY.title)
   })
 
   it('should handle SORT_MOVIES_BY_RATING', () => {
-    expect(searchBy(initialState, { type: SEARCH_MOVIES_BY_GENRE })).toEqual(SEARCH_BY.genre)
+    expect(searchBy(initialState, {
+      type: SEARCH_MOVIES_BY_GENRE
+    })).toEqual(SEARCH_BY.genre)
   })
 })
 
@@ -105,7 +129,8 @@ describe('selectedMovie reducer', () => {
   const initialState = INITIAL_STATE.selectedMovie
 
   it('should return the initial state', () => {
-    expect(selectedMovie(undefined, {})).toEqual(initialState)
+    expect(selectedMovie(undefined, {
+    })).toEqual(initialState)
   })
 
   it('should handle FETCH_SINGLE_MOVIE_SUCCESS', () => {
@@ -121,7 +146,8 @@ describe('errors reducer', () => {
   const error = new Error('Some error')
 
   it('should return the initial state', () => {
-    expect(errors(undefined, {})).toEqual(initialState)
+    expect(errors(undefined, {
+    })).toEqual(initialState)
   })
 
   it('should handle FETCH_MOVIES_FAIL', () => {
@@ -139,10 +165,14 @@ describe('errors reducer', () => {
   })
 
   it('should handle FETCH_MOVIES_SUCCESS', () => {
-    expect(errors([error], { type: FETCH_MOVIES_SUCCESS })).toEqual([])
+    expect(errors([error], {
+      type: FETCH_MOVIES_SUCCESS
+    })).toEqual([])
   })
 
   it('should handle FETCH_SINGLE_MOVIE_SUCCESS', () => {
-    expect(errors([error], { type: FETCH_SINGLE_MOVIE_SUCCESS })).toEqual([])
+    expect(errors([error], {
+      type: FETCH_SINGLE_MOVIE_SUCCESS
+    })).toEqual([])
   })
 })

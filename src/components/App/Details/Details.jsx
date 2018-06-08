@@ -1,17 +1,27 @@
-import React, { Component } from 'react'
+/* @flow */
 
-import PropTypes from 'prop-types'
+import * as React from 'react'
 
 import Movie from './Movie'
 import ErrorBoundary from '../../shared/ErrorBoundary'
 import MoviesList from '../../shared/MoviesList'
+import { Movies, SingleMovie } from '../../../types'
 
 import './Details.scss'
 
-class Details extends Component {
+type Props = {
+  count: number,
+  fetching: boolean,
+  match: { params: { id: string } },
+  movies: Movies,
+  onSelectMovie: (id: number) => void,
+  selectedMovie: SingleMovie
+}
+
+class Details extends React.Component<Props> {
   componentDidMount() {
     const { match: { params: { id } }, onSelectMovie } = this.props
-    onSelectMovie(id)
+    onSelectMovie(parseInt(id, 10))
   }
 
   render() {
@@ -34,24 +44,6 @@ class Details extends Component {
       </div>
     )
   }
-}
-
-Details.propTypes = {
-  count: PropTypes.number.isRequired,
-  fetching: PropTypes.bool.isRequired,
-  match: PropTypes.shape({ params: PropTypes.shape({ id: PropTypes.string }) }).isRequired,
-  movies: PropTypes.arrayOf(PropTypes.object).isRequired,
-  onSelectMovie: PropTypes.func.isRequired,
-  selectedMovie: PropTypes.shape({
-    genres: PropTypes.arrayOf(PropTypes.string).isRequired,
-    overview: PropTypes.string.isRequired,
-    poster_path: PropTypes.string,
-    release_date: PropTypes.string.isRequired,
-    runtime: PropTypes.number,
-    tagline: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    vote_average: PropTypes.number.isRequired
-  }).isRequired
 }
 
 export default Details

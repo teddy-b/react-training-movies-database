@@ -11,7 +11,11 @@ const selectedMovie = moviesMock.data[0]
 const props = {
   count: moviesMock.total,
   fetching: false,
-  match: { params: { id: selectedMovie.id.toString() } },
+  match: {
+    params: {
+      id: selectedMovie.id.toString()
+    }
+  },
   movies: moviesMock.data,
   onSelectMovie: action('clicked'),
   selectedMovie

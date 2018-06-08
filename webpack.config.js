@@ -22,14 +22,18 @@ module.exports = env => ({
     }
   },
   mode: env.dev ? 'development' : 'production',
-  resolve: { extensions: ['.js', '.jsx'] },
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
   devtool: env.dev ? 'source-map' : 'none',
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         exclude: /(node_modules)/,
-        use: { loader: 'babel-loader' }
+        use: {
+          loader: 'babel-loader'
+        }
       },
       {
         test: /\.(css|scss)$/,
@@ -47,7 +51,9 @@ module.exports = env => ({
             },
             {
               loader: 'sass-loader',
-              options: { sourceMap: env.dev }
+              options: {
+                sourceMap: env.dev
+              }
             }
           ]
         })
@@ -57,7 +63,9 @@ module.exports = env => ({
         use: [
           {
             loader: 'file-loader',
-            options: { name: env.prod ? '[path][name].[hash].[ext]' : '[path][name].[ext]' }
+            options: {
+              name: env.prod ? '[path][name].[hash].[ext]' : '[path][name].[ext]'
+            }
           }
         ]
       }
@@ -74,7 +82,9 @@ module.exports = env => ({
         removeRedundantAttributes: true
       }
     }),
-    new ExtractTextPlugin({ filename: env.prod ? 'styles.[hash].css' : 'styles.css' })
+    new ExtractTextPlugin({
+      filename: env.prod ? 'styles.[hash].css' : 'styles.css'
+    })
   ],
   devServer: {
     contentBase: path.join(__dirname, 'dist'),

@@ -1,45 +1,49 @@
-import React from 'react'
+/* @flow */
 
-import PropTypes from 'prop-types'
+import React from 'react'
 
 import SearchBar from './SearchBar'
 import SortInfo from './SortInfo'
 
-const Header = ({
-  count,
-  onSearch,
-  onSearchMoviesByGenre,
-  onSearchMoviesByTitle,
-  onSortMoviesByRating,
-  onSortMoviesByRelaseDate,
-  searchBy,
-  sortBy
-}) => (
-  <header className="header">
-    <SearchBar
-      onSearch={onSearch}
-      onSearchMoviesByGenre={onSearchMoviesByGenre}
-      onSearchMoviesByTitle={onSearchMoviesByTitle}
-      searchBy={searchBy}
-    />
-    <SortInfo
-      count={count}
-      onSortMoviesByRating={onSortMoviesByRating}
-      onSortMoviesByRelaseDate={onSortMoviesByRelaseDate}
-      sortBy={sortBy}
-    />
-  </header>
-)
+type Props = {
+  count: number,
+  onSearch: () => void,
+  onSearchMoviesByGenre: () => void,
+  onSearchMoviesByTitle: () => void,
+  onSortMoviesByRating: () => void,
+  onSortMoviesByRelaseDate: () => void,
+  searchBy: string,
+  sortBy: string
+}
 
-Header.propTypes = {
-  count: PropTypes.number.isRequired,
-  onSearch: PropTypes.func.isRequired,
-  onSearchMoviesByGenre: PropTypes.func.isRequired,
-  onSearchMoviesByTitle: PropTypes.func.isRequired,
-  onSortMoviesByRating: PropTypes.func.isRequired,
-  onSortMoviesByRelaseDate: PropTypes.func.isRequired,
-  searchBy: PropTypes.string.isRequired,
-  sortBy: PropTypes.string.isRequired
+const Header = (props: Props) => {
+  const {
+    count,
+    onSearch,
+    onSearchMoviesByGenre,
+    onSearchMoviesByTitle,
+    onSortMoviesByRating,
+    onSortMoviesByRelaseDate,
+    searchBy,
+    sortBy
+  } = props
+
+  return (
+    <header className="header">
+      <SearchBar
+        onSearch={onSearch}
+        onSearchMoviesByGenre={onSearchMoviesByGenre}
+        onSearchMoviesByTitle={onSearchMoviesByTitle}
+        searchBy={searchBy}
+      />
+      <SortInfo
+        count={count}
+        onSortMoviesByRating={onSortMoviesByRating}
+        onSortMoviesByRelaseDate={onSortMoviesByRelaseDate}
+        sortBy={sortBy}
+      />
+    </header>
+  )
 }
 
 export default Header

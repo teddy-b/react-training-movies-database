@@ -1,13 +1,23 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+/* @flow */
 
-import PropTypes from 'prop-types'
+import * as React from 'react'
+import { Link } from 'react-router-dom'
 
 import Logo from '../../../shared/Logo'
 
 import './Movie.scss'
 
-const Movie = (props) => {
+type Props = {
+  overview: string,
+  poster_path: ?string,
+  release_date: string,
+  runtime: ?number,
+  tagline: string,
+  title: string,
+  vote_average: number
+}
+
+const Movie = (props: Props) => {
   const {
     overview,
     poster_path: posterPath,
@@ -20,7 +30,10 @@ const Movie = (props) => {
   const year = new Date(releaseDate).getFullYear() || ''
   return (
     <div className="movieSection">
-      <Link style={{ textDecoration: 'none' }} to="/">
+      <Link
+        // style={{ textDecoration: 'none' }}
+        to="/"
+      >
         <Logo />
       </Link>
       <figure className="movie">
@@ -42,21 +55,6 @@ const Movie = (props) => {
       </figure>
     </div>
   )
-}
-
-Movie.propTypes = {
-  overview: PropTypes.string.isRequired,
-  poster_path: PropTypes.string,
-  release_date: PropTypes.string.isRequired,
-  runtime: PropTypes.number,
-  tagline: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  vote_average: PropTypes.number.isRequired
-}
-
-Movie.defaultProps = {
-  poster_path: '',
-  runtime: 0
 }
 
 export default Movie

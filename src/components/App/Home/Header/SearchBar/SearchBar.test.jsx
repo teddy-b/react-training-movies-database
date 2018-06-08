@@ -86,7 +86,11 @@ describe('SearchBar', () => {
       </MemoryRouter>
     )
 
-    component.find('input').at(0).simulate('change', { target: { value: 'New value' } })
+    component.find('input').at(0).simulate('change', {
+      target: {
+        value: 'New value'
+      }
+    })
     component.find('button').at(2).simulate('click')
 
     expect(onSearchMock).toBeCalled()
