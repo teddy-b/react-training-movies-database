@@ -3,10 +3,19 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
+import {
+  StyledSearchBar,
+  StyledLink,
+  StyledSearchBarTitle,
+  StyledSearchInput,
+  StyledSearchFooter,
+  StyledSearchBy,
+  StyledSearchByBtns,
+  StyledSearchByBtn,
+  StyledSearchBtn
+} from './StyledSearchBar'
 import Logo from '../../../../shared/Logo'
 import { SEARCH_BY, GENRES } from '../../../../../constants/global'
-
-import './SearchBar.scss'
 
 type Props = {
   onSearch: (searchText: string, searchBy: string) => void,
@@ -36,17 +45,13 @@ class SearchBar extends Component<Props, State> {
     } = this.props
 
     return (
-      <div className="searchBar">
-        <Link
-          // style={{ textDecoration: 'none' }}
-          to="/"
-        >
+      <StyledSearchBar>
+        <StyledLink to="/">
           <Logo />
-        </Link>
-        <p className="searchBarTitle">Find your movie</p>
-        <input
+        </StyledLink>
+        <StyledSearchBarTitle>Find your movie</StyledSearchBarTitle>
+        <StyledSearchInput
           placeholder="Start typing movie title or genre"
-          className="searchInput"
           type="text"
           onChange={event => this.setState({
             searchText: event.target.value
@@ -58,29 +63,31 @@ class SearchBar extends Component<Props, State> {
             {GENRES.map(genre => <option key={genre} value={genre} />)}
           </datalist>
         }
-        <div className="searchFooter">
-          <div className="searchBy">Search by </div>
-          <div className="searchByBtns">
-            <button
-              className={`searchByTitleBtn ${searchBy === SEARCH_BY.title ? 'selected' : ''}`}
+        <StyledSearchFooter>
+          <StyledSearchBy>Search by </StyledSearchBy>
+          <StyledSearchByBtns>
+            <StyledSearchByBtn
+              selected={searchBy === SEARCH_BY.title}
               onClick={onSearchMoviesByTitle}
             >
               Title
-            </button>
-            <button
-              className={`searchByGenreBtn ${searchBy === SEARCH_BY.genre ? 'selected' : ''}`}
+            </StyledSearchByBtn>
+            <StyledSearchByBtn
+              selected={searchBy === SEARCH_BY.genre}
               onClick={onSearchMoviesByGenre}
             >
               Genre
-            </button>
-          </div>
+            </StyledSearchByBtn>
+          </StyledSearchByBtns>
           <Link to={`/search/${searchBy}/${this.state.searchText}`}>
-            <button className="searchBtn" onClick={() => onSearch(this.state.searchText, searchBy)}>
+            <StyledSearchBtn
+              onClick={() => onSearch(this.state.searchText, searchBy)}
+            >
               Search
-            </button>
+            </StyledSearchBtn>
           </Link>
-        </div>
-      </div>
+        </StyledSearchFooter>
+      </StyledSearchBar>
     )
   }
 }

@@ -3,11 +3,10 @@
 import React, { Component } from 'react'
 
 import Header from './Header'
+import StyledHome from './StyledHome'
 import ErrorBoundary from '../../shared/ErrorBoundary'
 import MoviesList from '../../shared/MoviesList'
 import { Movies } from '../../../types'
-
-import './Home.scss'
 
 type Props = {
   count: number,
@@ -51,7 +50,7 @@ class Home extends Component<Props> {
     } = this.props
 
     return (
-      <div className="home">
+      <StyledHome>
         <ErrorBoundary>
           <Header
             count={count}
@@ -72,7 +71,7 @@ class Home extends Component<Props> {
             onSelectMovie={onSelectMovie}
           />
         </ErrorBoundary>
-      </div>
+      </StyledHome>
     )
   }
 }

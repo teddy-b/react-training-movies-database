@@ -2,9 +2,8 @@
 
 import React from 'react'
 
+import { StyledSortInfo, StyledButton } from './StyledSortInfo'
 import { SORT_BY } from '../../../../../constants/global'
-
-import './SortInfo.scss'
 
 type Props = {
   count: number,
@@ -16,25 +15,25 @@ type Props = {
 const SortInfo = (props: Props) => {
   const { count, onSortMoviesByRelaseDate, onSortMoviesByRating, sortBy } = props
   return (
-    <div className="sortInfo">
+    <StyledSortInfo>
       {count > 0 && <div>{count} movies found</div>}
       {count > 0 &&
         <div>
           <span>Sort by </span>
-          <button
-            className={`${sortBy === SORT_BY.releaseDate ? 'selected' : ''}`}
+          <StyledButton
+            selected={sortBy === SORT_BY.releaseDate}
             onClick={() => onSortMoviesByRelaseDate()}
           >
             Release date
-          </button>
-          <button
-            className={`${sortBy === SORT_BY.rating ? 'selected' : ''}`}
+          </StyledButton>
+          <StyledButton
+            selected={sortBy === SORT_BY.rating}
             onClick={() => onSortMoviesByRating()}
           >
             Rating
-          </button>
+          </StyledButton>
         </div>}
-    </div>
+    </StyledSortInfo>
   )
 }
 

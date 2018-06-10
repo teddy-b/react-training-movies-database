@@ -1,3 +1,5 @@
+export * from './actions'
 export * from './Movies'
 export * from './SingleMovie'
 export * from './State'
+export * from './thunkActions'
