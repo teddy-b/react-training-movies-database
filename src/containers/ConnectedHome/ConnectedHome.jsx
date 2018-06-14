@@ -14,9 +14,9 @@ import Home from '../../components/App/Home'
 import { SORT_BY } from '../../constants/global'
 
 const mapStateToProps = state => ({
-  count: state.movies.total,
+  count: state.movies.toJS().total,
   fetching: state.fetching,
-  movies: state.movies.data,
+  movies: state.movies.toJS().data,
   searchBy: state.searchBy,
   sortBy: state.sortBy
 })

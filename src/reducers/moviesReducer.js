@@ -1,3 +1,5 @@
+import { Map, List } from 'immutable'
+
 import {
   FETCH_MOVIES_START,
   FETCH_MOVIES_SUCCESS,
@@ -11,21 +13,21 @@ import {
   SEARCH_MOVIES_BY_GENRE
 } from '../constants/actionTypes'
 import { SEARCH_BY, SORT_BY } from '../constants/global'
-import INITIAL_STATE from '../constants/initialState'
+import initialState from '../store/initialState'
 
-export const movies = (state = INITIAL_STATE.movies, action) => {
+export const movies = (state = initialState.movies, action) => {
   switch (action.type) {
     case FETCH_MOVIES_SUCCESS:
-      return {
-        data: action.payload.data,
+      return Map({
+        data: List(action.payload.data),
         total: action.payload.total
-      }
+      })
     default:
       return state
   }
 }
 
-export const fetching = (state = INITIAL_STATE.fetching, action) => {
+export const fetching = (state = initialState.fetching, action) => {
   switch (action.type) {
     case FETCH_MOVIES_START:
     case FETCH_SINGLE_MOVIE_START:
@@ -40,7 +42,7 @@ export const fetching = (state = INITIAL_STATE.fetching, action) => {
   }
 }
 
-export const sortBy = (state = INITIAL_STATE.sortBy, action) => {
+export const sortBy = (state = initialState.sortBy, action) => {
   switch (action.type) {
     case SORT_MOVIES_BY_RELEASE_DATE:
       return SORT_BY.releaseDate
@@ -51,7 +53,7 @@ export const sortBy = (state = INITIAL_STATE.sortBy, action) => {
   }
 }
 
-export const searchBy = (state = INITIAL_STATE.searchBy, action) => {
+export const searchBy = (state = initialState.searchBy, action) => {
   switch (action.type) {
     case SEARCH_MOVIES_BY_TITLE:
       return SEARCH_BY.title
@@ -62,26 +64,23 @@ export const searchBy = (state = INITIAL_STATE.searchBy, action) => {
   }
 }
 
-export const selectedMovie = (state = INITIAL_STATE.selectedMovie, action) => {
+export const selectedMovie = (state = initialState.selectedMovie, action) => {
   switch (action.type) {
     case FETCH_SINGLE_MOVIE_SUCCESS:
-      return action.payload
+      return Map(action.payload)
     default:
       return state
   }
 }
 
-export const errors = (state = INITIAL_STATE.errors, action) => {
+export const errors = (state = initialState.errors, action) => {
   switch (action.type) {
     case FETCH_MOVIES_FAIL:
     case FETCH_SINGLE_MOVIE_FAIL:
-      return [
-        ...state,
-        action.payload
-      ]
+      return state.push(Map(action.payload))
     case FETCH_MOVIES_SUCCESS:
     case FETCH_SINGLE_MOVIE_SUCCESS:
-      return []
+      return List()
     default:
       return state
   }

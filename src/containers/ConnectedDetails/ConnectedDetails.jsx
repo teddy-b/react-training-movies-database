@@ -5,10 +5,10 @@ import { selectMovie } from '../../actions'
 import Details from '../../components/App/Details'
 
 const mapStateToProps = state => ({
-  count: state.movies.total,
+  count: state.movies.toJS().total,
   fetching: state.fetching,
-  movies: state.movies.data,
-  selectedMovie: state.selectedMovie
+  movies: state.movies.toJS().data,
+  selectedMovie: state.selectedMovie.toJS()
 })
 
 const mapDispatchToProps = dispatch => ({

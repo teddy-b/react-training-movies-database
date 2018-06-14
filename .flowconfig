@@ -1,9 +1,16 @@
 [ignore]
-.*/node_modules
+.*/coverage/.*
+.*/dist/.*
+.*/flow-typed/.*
+.*/node_modules/.*
+.*/storybook-static/.*
+.*/typings/.*
+.*/__snapshots__/.*
 
 [include]
 
 [libs]
+./flow-typed/
 
 [lints]
 

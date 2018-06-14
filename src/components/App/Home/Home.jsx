@@ -1,6 +1,6 @@
 /* @flow */
 
-import React, { Component } from 'react'
+import * as React from 'react'
 
 import Header from './Header'
 import StyledHome from './StyledHome'
@@ -26,7 +26,7 @@ type Props = {
   sortBy: string
 }
 
-class Home extends Component<Props> {
+class Home extends React.Component<Props> {
   componentDidMount() {
     const { match: { params: { query, searchBy } }, onSearch } = this.props
     if (query) {

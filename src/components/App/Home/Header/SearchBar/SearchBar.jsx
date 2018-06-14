@@ -1,6 +1,6 @@
 /* @flow */
 
-import React, { Component } from 'react'
+import * as React from 'react'
 import { Link } from 'react-router-dom'
 
 import {
@@ -28,7 +28,7 @@ type State = {
   searchText: string,
 }
 
-class SearchBar extends Component<Props, State> {
+class SearchBar extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props)
     this.state = {

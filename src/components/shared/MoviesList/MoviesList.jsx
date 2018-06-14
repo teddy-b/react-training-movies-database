@@ -1,6 +1,6 @@
 /* @flow */
 
-import React from 'react'
+import * as React from 'react'
 
 import Loading from '../Loading'
 import MovieItem from './MovieItem'
@@ -16,26 +16,23 @@ type Props = {
   onSelectMovie: () => void
 }
 
-const MoviesList = (props: Props) => {
-  const { count, fetching, movies, onSelectMovie } = props
-  return (
-    <div className="movies">
-      {fetching ?
-        <Loading /> :
-        <div className="moviesList">
-          {count === 0 && <div className="noMovies">No films found</div>}
-          {movies.slice(0, ITEMS_TO_SHOW).map(movie => (
-            <MovieItem
-              key={movie.id}
-              onSelectMovie={onSelectMovie}
-              {...movie}
-            />
-          ))}
-          {count > ITEMS_TO_SHOW && <button className="moreBtn">Show more</button>}
-        </div>
-      }
-    </div>
-  )
-}
+const MoviesList = ({ count, fetching, movies, onSelectMovie }: Props) => (
+  <div className="movies">
+    {fetching ?
+      <Loading /> :
+      <div className="moviesList">
+        {count === 0 && <div className="noMovies">No films found</div>}
+        {movies.slice(0, ITEMS_TO_SHOW).map(movie => (
+          <MovieItem
+            key={movie.id}
+            onSelectMovie={onSelectMovie}
+            {...movie}
+          />
+        ))}
+        {count > ITEMS_TO_SHOW && <button className="moreBtn">Show more</button>}
+      </div>
+    }
+  </div>
+)
 
 export default MoviesList
