@@ -3,9 +3,9 @@
 import * as React from 'react'
 
 import Header from './Header'
-import StyledHome from './StyledHome'
 import ErrorBoundary from '../../shared/ErrorBoundary'
 import MoviesList from '../../shared/MoviesList'
+import StyledPage from '../../shared/styled/StyledPage'
 import { Movies } from '../../../types'
 
 type Props = {
@@ -50,7 +50,7 @@ class Home extends React.Component<Props> {
     } = this.props
 
     return (
-      <StyledHome>
+      <StyledPage>
         <ErrorBoundary>
           <Header
             count={count}
@@ -71,7 +71,7 @@ class Home extends React.Component<Props> {
             onSelectMovie={onSelectMovie}
           />
         </ErrorBoundary>
-      </StyledHome>
+      </StyledPage>
     )
   }
 }

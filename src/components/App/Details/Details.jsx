@@ -3,9 +3,10 @@
 import * as React from 'react'
 
 import Movie from './Movie'
-import { StyledDetails, StyledFilmsBy } from './StyledDetails'
+import StyledFilmsBy from './StyledDetails'
 import ErrorBoundary from '../../shared/ErrorBoundary'
 import MoviesList from '../../shared/MoviesList'
+import StyledPage from '../../shared/styled/StyledPage'
 import { Movies, SingleMovie } from '../../../types'
 
 type Props = {
@@ -27,7 +28,7 @@ class Details extends React.Component<Props> {
     const { count, fetching, movies, onSelectMovie, selectedMovie } = this.props
 
     return (
-      <StyledDetails>
+      <StyledPage>
         <ErrorBoundary>
           <Movie {...selectedMovie} />
         </ErrorBoundary>
@@ -42,7 +43,7 @@ class Details extends React.Component<Props> {
             onSelectMovie={onSelectMovie}
           />
         </ErrorBoundary>
-      </StyledDetails>
+      </StyledPage>
     )
   }
 }

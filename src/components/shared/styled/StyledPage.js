@@ -2,8 +2,8 @@ import styled from 'styled-components'
 
 import { footerHeight } from '../../../constants/styles'
 
-const StyledHome = styled.div`
+const StyledPage = styled.div`
   margin-bottom: ${footerHeight};
 `
 
-export default StyledHome
+export default StyledPage

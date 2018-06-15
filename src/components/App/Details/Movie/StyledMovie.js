@@ -28,10 +28,6 @@ export const StyledMoviePoster = styled.div`
   }
 `
 
-export const StyledImg = styled.img`
-  width: 100%;
-`
-
 export const StyledMovieDetails = styled.figcaption`
   margin: 2%;
   width: 98%;

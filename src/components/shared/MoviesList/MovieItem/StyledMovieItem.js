@@ -25,10 +25,6 @@ export const StyledMovieItem = styled.figure`
   }
 `
 
-export const StyledImg = styled.img`
-  width: 100%;
-`
-
 export const StyledMovieYear = styled.div`
   padding: 2px;
   float: right;

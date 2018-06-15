@@ -4,11 +4,11 @@ import * as React from 'react'
 
 import {
   StyledMovieItem,
-  StyledImg,
   StyledMovieYear,
   StyledMovieTitle,
   StyledMovieGenre
 } from './StyledMovieItem'
+import StyledImg from '../../styled/StyledImg'
 import StyledLink from '../../styled/StyledLink'
 
 type Props = {

@@ -6,7 +6,6 @@ import {
   StyledMovieSection,
   StyledMovie,
   StyledMoviePoster,
-  StyledImg,
   StyledMovieDetails,
   StyledDetailsHeader,
   StyledHeading,
@@ -14,6 +13,7 @@ import {
   StyledYear
 } from './StyledMovie'
 import Logo from '../../../shared/Logo'
+import StyledImg from '../../../shared/styled/StyledImg'
 import StyledLink from '../../../shared/styled/StyledLink'
 
 type Props = {
