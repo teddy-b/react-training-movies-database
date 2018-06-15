@@ -1,11 +1,20 @@
 /* @flow */
 
 import * as React from 'react'
-import { Link } from 'react-router-dom'
 
+import {
+  StyledMovieSection,
+  StyledMovie,
+  StyledMoviePoster,
+  StyledImg,
+  StyledMovieDetails,
+  StyledDetailsHeader,
+  StyledHeading,
+  StyledVoteAverage,
+  StyledYear
+} from './StyledMovie'
 import Logo from '../../../shared/Logo'
-
-import './Movie.scss'
+import StyledLink from '../../../shared/styled/StyledLink'
 
 type Props = {
   overview: string,
@@ -29,31 +38,28 @@ const Movie = (props: Props) => {
   } = props
   const year = new Date(releaseDate).getFullYear() || ''
   return (
-    <div className="movieSection">
-      <Link
-        // style={{ textDecoration: 'none' }}
-        to="/"
-      >
+    <StyledMovieSection>
+      <StyledLink to="/">
         <Logo />
-      </Link>
-      <figure className="movie">
+      </StyledLink>
+      <StyledMovie>
         {posterPath &&
-          <div className="moviePoster">
-            <img src={posterPath} alt={title} />
-          </div>
+          <StyledMoviePoster>
+            <StyledImg src={posterPath} alt={title} />
+          </StyledMoviePoster>
         }
-        <figcaption className="movieDetails">
-          <div className="heading">
-            <h2>{title}</h2>
-            <span className="voteAverage">{voteAverage}</span>
-          </div>
+        <StyledMovieDetails>
+          <StyledDetailsHeader>
+            <StyledHeading>{title}</StyledHeading>
+            <StyledVoteAverage>{voteAverage}</StyledVoteAverage>
+          </StyledDetailsHeader>
           <h4>{tagline}</h4>
-          <span>{year}</span>
+          <StyledYear>{year}</StyledYear>
           {runtime && <span>{runtime} min</span>}
           <p>{overview}</p>
-        </figcaption>
-      </figure>
-    </div>
+        </StyledMovieDetails>
+      </StyledMovie>
+    </StyledMovieSection>
   )
 }
 

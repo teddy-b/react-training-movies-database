@@ -1,9 +1,15 @@
 /* @flow */
 
 import * as React from 'react'
-import { Link } from 'react-router-dom'
 
-import './MovieItem.scss'
+import {
+  StyledMovieItem,
+  StyledImg,
+  StyledMovieYear,
+  StyledMovieTitle,
+  StyledMovieGenre
+} from './StyledMovieItem'
+import StyledLink from '../../styled/StyledLink'
 
 type Props = {
   genres: Array<string>,
@@ -22,19 +28,16 @@ const MovieItem = ({
   release_date: releaseDate,
   title
 }: Props) => (
-  <Link
-    to={`/film/${id}`}
-    // style={{ textDecoration: 'none' }}
-  >
-    <figure className="movieItem" onClick={() => onSelectMovie(id)}>
-      {posterPath && <img className="poster" src={posterPath} alt={title} />}
-      <figcaption className="movieInfo">
-        <div className="movieYear">{new Date(releaseDate).getFullYear()}</div>
-        <div className="movieTitle">{title}</div>
-        <div className="movieGenre">{genres.join(', ')}</div>
+  <StyledLink to={`/film/${id}`}>
+    <StyledMovieItem onClick={() => onSelectMovie(id)}>
+      {posterPath && <StyledImg src={posterPath} alt={title} />}
+      <figcaption>
+        <StyledMovieYear>{new Date(releaseDate).getFullYear()}</StyledMovieYear>
+        <StyledMovieTitle>{title}</StyledMovieTitle>
+        <StyledMovieGenre>{genres.join(', ')}</StyledMovieGenre>
       </figcaption>
-    </figure>
-  </Link>
+    </StyledMovieItem>
+  </StyledLink>
 )
 
 export default MovieItem

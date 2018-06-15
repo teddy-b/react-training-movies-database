@@ -3,11 +3,10 @@
 import * as React from 'react'
 
 import Movie from './Movie'
+import { StyledDetails, StyledFilmsBy } from './StyledDetails'
 import ErrorBoundary from '../../shared/ErrorBoundary'
 import MoviesList from '../../shared/MoviesList'
 import { Movies, SingleMovie } from '../../../types'
-
-import './Details.scss'
 
 type Props = {
   count: number,
@@ -28,12 +27,14 @@ class Details extends React.Component<Props> {
     const { count, fetching, movies, onSelectMovie, selectedMovie } = this.props
 
     return (
-      <div className="details">
+      <StyledDetails>
         <ErrorBoundary>
           <Movie {...selectedMovie} />
         </ErrorBoundary>
         <ErrorBoundary>
-          {selectedMovie.genres.length && <div className="filmsBy">Films by {selectedMovie.genres[0]} genre</div>}
+          {selectedMovie.genres.length &&
+            <StyledFilmsBy>Films by {selectedMovie.genres[0]} genre</StyledFilmsBy>
+          }
           <MoviesList
             count={count}
             fetching={fetching}
@@ -41,7 +42,7 @@ class Details extends React.Component<Props> {
             onSelectMovie={onSelectMovie}
           />
         </ErrorBoundary>
-      </div>
+      </StyledDetails>
     )
   }
 }

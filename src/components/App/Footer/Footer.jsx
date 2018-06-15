@@ -1,13 +1,12 @@
 import React from 'react'
 
 import Logo from '../../shared/Logo'
-
-import './Footer.scss'
+import StyledFooter from './StyledFooter'
 
 const Footer = () => (
-  <footer className="footer">
+  <StyledFooter>
     <Logo />
-  </footer>
+  </StyledFooter>
 )
 
 export default Footer

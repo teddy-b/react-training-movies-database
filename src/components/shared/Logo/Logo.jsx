@@ -1,9 +1,9 @@
 import React from 'react'
 
-import './Logo.scss'
+import StyledLogo from './StyledLogo'
 
 const Logo = () => (
-  <p className="logo">netflixroulette</p>
+  <StyledLogo>netflixroulette</StyledLogo>
 )
 
 export default Logo

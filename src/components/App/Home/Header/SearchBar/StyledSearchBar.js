@@ -1,16 +1,11 @@
-import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-import { black, darkgrey, dimgrey, red, white } from '../../../../../constants/styles'
+import { black, grey2, grey4, red, white } from '../../../../../constants/styles'
 
 export const StyledSearchBar = styled.div`
-  background-color: ${dimgrey};
+  background-color: ${grey4};
   color: ${white};
   padding: .5em;
-`
-
-export const StyledLink = styled(Link)`
-  text-decoration: none;
 `
 
 export const StyledSearchBarTitle = styled.p`
@@ -47,7 +42,7 @@ export const StyledSearchByBtn = styled.button`
   cursor: pointer;
   margin: .3em;
   padding: .6em;
-  background-color: ${props => (props.selected ? red : darkgrey)};
+  background-color: ${props => (props.selected ? red : grey2)};
 `
 
 export const StyledSearchBtn = styled.button`

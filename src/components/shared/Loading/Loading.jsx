@@ -1,12 +1,12 @@
 import React from 'react'
 import ReactLoading from 'react-loading'
 
-import './Loading.scss'
+import StyledLoading from './StyledLoading'
 
 const Loading = () => (
-  <div className="loading">
+  <StyledLoading>
     <ReactLoading type="spinningBubbles" color="deepSkyBlue" />
-  </div>
+  </StyledLoading>
 )
 
 export default Loading

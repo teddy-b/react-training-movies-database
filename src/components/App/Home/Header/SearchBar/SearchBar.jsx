@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom'
 
 import {
   StyledSearchBar,
-  StyledLink,
   StyledSearchBarTitle,
   StyledSearchInput,
   StyledSearchFooter,
@@ -15,6 +14,7 @@ import {
   StyledSearchBtn
 } from './StyledSearchBar'
 import Logo from '../../../../shared/Logo'
+import StyledLink from '../../../../shared/styled/StyledLink'
 import { SEARCH_BY, GENRES } from '../../../../../constants/global'
 
 type Props = {
