@@ -3,11 +3,13 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 import { persistStore, persistReducer } from 'redux-persist'
 import sessionStorage from 'redux-persist/lib/storage/session'
 import thunk from 'redux-thunk'
+import immutableTransform from 'redux-persist-transform-immutable'
 
 import rootReducer from '../reducers/rootReducer'
 import initialState from './initialState'
 
 const persistConfig = {
+  transforms: [immutableTransform()],
   key: 'mdbRoot',
   storage: sessionStorage
 }
