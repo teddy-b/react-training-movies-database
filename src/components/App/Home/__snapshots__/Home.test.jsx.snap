@@ -2,7 +2,7 @@
 
 exports[`Home renders correctly 1`] = `
 <div
-  className="home"
+  className="sc-bdVaJa gVGaTE"
 >
   <ErrorBoundary>
     <Header
@@ -468,7 +468,7 @@ exports[`Home renders correctly 1`] = `
 
 exports[`Home renders correctly with match params 1`] = `
 <div
-  className="home"
+  className="sc-bdVaJa gVGaTE"
 >
   <ErrorBoundary>
     <Header

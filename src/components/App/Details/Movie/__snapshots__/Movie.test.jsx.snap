@@ -2,41 +2,40 @@
 
 exports[`Movie renders correctly 1`] = `
 <div
-  className="movieSection"
+  className="sc-bdVaJa ilUIgN"
 >
   <a
+    className="sc-dnqmqq kxhpGu"
     href="/"
     onClick={[Function]}
-    style={
-      Object {
-        "textDecoration": "none",
-      }
-    }
   >
     <Logo />
   </a>
   <figure
-    className="movie"
+    className="sc-bwzfXH haFnbb"
   >
     <div
-      className="moviePoster"
+      className="sc-htpNat iMSUrM"
     >
       <img
         alt="Fifty Shades Freed"
+        className="sc-htoDjs kKCJWi"
         src="https://image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
       />
     </div>
     <figcaption
-      className="movieDetails"
+      className="sc-bxivhb dRhjdJ"
     >
       <div
-        className="heading"
+        className="sc-ifAKCX dCoIjQ"
       >
-        <h2>
+        <h2
+          className="sc-EHOje ixikkM"
+        >
           Fifty Shades Freed
         </h2>
         <span
-          className="voteAverage"
+          className="sc-bZQynM jCBbRc"
         >
           6.1
         </span>
@@ -44,7 +43,9 @@ exports[`Movie renders correctly 1`] = `
       <h4>
         Don't miss the climax
       </h4>
-      <span>
+      <span
+        className="sc-gzVnrw igxgss"
+      >
         2018
       </span>
       <span>
@@ -61,41 +62,40 @@ exports[`Movie renders correctly 1`] = `
 
 exports[`Movie renders correctly with invalid date 1`] = `
 <div
-  className="movieSection"
+  className="sc-bdVaJa ilUIgN"
 >
   <a
+    className="sc-dnqmqq kxhpGu"
     href="/"
     onClick={[Function]}
-    style={
-      Object {
-        "textDecoration": "none",
-      }
-    }
   >
     <Logo />
   </a>
   <figure
-    className="movie"
+    className="sc-bwzfXH haFnbb"
   >
     <div
-      className="moviePoster"
+      className="sc-htpNat iMSUrM"
     >
       <img
         alt="Fifty Shades Freed"
+        className="sc-htoDjs kKCJWi"
         src="https://image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
       />
     </div>
     <figcaption
-      className="movieDetails"
+      className="sc-bxivhb dRhjdJ"
     >
       <div
-        className="heading"
+        className="sc-ifAKCX dCoIjQ"
       >
-        <h2>
+        <h2
+          className="sc-EHOje ixikkM"
+        >
           Fifty Shades Freed
         </h2>
         <span
-          className="voteAverage"
+          className="sc-bZQynM jCBbRc"
         >
           6.1
         </span>
@@ -103,7 +103,9 @@ exports[`Movie renders correctly with invalid date 1`] = `
       <h4>
         Don't miss the climax
       </h4>
-      <span>
+      <span
+        className="sc-gzVnrw igxgss"
+      >
         
       </span>
       <span>

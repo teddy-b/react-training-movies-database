@@ -2,7 +2,7 @@
 
 exports[`Logo renders correctly 1`] = `
 <p
-  className="logo"
+  className="sc-bdVaJa hBMEvi"
 >
   netflixroulette
 </p>

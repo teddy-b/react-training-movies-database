@@ -2,37 +2,31 @@
 
 exports[`MovieItem renders correctly 1`] = `
 <a
+  className="sc-EHOje lkuXgQ"
   href="/film/337167"
   onClick={[Function]}
-  style={
-    Object {
-      "textDecoration": "none",
-    }
-  }
 >
   <figure
-    className="movieItem"
+    className="sc-bdVaJa aVXFD"
   >
     <img
       alt="Fifty Shades Freed"
-      className="poster"
+      className="sc-ifAKCX kqqTha"
       src="https://image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
     />
-    <figcaption
-      className="movieInfo"
-    >
+    <figcaption>
       <div
-        className="movieYear"
+        className="sc-bwzfXH jIElrg"
       >
         2018
       </div>
       <div
-        className="movieTitle"
+        className="sc-htpNat hngseF"
       >
         Fifty Shades Freed
       </div>
       <div
-        className="movieGenre"
+        className="sc-bxivhb bHMrYY"
       >
         Drama, Romance
       </div>

@@ -2,7 +2,7 @@
 
 exports[`Details renders correctly 1`] = `
 <div
-  className="details"
+  className="sc-bwzfXH iPTqxz"
 >
   <ErrorBoundary>
     <Movie
@@ -27,7 +27,7 @@ exports[`Details renders correctly 1`] = `
   </ErrorBoundary>
   <ErrorBoundary>
     <div
-      className="filmsBy"
+      className="sc-bdVaJa fcuKrW"
     >
       Films by 
       Drama
@@ -480,7 +480,7 @@ exports[`Details renders correctly 1`] = `
         [MockFunction] {
           "calls": Array [
             Array [
-              "337167",
+              337167,
             ],
           ],
         }

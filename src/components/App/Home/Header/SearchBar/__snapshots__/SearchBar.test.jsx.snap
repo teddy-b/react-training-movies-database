@@ -2,26 +2,22 @@
 
 exports[`SearchBar renders correctly with search by genres 1`] = `
 <div
-  className="searchBar"
+  className="sc-bdVaJa ilUIgN"
 >
   <a
+    className="sc-htoDjs enzMhh"
     href="/"
     onClick={[Function]}
-    style={
-      Object {
-        "textDecoration": "none",
-      }
-    }
   >
     <data-logo />
   </a>
   <p
-    className="searchBarTitle"
+    className="sc-bwzfXH ckkHdC"
   >
     Find your movie
   </p>
   <input
-    className="searchInput"
+    className="sc-htpNat leAEoF"
     list="genres"
     onChange={[Function]}
     placeholder="Start typing movie title or genre"
@@ -89,25 +85,27 @@ exports[`SearchBar renders correctly with search by genres 1`] = `
     />
   </datalist>
   <div
-    className="searchFooter"
+    className="sc-bxivhb eUiDro"
   >
     <div
-      className="searchBy"
+      className="sc-ifAKCX iqcapW"
     >
       Search by 
     </div>
     <div
-      className="searchByBtns"
+      className="sc-EHOje QURia"
     >
       <button
-        className="searchByTitleBtn false"
+        className="sc-bZQynM skibW"
         onClick={[MockFunction]}
+        selected={false}
       >
         Title
       </button>
       <button
-        className="searchByGenreBtn selected"
+        className="sc-bZQynM fyVJBT"
         onClick={[MockFunction]}
+        selected={true}
       >
         Genre
       </button>
@@ -117,7 +115,8 @@ exports[`SearchBar renders correctly with search by genres 1`] = `
       onClick={[Function]}
     >
       <button
-        className="searchBtn"
+        className="sc-gzVnrw jAEZiU"
+        onClick={[Function]}
       >
         Search
       </button>
@@ -128,51 +127,49 @@ exports[`SearchBar renders correctly with search by genres 1`] = `
 
 exports[`SearchBar renders correctly with search by title 1`] = `
 <div
-  className="searchBar"
+  className="sc-bdVaJa ilUIgN"
 >
   <a
+    className="sc-htoDjs enzMhh"
     href="/"
     onClick={[Function]}
-    style={
-      Object {
-        "textDecoration": "none",
-      }
-    }
   >
     <data-logo />
   </a>
   <p
-    className="searchBarTitle"
+    className="sc-bwzfXH ckkHdC"
   >
     Find your movie
   </p>
   <input
-    className="searchInput"
+    className="sc-htpNat leAEoF"
     list="genres"
     onChange={[Function]}
     placeholder="Start typing movie title or genre"
     type="text"
   />
   <div
-    className="searchFooter"
+    className="sc-bxivhb eUiDro"
   >
     <div
-      className="searchBy"
+      className="sc-ifAKCX iqcapW"
     >
       Search by 
     </div>
     <div
-      className="searchByBtns"
+      className="sc-EHOje QURia"
     >
       <button
-        className="searchByTitleBtn selected"
+        className="sc-bZQynM fyVJBT"
         onClick={[MockFunction]}
+        selected={true}
       >
         Title
       </button>
       <button
-        className="searchByGenreBtn false"
+        className="sc-bZQynM skibW"
         onClick={[MockFunction]}
+        selected={false}
       >
         Genre
       </button>
@@ -182,7 +179,8 @@ exports[`SearchBar renders correctly with search by title 1`] = `
       onClick={[Function]}
     >
       <button
-        className="searchBtn"
+        className="sc-gzVnrw jAEZiU"
+        onClick={[Function]}
       >
         Search
       </button>

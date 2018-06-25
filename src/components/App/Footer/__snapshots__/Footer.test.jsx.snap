@@ -2,7 +2,7 @@
 
 exports[`Footer renders correctly 1`] = `
 <footer
-  className="footer"
+  className="sc-bdVaJa gQRJfw"
 >
   <Logo />
 </footer>
