@@ -1,3 +1,5 @@
+/* @flow */
+
 export type State = {
   +movies: {
     +data: Array<{

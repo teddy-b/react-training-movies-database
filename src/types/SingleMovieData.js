@@ -1,4 +1,6 @@
-export type SingleMovie = {
+/* @flow */
+
+export type SingleMovieData = {
   genres: Array<string>,
   overview: string,
   poster_path: ?string,

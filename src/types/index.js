@@ -1,5 +1,5 @@
 export * from './actions'
-export * from './Movies'
-export * from './SingleMovie'
+export * from './MoviesData'
+export * from './SingleMovieData'
 export * from './State'
 export * from './thunkActions'
