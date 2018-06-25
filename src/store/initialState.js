@@ -3,7 +3,8 @@
 import * as Immutable from 'immutable'
 
 import { SEARCH_BY, SORT_BY } from '../constants/global'
-import { State } from '../types'
+
+import type { State } from '../types'
 
 const { Map, List } = Immutable
 

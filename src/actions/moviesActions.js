@@ -12,7 +12,8 @@ import {
   SEARCH_MOVIES_BY_TITLE,
   SEARCH_MOVIES_BY_GENRE
 } from '../constants/actionTypes'
-import {
+
+import type {
   FetchMoviesStartAction,
   FetchMoviesSuccessAction,
   FetchMoviesFailAction,
@@ -23,15 +24,15 @@ import {
   SortMoviesByRatingAction,
   SearchMoviesByTitleAction,
   SearchMoviesByGenreAction,
-  Movies,
-  SingleMovie
+  MoviesData,
+  SingleMovieData
 } from '../types'
 
 export const fetchMoviesStart = (): FetchMoviesStartAction => ({
   type: FETCH_MOVIES_START
 })
 
-export const fetchMoviesSuccess = (movies: Movies): FetchMoviesSuccessAction => ({
+export const fetchMoviesSuccess = (movies: MoviesData): FetchMoviesSuccessAction => ({
   type: FETCH_MOVIES_SUCCESS,
   payload: movies
 })
@@ -45,7 +46,7 @@ export const fetchSingleMovieStart = (): FetchSingleMovieStartAction => ({
   type: FETCH_SINGLE_MOVIE_START
 })
 
-export const fetchSingleMovieSuccess = (movie: SingleMovie): FetchSingleMovieSuccessAction => ({
+export const fetchSingleMovieSuccess = (movie: SingleMovieData): FetchSingleMovieSuccessAction => ({
   type: FETCH_SINGLE_MOVIE_SUCCESS,
   payload: movie
 })

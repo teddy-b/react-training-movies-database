@@ -1,3 +1,5 @@
+/* @flow */
+
 import {
   fetchMoviesStart,
   fetchMoviesFail,
@@ -24,12 +26,26 @@ import {
 } from '../constants/actionTypes'
 import moviesMock from '../mocks/movies-mocks'
 
+import type {
+  FetchMoviesStartAction,
+  FetchMoviesSuccessAction,
+  FetchMoviesFailAction,
+  FetchSingleMovieStartAction,
+  FetchSingleMovieSuccessAction,
+  FetchSingleMovieFailAction,
+  SortMoviesByRelaseDateAction,
+  SortMoviesByRatingAction,
+  SearchMoviesByTitleAction,
+  SearchMoviesByGenreAction,
+  SingleMovieData
+} from '../types'
+
 describe('actions', () => {
-  const singleMovieMock = moviesMock.data[0]
-  const error = new Error('Some error')
+  const singleMovieMock: SingleMovieData = moviesMock.data[0]
+  const error: Error = new Error('Some error')
 
   it('should create an action to start fetch movies', () => {
-    const expectedAction = {
+    const expectedAction: FetchMoviesStartAction = {
       type: FETCH_MOVIES_START
     }
 
@@ -37,7 +53,7 @@ describe('actions', () => {
   })
 
   it('should create an action to success fetch movies', () => {
-    const expectedAction = {
+    const expectedAction: FetchMoviesSuccessAction = {
       type: FETCH_MOVIES_SUCCESS,
       payload: moviesMock
     }
@@ -46,7 +62,7 @@ describe('actions', () => {
   })
 
   it('should create an action to fail fetch movies', () => {
-    const expectedAction = {
+    const expectedAction: FetchMoviesFailAction = {
       type: FETCH_MOVIES_FAIL,
       payload: error
     }
@@ -55,7 +71,7 @@ describe('actions', () => {
   })
 
   it('should create an action to start fetch single movie', () => {
-    const expectedAction = {
+    const expectedAction: FetchSingleMovieStartAction = {
       type: FETCH_SINGLE_MOVIE_START
     }
 
@@ -63,7 +79,7 @@ describe('actions', () => {
   })
 
   it('should create an action to success fetch single movie', () => {
-    const expectedAction = {
+    const expectedAction: FetchSingleMovieSuccessAction = {
       type: FETCH_SINGLE_MOVIE_SUCCESS,
       payload: singleMovieMock
     }
@@ -72,7 +88,7 @@ describe('actions', () => {
   })
 
   it('should create an action to fail fetch single movie', () => {
-    const expectedAction = {
+    const expectedAction: FetchSingleMovieFailAction = {
       type: FETCH_SINGLE_MOVIE_FAIL,
       payload: error
     }
@@ -81,7 +97,7 @@ describe('actions', () => {
   })
 
   it('should create an action to sort movies by relase date', () => {
-    const expectedAction = {
+    const expectedAction: SortMoviesByRelaseDateAction = {
       type: SORT_MOVIES_BY_RELEASE_DATE
     }
 
@@ -89,7 +105,7 @@ describe('actions', () => {
   })
 
   it('should create an action to sort movies by rating', () => {
-    const expectedAction = {
+    const expectedAction: SortMoviesByRatingAction = {
       type: SORT_MOVIES_BY_RATING
     }
 
@@ -97,7 +113,7 @@ describe('actions', () => {
   })
 
   it('should create an action to search movies by title', () => {
-    const expectedAction = {
+    const expectedAction: SearchMoviesByTitleAction = {
       type: SEARCH_MOVIES_BY_TITLE
     }
 
@@ -105,7 +121,7 @@ describe('actions', () => {
   })
 
   it('should create an action to search movies by genre', () => {
-    const expectedAction = {
+    const expectedAction: SearchMoviesByGenreAction = {
       type: SEARCH_MOVIES_BY_GENRE
     }
 

@@ -1,4 +1,10 @@
+/* @flow */
+
 import { combineReducers } from 'redux'
+
+import type { CombinedReducer } from 'redux'
+
+import type { MoviesAction, State } from '../types'
 
 import {
   movies,
@@ -9,7 +15,7 @@ import {
   errors
 } from './moviesReducer'
 
-export default combineReducers({
+const rootReducer: CombinedReducer<State, MoviesAction> = combineReducers({
   movies,
   fetching,
   sortBy,
@@ -17,3 +23,5 @@ export default combineReducers({
   selectedMovie,
   errors
 })
+
+export default rootReducer
