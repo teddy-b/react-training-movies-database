@@ -7,15 +7,16 @@ import StyledFilmsBy from './StyledDetails'
 import ErrorBoundary from '../../shared/ErrorBoundary'
 import MoviesList from '../../shared/MoviesList'
 import StyledPage from '../../shared/styled/StyledPage'
-import { Movies, SingleMovie } from '../../../types'
+
+import type { MoviesData, SingleMovieData } from '../../../types'
 
 type Props = {
   count: number,
   fetching: boolean,
   match: { params: { id: string } },
-  movies: Movies,
+  movies: MoviesData,
   onSelectMovie: (id: number) => void,
-  selectedMovie: SingleMovie
+  selectedMovie: SingleMovieData
 }
 
 class Details extends React.Component<Props> {
@@ -24,7 +25,7 @@ class Details extends React.Component<Props> {
     onSelectMovie(parseInt(id, 10))
   }
 
-  render() {
+  render(): React.Node {
     const { count, fetching, movies, onSelectMovie, selectedMovie } = this.props
 
     return (

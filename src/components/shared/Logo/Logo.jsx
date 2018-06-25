@@ -1,8 +1,10 @@
-import React from 'react'
+/* @flow */
+
+import * as React from 'react'
 
 import StyledLogo from './StyledLogo'
 
-const Logo = () => (
+const Logo = (): React.Node => (
   <StyledLogo>netflixroulette</StyledLogo>
 )
 

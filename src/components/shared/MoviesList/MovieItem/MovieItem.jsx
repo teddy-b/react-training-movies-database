@@ -27,9 +27,9 @@ const MovieItem = ({
   poster_path: posterPath,
   release_date: releaseDate,
   title
-}: Props) => (
-  <StyledLink to={`/film/${id}`}>
-    <StyledMovieItem onClick={() => onSelectMovie(id)}>
+}: Props): React.Node => (
+  <StyledLink to={`/film/${id}`} onClick={(): void => onSelectMovie(id)}>
+    <StyledMovieItem>
       {posterPath && <StyledImg src={posterPath} alt={title} />}
       <figcaption>
         <StyledMovieYear>{new Date(releaseDate).getFullYear()}</StyledMovieYear>

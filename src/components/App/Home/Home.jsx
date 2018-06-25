@@ -6,7 +6,8 @@ import Header from './Header'
 import ErrorBoundary from '../../shared/ErrorBoundary'
 import MoviesList from '../../shared/MoviesList'
 import StyledPage from '../../shared/styled/StyledPage'
-import { Movies } from '../../../types'
+
+import type { MoviesData } from '../../../types'
 
 type Props = {
   count: number,
@@ -15,7 +16,7 @@ type Props = {
     query?: string,
     searchBy?: string
   }},
-  movies: Movies,
+  movies: MoviesData,
   onSearch: (query?: string, searchBy?: string) => void,
   onSearchMoviesByGenre: () => void,
   onSearchMoviesByTitle: () => void,
@@ -34,7 +35,7 @@ class Home extends React.Component<Props> {
     }
   }
 
-  render() {
+  render(): React.Node {
     const {
       count,
       fetching,

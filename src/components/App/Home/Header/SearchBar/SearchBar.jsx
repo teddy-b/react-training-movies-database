@@ -36,7 +36,7 @@ class SearchBar extends React.Component<Props, State> {
     }
   }
 
-  render() {
+  render(): React.Node {
     const {
       onSearch,
       onSearchMoviesByGenre,
@@ -53,14 +53,14 @@ class SearchBar extends React.Component<Props, State> {
         <StyledSearchInput
           placeholder="Start typing movie title or genre"
           type="text"
-          onChange={event => this.setState({
-            searchText: event.target.value
+          onChange={(event: SyntheticEvent<HTMLInputElement>): void => this.setState({
+            searchText: event.currentTarget.value
           })}
           list="genres"
         />
         {searchBy === SEARCH_BY.genre &&
           <datalist id="genres">
-            {GENRES.map(genre => <option key={genre} value={genre} />)}
+            {GENRES.map((genre: string): React.Node => <option key={genre} value={genre} />)}
           </datalist>
         }
         <StyledSearchFooter>
@@ -81,7 +81,7 @@ class SearchBar extends React.Component<Props, State> {
           </StyledSearchByBtns>
           <Link to={`/search/${searchBy}/${this.state.searchText}`}>
             <StyledSearchBtn
-              onClick={() => onSearch(this.state.searchText, searchBy)}
+              onClick={(): void => onSearch(this.state.searchText, searchBy)}
             >
               Search
             </StyledSearchBtn>

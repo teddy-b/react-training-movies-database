@@ -25,8 +25,8 @@ const Header = ({
   onSortMoviesByRelaseDate,
   searchBy,
   sortBy
-}: Props) => (
-  <div>
+}: Props): React.Node => (
+  <header>
     <SearchBar
       onSearch={onSearch}
       onSearchMoviesByGenre={onSearchMoviesByGenre}
@@ -39,7 +39,7 @@ const Header = ({
       onSortMoviesByRelaseDate={onSortMoviesByRelaseDate}
       sortBy={sortBy}
     />
-  </div>
+  </header>
 )
 
 export default Header

@@ -1,4 +1,6 @@
-import React from 'react'
+/* @flow */
+
+import * as React from 'react'
 
 import StyledLink from '../../shared/styled/StyledLink'
 import {
@@ -9,7 +11,7 @@ import {
   StyledButton
 } from './StyledNotFound'
 
-const NotFound = () => (
+const NotFound = (): React.Node => (
   <StyledNotFound>
     <StyledTitle>
       404

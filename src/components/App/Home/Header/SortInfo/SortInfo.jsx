@@ -12,7 +12,12 @@ type Props = {
   sortBy: string
 }
 
-const SortInfo = ({ count, onSortMoviesByRelaseDate, onSortMoviesByRating, sortBy }: Props) => (
+const SortInfo = ({
+  count,
+  onSortMoviesByRelaseDate,
+  onSortMoviesByRating,
+  sortBy
+}: Props): React.Node => (
   <StyledSortInfo>
     {count > 0 && <div>{count} movies found</div>}
     {count > 0 &&
@@ -20,13 +25,13 @@ const SortInfo = ({ count, onSortMoviesByRelaseDate, onSortMoviesByRating, sortB
         <span>Sort by </span>
         <StyledButton
           selected={sortBy === SORT_BY.releaseDate}
-          onClick={() => onSortMoviesByRelaseDate()}
+          onClick={(): void => onSortMoviesByRelaseDate()}
         >
           Release date
         </StyledButton>
         <StyledButton
           selected={sortBy === SORT_BY.rating}
-          onClick={() => onSortMoviesByRating()}
+          onClick={(): void => onSortMoviesByRating()}
         >
           Rating
         </StyledButton>

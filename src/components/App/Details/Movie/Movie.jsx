@@ -26,7 +26,7 @@ type Props = {
   vote_average: number
 }
 
-const Movie = (props: Props) => {
+const Movie = (props: Props): React.Node => {
   const {
     overview,
     poster_path: posterPath,

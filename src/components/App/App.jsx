@@ -1,4 +1,6 @@
-import React from 'react'
+/* @flow */
+
+import * as React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import Footer from './Footer'
@@ -7,7 +9,7 @@ import ErrorBoundary from '../shared/ErrorBoundary'
 import ConnectedDetails from '../../containers/ConnectedDetails'
 import ConnectedHome from '../../containers/ConnectedHome'
 
-const App = () => (
+const App = (): React.Node => (
   <ErrorBoundary>
     <Router>
       <Switch>
