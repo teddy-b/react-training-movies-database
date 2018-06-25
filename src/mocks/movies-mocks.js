@@ -1,4 +1,8 @@
-const moviesMock = {
+/* @flow */
+
+import type { MoviesResponse } from '../types'
+
+const moviesMock: MoviesResponse = {
   data: [
     {
       id: 337167,
