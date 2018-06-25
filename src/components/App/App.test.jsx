@@ -1,14 +1,16 @@
-import React from 'react'
+/* @flow */
+
+import * as React from 'react'
 
 import renderer from 'react-test-renderer'
 
 import App from './App'
 
-jest.mock('./Footer', () => 'Footer')
-jest.mock('./NotFound', () => () => 'NotFound')
-jest.mock('../shared/ErrorBoundary', () => 'ErrorBoundary')
-jest.mock('../../containers/ConnectedDetails', () => () => 'ConnectedDetails')
-jest.mock('../../containers/ConnectedHome', () => () => 'ConnectedHome')
+jest.mock('./Footer', (): string => 'Footer')
+jest.mock('./NotFound', (): Function => (): string => 'NotFound')
+jest.mock('../shared/ErrorBoundary', (): string => 'ErrorBoundary')
+jest.mock('../../containers/ConnectedDetails', (): Function => (): string => 'ConnectedDetails')
+jest.mock('../../containers/ConnectedHome', (): Function => (): string => 'ConnectedHome')
 
 describe('App', () => {
   it('renders correctly', () => {

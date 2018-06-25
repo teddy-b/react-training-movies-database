@@ -1,12 +1,14 @@
-import React from 'react'
+/* @flow */
+
+import * as React from 'react'
 
 import renderer from 'react-test-renderer'
 
 import Header from './Header'
 import { SEARCH_BY, SORT_BY } from '../../../../constants/global'
 
-jest.mock('./SearchBar', () => 'SearchBar')
-jest.mock('./SortInfo', () => 'SortInfo')
+jest.mock('./SearchBar', (): string => 'SearchBar')
+jest.mock('./SortInfo', (): string => 'SortInfo')
 
 describe('Header', () => {
   const props = {

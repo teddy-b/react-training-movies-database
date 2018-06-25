@@ -1,10 +1,12 @@
-import React from 'react'
+/* @flow */
+
+import * as React from 'react'
 
 import renderer from 'react-test-renderer'
 
 import Loading from './Loading'
 
-jest.mock('react-loading', () => 'ReactLoading')
+jest.mock('react-loading', (): string => 'ReactLoading')
 
 describe('Loading', () => {
   it('renders correctly', () => {

@@ -1,4 +1,6 @@
-import React from 'react'
+/* @flow */
+
+import * as React from 'react'
 import { MemoryRouter } from 'react-router-dom'
 
 import renderer from 'react-test-renderer'
@@ -6,7 +8,7 @@ import renderer from 'react-test-renderer'
 import Movie from './Movie'
 import moviesMock from '../../../../mocks/movies-mocks'
 
-jest.mock('../../../shared/Logo', () => 'Logo')
+jest.mock('../../../shared/Logo', (): string => 'Logo')
 
 describe('Movie', () => {
   const singleMovieMock = moviesMock.data[0]

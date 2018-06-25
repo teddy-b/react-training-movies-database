@@ -1,10 +1,12 @@
-import React from 'react'
+/* @flow */
+
+import * as React from 'react'
 
 import renderer from 'react-test-renderer'
 
 import Footer from './Footer'
 
-jest.mock('../../shared/Logo', () => 'Logo')
+jest.mock('../../shared/Logo', (): string => 'Logo')
 
 describe('Footer', () => {
   it('renders correctly', () => {
