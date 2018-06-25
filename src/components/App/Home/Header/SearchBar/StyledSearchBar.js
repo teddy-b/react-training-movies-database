@@ -1,3 +1,5 @@
+/* @flow */
+
 import styled from 'styled-components'
 
 import { black, grey2, grey4, red, white } from '../../../../../constants/styles'
@@ -42,7 +44,7 @@ export const StyledSearchByBtn = styled.button`
   cursor: pointer;
   margin: .3em;
   padding: .6em;
-  background-color: ${props => (props.selected ? red : grey2)};
+  background-color: ${(props: { [prop: string]: string }): string => (props.selected ? red : grey2)};
 `
 
 export const StyledSearchBtn = styled.button`

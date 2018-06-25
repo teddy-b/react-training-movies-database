@@ -1,3 +1,5 @@
+/* @flow */
+
 import styled from 'styled-components'
 
 import { black, grey1, red } from '../../../../../constants/styles'
@@ -14,5 +16,5 @@ export const StyledButton = styled.button`
   background-color: inherit;
   font-size: inherit;
   cursor: pointer;
-  color: ${props => (props.selected ? red : black)};
+  color: ${(props: { [prop: string]: string }): string => (props.selected ? red : black)};
 `
