@@ -1,9 +1,12 @@
-import React from 'react'
+/* @flow */
+
+import * as React from 'react'
 import { MemoryRouter } from 'react-router-dom'
 
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
-import { linkTo } from '@storybook/addon-links'
+
+import type { Renderable } from '@storybook/react'
 
 import Home from './Home'
 import moviesMock from '../../../mocks/movies-mocks'
@@ -11,11 +14,15 @@ import moviesMock from '../../../mocks/movies-mocks'
 const props = {
   count: 0,
   fetching: false,
+  match: {
+    params: {
+    }
+  },
   movies: [],
   onSearch: action('clicked'),
   onSearchMoviesByGenre: action('clicked'),
   onSearchMoviesByTitle: action('clicked'),
-  onSelectMovie: linkTo('Components/Details'),
+  onSelectMovie: action('clicked'),
   onSortMoviesByRating: action('clicked'),
   onSortMoviesByRelaseDate: action('clicked'),
   searchBy: 'title',
@@ -24,12 +31,12 @@ const props = {
 const fetching = true
 
 storiesOf('Components/Home', module)
-  .add('without movies', () => (
+  .add('without movies', (): Renderable => (
     <MemoryRouter>
       <Home {...props} />
     </MemoryRouter>
   ))
-  .add('while fetching', () => (
+  .add('while fetching', (): Renderable => (
     <MemoryRouter>
       <Home
         {...props}
@@ -37,7 +44,7 @@ storiesOf('Components/Home', module)
       />
     </MemoryRouter>
   ))
-  .add('with movies', () => (
+  .add('with movies', (): Renderable => (
     <MemoryRouter>
       <Home
         {...props}
@@ -46,7 +53,7 @@ storiesOf('Components/Home', module)
       />
     </MemoryRouter>
   ))
-  .add('with error in MoviesList', () => (
+  .add('with error in MoviesList', (): Renderable => (
     <MemoryRouter>
       <Home
         {...props}

@@ -1,8 +1,12 @@
-import React from 'react'
+/* @flow */
+
+import * as React from 'react'
 import { MemoryRouter } from 'react-router-dom'
 
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
+
+import type { Renderable } from '@storybook/react'
 
 import Details from './Details'
 import moviesMock from '../../../mocks/movies-mocks'
@@ -23,7 +27,7 @@ const props = {
 const fetching = true
 
 storiesOf('Components/Details', module)
-  .add('while fetching suggested movies by genre', () => (
+  .add('while fetching suggested movies by genre', (): Renderable => (
     <MemoryRouter>
       <Details
         {...props}
@@ -31,12 +35,12 @@ storiesOf('Components/Details', module)
       />
     </MemoryRouter>
   ))
-  .add('with suggested movies by genre', () => (
+  .add('with suggested movies by genre', (): Renderable => (
     <MemoryRouter>
       <Details {...props} />
     </MemoryRouter>
   ))
-  .add('with error in MoviesList', () => (
+  .add('with error in MoviesList', (): Renderable => (
     <MemoryRouter>
       <Details
         {...props}

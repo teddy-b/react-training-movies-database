@@ -1,8 +1,12 @@
-import React from 'react'
+/* @flow */
+
+import * as React from 'react'
 import { MemoryRouter } from 'react-router-dom'
 
 import { storiesOf } from '@storybook/react'
-import { linkTo } from '@storybook/addon-links'
+import { action } from '@storybook/addon-actions'
+
+import type { Renderable } from '@storybook/react'
 
 import MoviesList from './MoviesList'
 import moviesMock from '../../../mocks/movies-mocks'
@@ -11,19 +15,19 @@ const props = {
   count: 0,
   fetching: false,
   movies: [],
-  onSelectMovie: linkTo('Components/Movie')
+  onSelectMovie: action('clicked')
 }
 const fetching = true
 
 storiesOf('Components/MoviesList', module)
-  .add('without movies', () => <MoviesList {...props} />)
-  .add('while fetching', () => (
+  .add('without movies', (): Renderable => <MoviesList {...props} />)
+  .add('while fetching', (): Renderable => (
     <MoviesList
       {...props}
       fetching={fetching}
     />
   ))
-  .add('with movies', () => (
+  .add('with movies', (): Renderable => (
     <MemoryRouter>
       <MoviesList
         {...props}
