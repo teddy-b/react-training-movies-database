@@ -1,13 +1,15 @@
-import React from 'react'
+/* @flow */
+
+import * as React from 'react'
 import { MemoryRouter } from 'react-router-dom'
 
-import { shallow, mount } from 'enzyme'
+import { mount } from 'enzyme'
 import renderer from 'react-test-renderer'
 
 import SearchBar from './SearchBar'
 import { SEARCH_BY } from '../../../../../constants/global'
 
-jest.mock('../../../../shared/Logo', () => 'data-logo')
+jest.mock('../../../../shared/Logo', (): string => 'data-logo')
 
 describe('SearchBar', () => {
   const props = {
@@ -47,12 +49,14 @@ describe('SearchBar', () => {
 
   it('should trigger onSearchMoviesByTitle onClick', () => {
     const onSearchMoviesByTitleMock = jest.fn()
-    const component = shallow(
-      <SearchBar
-        {...props}
-        onSearchMoviesByTitle={onSearchMoviesByTitleMock}
-        searchBy={SEARCH_BY.genre}
-      />
+    const component = mount(
+      <MemoryRouter>
+        <SearchBar
+          {...props}
+          onSearchMoviesByTitle={onSearchMoviesByTitleMock}
+          searchBy={SEARCH_BY.genre}
+        />
+      </MemoryRouter>
     )
 
     component.find('button').at(0).simulate('click')
@@ -62,12 +66,14 @@ describe('SearchBar', () => {
 
   it('should trigger onSearchMoviesByGenre onClick', () => {
     const onSearchMoviesByGenreMock = jest.fn()
-    const component = shallow(
-      <SearchBar
-        {...props}
-        onSearchMoviesByGenre={onSearchMoviesByGenreMock}
-        searchBy={SEARCH_BY.title}
-      />
+    const component = mount(
+      <MemoryRouter>
+        <SearchBar
+          {...props}
+          onSearchMoviesByGenre={onSearchMoviesByGenreMock}
+          searchBy={SEARCH_BY.title}
+        />
+      </MemoryRouter>
     )
 
     component.find('button').at(1).simulate('click')

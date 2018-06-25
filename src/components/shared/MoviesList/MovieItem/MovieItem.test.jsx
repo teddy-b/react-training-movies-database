@@ -1,7 +1,9 @@
-import React from 'react'
+/* @flow */
+
+import * as React from 'react'
 import { MemoryRouter } from 'react-router-dom'
 
-import { shallow } from 'enzyme'
+import { mount } from 'enzyme'
 import renderer from 'react-test-renderer'
 
 import MovieItem from './MovieItem'
@@ -28,7 +30,11 @@ describe('MovieItem', () => {
   })
 
   it('should trigger onSelectMovie onClick', () => {
-    const component = shallow(<MovieItem {...props} />)
+    const component = mount(
+      <MemoryRouter>
+        <MovieItem {...props} />
+      </MemoryRouter>
+    )
 
     component.find('Link').at(0).simulate('click')
 

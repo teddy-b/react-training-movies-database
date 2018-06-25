@@ -1,6 +1,8 @@
-import React from 'react'
+/* @flow */
 
-import { shallow } from 'enzyme'
+import * as React from 'react'
+
+import { mount } from 'enzyme'
 import renderer from 'react-test-renderer'
 
 import SortInfo from './SortInfo'
@@ -40,7 +42,7 @@ describe('SortInfo', () => {
 
   it('should trigger onSortMoviesByRelaseDate onClick', () => {
     const onSortMoviesByRelaseDateMock = jest.fn()
-    const component = shallow(
+    const component = mount(
       <SortInfo
         {...props}
         onSortMoviesByRelaseDate={onSortMoviesByRelaseDateMock}
@@ -55,7 +57,7 @@ describe('SortInfo', () => {
 
   it('should trigger onSortMoviesByRating onClick', () => {
     const onSortMoviesByRatingMock = jest.fn()
-    const component = shallow(
+    const component = mount(
       <SortInfo
         {...props}
         onSortMoviesByRating={onSortMoviesByRatingMock}
