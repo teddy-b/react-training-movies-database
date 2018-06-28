@@ -46,7 +46,7 @@ class SearchBar extends React.Component<Props, State> {
 
     return (
       <StyledSearchBar>
-        <StyledLink to="/">
+        <StyledLink to="/search/title">
           <Logo />
         </StyledLink>
         <StyledSearchBarTitle>Find your movie</StyledSearchBarTitle>

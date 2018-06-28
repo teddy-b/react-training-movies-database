@@ -39,7 +39,7 @@ const Movie = (props: Props): React.Node => {
   const year = new Date(releaseDate).getFullYear() || ''
   return (
     <StyledMovieSection>
-      <StyledLink to="/">
+      <StyledLink to="/search/title">
         <Logo />
       </StyledLink>
       <StyledMovie>
