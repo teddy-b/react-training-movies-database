@@ -1,15 +1,13 @@
 # Movies Database application
 A single page application, which allows users to search the Movies database.
 
-## Demo
-
-Latest build is available at [Movies Database Demopage](https://teddy-b.github.io/react-training-movies-database/dist).
-
 ## Setup
 
-* Run `npm install` to install dependencies. You need to have **node.js** and **Webpack** installed globally.
-* Run `npm start` to start the application in development mode.
+* Run `npm install` or `yarn install` to install dependencies. You need to have **node.js** and **Webpack** installed globally.
+* Run `npm start` or `yarn start` to start the application in development mode.
 * Open [http://localhost:9000](http://localhost:9000) to view it in the browser.
+
+* Note: Storybook might not work properly with `npm`. Install all dependencies using `yarn` instead.
 
 ## Available Scripts
 
@@ -24,6 +22,26 @@ Prepares a production build into the `/dist` folder. Application is optimized fo
 ### `npm test`
 
 Runs available tests.
+
+### `npm run e2e`
+
+Runs available E2E tests.
+
+### `npm run lint`
+
+Checks for linting errors.
+
+### `npm run storybook`
+
+Creates Storybook. Open [http://localhost:6006](http://localhost:6006) to view it in the browser.
+
+### `npm run build-storybook`
+
+Creates build of Storybook.
+
+### `npm run flow`
+
+Checks for flow errors.
 
 ## Technologies
 
