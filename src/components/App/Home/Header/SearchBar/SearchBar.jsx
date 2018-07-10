@@ -1,20 +1,42 @@
-import React, { Component } from 'react'
+/* @flow */
+
+import * as React from 'react'
 import { Link } from 'react-router-dom'
 
-import PropTypes from 'prop-types'
-
+import {
+  StyledSearchBar,
+  StyledSearchBarTitle,
+  StyledSearchInput,
+  StyledSearchFooter,
+  StyledSearchBy,
+  StyledSearchByBtns,
+  StyledSearchByBtn,
+  StyledSearchBtn
+} from './StyledSearchBar'
 import Logo from '../../../../shared/Logo'
+import StyledLink from '../../../../shared/styled/StyledLink'
 import { SEARCH_BY, GENRES } from '../../../../../constants/global'
 
-import './SearchBar.scss'
+type Props = {
+  onSearch: (searchText: string, searchBy: string) => void,
+  onSearchMoviesByGenre: () => void,
+  onSearchMoviesByTitle: () => void,
+  searchBy: string,
+}
 
-class SearchBar extends Component {
-  constructor(props) {
+type State = {
+  searchText: string,
+}
+
+class SearchBar extends React.Component<Props, State> {
+  constructor(props: Props) {
     super(props)
-    this.state = { searchText: '' }
+    this.state = {
+      searchText: ''
+    }
   }
 
-  render() {
+  render(): React.Node {
     const {
       onSearch,
       onSearchMoviesByGenre,
@@ -23,56 +45,51 @@ class SearchBar extends Component {
     } = this.props
 
     return (
-      <div className="searchBar">
-        <Logo />
-        <p className="searchBarTitle">Find your movie</p>
-        <input
+      <StyledSearchBar>
+        <StyledLink to="/search/title">
+          <Logo />
+        </StyledLink>
+        <StyledSearchBarTitle>Find your movie</StyledSearchBarTitle>
+        <StyledSearchInput
           placeholder="Start typing movie title or genre"
-          className="searchInput"
           type="text"
-          onChange={event => this.setState({ searchText: event.target.value })}
+          onChange={(event: SyntheticEvent<HTMLInputElement>): void => this.setState({
+            searchText: event.currentTarget.value
+          })}
           list="genres"
         />
         {searchBy === SEARCH_BY.genre &&
           <datalist id="genres">
-            {GENRES.map(genre => <option key={genre} value={genre} />)}
+            {GENRES.map((genre: string): React.Node => <option key={genre} value={genre} />)}
           </datalist>
         }
-        <div className="searchFooter">
-          <div className="searchBy">Search by </div>
-          <div className="searchByBtns">
-            <button
-              className={`searchByTitleBtn ${searchBy === SEARCH_BY.title && 'selected'}`}
+        <StyledSearchFooter>
+          <StyledSearchBy>Search by </StyledSearchBy>
+          <StyledSearchByBtns>
+            <StyledSearchByBtn
+              selected={searchBy === SEARCH_BY.title}
               onClick={onSearchMoviesByTitle}
             >
               Title
-            </button>
-            <button
-              className={`searchByGenreBtn ${searchBy === SEARCH_BY.genre && 'selected'}`}
+            </StyledSearchByBtn>
+            <StyledSearchByBtn
+              selected={searchBy === SEARCH_BY.genre}
               onClick={onSearchMoviesByGenre}
             >
               Genre
-            </button>
-          </div>
-          <Link
-            to={`/search/${searchBy}/${this.state.searchText}`}
-            onClick={() => onSearch(this.state.searchText, searchBy)}
-          >
-            <button className="searchBtn">
+            </StyledSearchByBtn>
+          </StyledSearchByBtns>
+          <Link to={`/search/${searchBy}/${this.state.searchText}`}>
+            <StyledSearchBtn
+              onClick={(): void => onSearch(this.state.searchText, searchBy)}
+            >
               Search
-            </button>
+            </StyledSearchBtn>
           </Link>
-        </div>
-      </div>
+        </StyledSearchFooter>
+      </StyledSearchBar>
     )
   }
-}
-
-SearchBar.propTypes = {
-  onSearch: PropTypes.func.isRequired,
-  onSearchMoviesByGenre: PropTypes.func.isRequired,
-  onSearchMoviesByTitle: PropTypes.func.isRequired,
-  searchBy: PropTypes.string.isRequired
 }
 
 export default SearchBar

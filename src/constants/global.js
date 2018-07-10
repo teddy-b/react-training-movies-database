@@ -1,6 +1,8 @@
-export const API = 'http://react-cdp-api.herokuapp.com/movies'
+/* @flow */
 
-export const GENRES = [
+export const API: string = 'http://react-cdp-api.herokuapp.com/movies'
+
+export const GENRES: string[] = [
   'Action',
   'Adventure',
   'Animation',
@@ -22,19 +24,19 @@ export const GENRES = [
   'Western'
 ]
 
-export const ITEMS_TO_SHOW = 24
+export const ITEMS_TO_SHOW: number = 24
 
-export const SEARCH_BY = {
+export const SEARCH_BY: { [prop: string]: string } = {
   title: 'title',
   genre: 'genres'
 }
 
-export const SORT_BY = {
+export const SORT_BY: { [prop: string]: string } = {
   releaseDate: 'release_date',
   rating: 'vote_average'
 }
 
-export const SORT_ORDER = {
+export const SORT_ORDER: { [prop: string]: string } = {
   asc: 'asc',
   desc: 'desc'
 }

@@ -1,3 +1,7 @@
+/* @flow */
+
+import { Map, List } from 'immutable'
+
 import {
   movies,
   fetching,
@@ -19,130 +23,239 @@ import {
   SEARCH_MOVIES_BY_GENRE
 } from '../constants/actionTypes'
 import { SEARCH_BY, SORT_BY } from '../constants/global'
-import INITIAL_STATE from '../constants/initialState'
+import initialState from '../store/initialState'
 import moviesMock from '../mocks/movies-mocks'
 
+import type {
+  FetchMoviesStartAction,
+  FetchMoviesSuccessAction,
+  FetchMoviesFailAction,
+  FetchSingleMovieStartAction,
+  FetchSingleMovieSuccessAction,
+  FetchSingleMovieFailAction,
+  SortMoviesByRelaseDateAction,
+  SortMoviesByRatingAction,
+  SearchMoviesByTitleAction,
+  SearchMoviesByGenreAction,
+  SingleMovieData,
+  State
+} from '../types'
+
 describe('movies reducer', () => {
-  const initialState = INITIAL_STATE.movies
+  const prevState: State.movies = initialState.movies
+  let action: FetchMoviesSuccessAction
+  let nextState: State.movies
 
   it('should return the initial state', () => {
-    expect(movies(undefined, {})).toEqual(initialState)
+    action = {
+    }
+    expect(movies(undefined, action)).toEqual(prevState)
   })
 
   it('should handle FETCH_MOVIES_SUCCESS', () => {
-    expect(movies(initialState, {
+    action = {
       type: FETCH_MOVIES_SUCCESS,
       payload: moviesMock
-    })).toEqual(moviesMock)
+    }
+    nextState = Map({
+      data: List(moviesMock.data),
+      total: moviesMock.total
+    })
+    expect(movies(prevState, action)).toEqual(nextState)
   })
 })
 
 describe('fetching reducer', () => {
-  const initialState = INITIAL_STATE.fetching
+  const prevState: State.fetching = initialState.fetching
+  let action:
+  | FetchMoviesStartAction
+  | FetchMoviesSuccessAction
+  | FetchMoviesFailAction
+  | FetchSingleMovieStartAction
+  | FetchSingleMovieSuccessAction
+  | FetchSingleMovieFailAction
+  let nextState: State.fetching
 
   it('should return the initial state', () => {
-    expect(fetching(undefined, {})).toEqual(initialState)
+    action = {
+    }
+    expect(fetching(undefined, action)).toEqual(prevState)
   })
 
   it('should handle FETCH_MOVIES_START', () => {
-    expect(fetching(initialState, { type: FETCH_MOVIES_START })).toEqual(true)
+    action = {
+      type: FETCH_MOVIES_START
+    }
+    nextState = true
+    expect(fetching(prevState, action)).toEqual(nextState)
   })
 
   it('should handle FETCH_SINGLE_MOVIE_START', () => {
-    expect(fetching(initialState, { type: FETCH_SINGLE_MOVIE_START })).toEqual(true)
+    action = {
+      type: FETCH_SINGLE_MOVIE_START
+    }
+    nextState = true
+    expect(fetching(prevState, action)).toEqual(nextState)
   })
 
   it('should handle FETCH_MOVIES_SUCCESS', () => {
-    expect(fetching(initialState, { type: FETCH_MOVIES_SUCCESS })).toEqual(false)
+    action = {
+      type: FETCH_MOVIES_SUCCESS
+    }
+    nextState = false
+    expect(fetching(prevState, action)).toEqual(nextState)
   })
 
   it('should handle FETCH_MOVIES_FAIL', () => {
-    expect(fetching(initialState, { type: FETCH_MOVIES_FAIL })).toEqual(false)
+    action = {
+      type: FETCH_MOVIES_FAIL
+    }
+    nextState = false
+    expect(fetching(prevState, action)).toEqual(nextState)
   })
 
   it('should handle FETCH_SINGLE_MOVIE_SUCCESS', () => {
-    expect(fetching(initialState, { type: FETCH_SINGLE_MOVIE_SUCCESS })).toEqual(false)
+    action = {
+      type: FETCH_SINGLE_MOVIE_SUCCESS
+    }
+    nextState = false
+    expect(fetching(prevState, action)).toEqual(nextState)
   })
 
   it('should handle FETCH_SINGLE_MOVIE_FAIL', () => {
-    expect(fetching(initialState, { type: FETCH_SINGLE_MOVIE_FAIL })).toEqual(false)
+    action = {
+      type: FETCH_SINGLE_MOVIE_FAIL
+    }
+    nextState = false
+    expect(fetching(prevState, action)).toEqual(nextState)
   })
 })
 
 describe('sortBy reducer', () => {
-  const initialState = INITIAL_STATE.sortBy
+  const prevState: State.sortBy = initialState.sortBy
+  let action: SortMoviesByRelaseDateAction | SortMoviesByRatingAction
+  let nextState: State.sortBy
 
   it('should return the initial state', () => {
-    expect(sortBy(undefined, {})).toEqual(initialState)
+    action = {
+    }
+    expect(sortBy(undefined, action)).toEqual(prevState)
   })
 
   it('should handle SORT_MOVIES_BY_RELEASE_DATE', () => {
-    expect(sortBy(initialState, { type: SORT_MOVIES_BY_RELEASE_DATE })).toEqual(SORT_BY.releaseDate)
+    action = {
+      type: SORT_MOVIES_BY_RELEASE_DATE
+    }
+    nextState = SORT_BY.releaseDate
+    expect(sortBy(prevState, action)).toEqual(nextState)
   })
 
   it('should handle SORT_MOVIES_BY_RATING', () => {
-    expect(sortBy(initialState, { type: SORT_MOVIES_BY_RATING })).toEqual(SORT_BY.rating)
+    action = {
+      type: SORT_MOVIES_BY_RATING
+    }
+    nextState = SORT_BY.rating
+    expect(sortBy(prevState, action)).toEqual(nextState)
   })
 })
 
 describe('searchBy reducer', () => {
-  const initialState = INITIAL_STATE.searchBy
+  const prevState: State.searchBy = initialState.searchBy
+  let action: SearchMoviesByTitleAction | SearchMoviesByGenreAction
+  let nextState: State.searchBy
 
   it('should return the initial state', () => {
-    expect(searchBy(undefined, {})).toEqual(initialState)
+    action = {
+    }
+    expect(searchBy(undefined, action)).toEqual(prevState)
   })
 
   it('should handle SORT_MOVIES_BY_RELEASE_DATE', () => {
-    expect(searchBy(initialState, { type: SEARCH_MOVIES_BY_TITLE })).toEqual(SEARCH_BY.title)
+    action = {
+      type: SEARCH_MOVIES_BY_TITLE
+    }
+    nextState = SEARCH_BY.title
+    expect(searchBy(prevState, action)).toEqual(nextState)
   })
 
   it('should handle SORT_MOVIES_BY_RATING', () => {
-    expect(searchBy(initialState, { type: SEARCH_MOVIES_BY_GENRE })).toEqual(SEARCH_BY.genre)
+    action = {
+      type: SEARCH_MOVIES_BY_GENRE
+    }
+    nextState = SEARCH_BY.genre
+    expect(searchBy(prevState, action)).toEqual(nextState)
   })
 })
 
 describe('selectedMovie reducer', () => {
-  const initialState = INITIAL_STATE.selectedMovie
+  const prevState: State.selectedMovie = initialState.selectedMovie
+  const singleMovieMock: SingleMovieData = moviesMock.data[0]
+  let action: FetchSingleMovieSuccessAction
+  let nextState: State.selectedMovie
 
   it('should return the initial state', () => {
-    expect(selectedMovie(undefined, {})).toEqual(initialState)
+    action = {
+    }
+    expect(selectedMovie(undefined, action)).toEqual(prevState)
   })
 
   it('should handle FETCH_SINGLE_MOVIE_SUCCESS', () => {
-    expect(selectedMovie(initialState, {
+    action = {
       type: FETCH_SINGLE_MOVIE_SUCCESS,
-      payload: (moviesMock.data[0])
-    })).toEqual(moviesMock.data[0])
+      payload: (singleMovieMock)
+    }
+    nextState = Map(singleMovieMock)
+    expect(selectedMovie(prevState, action)).toEqual(nextState)
   })
 })
 
 describe('errors reducer', () => {
-  const initialState = INITIAL_STATE.errors
-  const error = new Error('Some error')
+  const prevState: State.errors = initialState.errors
+  const error: Error = new Error('Some error')
+  let action:
+  | FetchMoviesSuccessAction
+  | FetchMoviesFailAction
+  | FetchSingleMovieSuccessAction
+  | FetchSingleMovieFailAction
+  let nextState: State.errors
 
   it('should return the initial state', () => {
-    expect(errors(undefined, {})).toEqual(initialState)
+    action = {
+    }
+    expect(errors(undefined, action)).toEqual(prevState)
   })
 
   it('should handle FETCH_MOVIES_FAIL', () => {
-    expect(errors(initialState, {
+    action = {
       type: FETCH_MOVIES_FAIL,
       payload: error
-    })).toEqual([error])
+    }
+    nextState = List([Map(error)])
+    expect(errors(prevState, action)).toEqual(nextState)
   })
 
   it('should handle FETCH_SINGLE_MOVIE_FAIL', () => {
-    expect(errors(initialState, {
+    action = {
       type: FETCH_SINGLE_MOVIE_FAIL,
       payload: error
-    })).toEqual([error])
+    }
+    nextState = List([Map(error)])
+    expect(errors(prevState, action)).toEqual(nextState)
   })
 
   it('should handle FETCH_MOVIES_SUCCESS', () => {
-    expect(errors([error], { type: FETCH_MOVIES_SUCCESS })).toEqual([])
+    action = {
+      type: FETCH_MOVIES_SUCCESS
+    }
+    nextState = List()
+    expect(errors(prevState, action)).toEqual(nextState)
   })
 
   it('should handle FETCH_SINGLE_MOVIE_SUCCESS', () => {
-    expect(errors([error], { type: FETCH_SINGLE_MOVIE_SUCCESS })).toEqual([])
+    action = {
+      type: FETCH_SINGLE_MOVIE_SUCCESS
+    }
+    nextState = List()
+    expect(errors(prevState, action)).toEqual(nextState)
   })
 })

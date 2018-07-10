@@ -7,3 +7,6 @@
 
 # code coverage
 /coverage
+
+# storybook
+/storybook-static

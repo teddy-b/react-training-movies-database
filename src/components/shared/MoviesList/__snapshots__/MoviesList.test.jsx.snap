@@ -1,743 +1,1022 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MoviesList renders correctly while fetching 1`] = `
-<div
-  className="movies"
->
-  <Loading />
-</div>
-`;
+exports[`MoviesList renders correctly while fetching 1`] = `<Loading />`;
 
 exports[`MoviesList renders correctly with data 1`] = `
 <div
-  className="movies"
+  className="sc-bdVaJa ettvwi"
 >
-  <div
-    className="moviesList"
-  >
-    <MovieItem
-      budget={55000000}
-      genres={
-        Array [
-          "Drama",
-          "Romance",
-        ]
-      }
-      id={337167}
-      onSelectMovie={[MockFunction]}
-      overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
-      poster_path="https: //image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
-      release_date="2018-02-07"
-      revenue={136906000}
-      runtime={106}
-      tagline="Don't miss the climax"
-      title="Fifty Shades Freed"
-      vote_average={6.1}
-      vote_count={1195}
-    />
-    <MovieItem
-      budget={150000000}
-      genres={
-        Array [
-          "Animation",
-          "Adventure",
-          "Family",
-          "Comedy",
-        ]
-      }
-      id={269149}
-      onSelectMovie={[MockFunction]}
-      overview="Determined to prove herself, Officer Judy Hopps, the first bunny on Zootopia's police force, jumps at the chance to crack her first case - even if it means partnering with scam-artist fox Nick Wilde to solve the mystery."
-      poster_path="https: //image.tmdb.org/t/p/w500/sM33SANp9z6rXW8Itn7NnG1GOEs.jpg"
-      release_date="2016-02-11"
-      revenue={1023784195}
-      runtime={108}
-      tagline="Welcome to the urban jungle."
-      title="Zootopia"
-      vote_average={7.7}
-      vote_count={6795}
-    />
-    <MovieItem
-      budget={200000000}
-      genres={
-        Array [
-          "Fantasy",
-          "Adventure",
-          "Science Fiction",
-        ]
-      }
-      id={181808}
-      onSelectMovie={[MockFunction]}
-      overview="Rey develops her newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength of her powers. Meanwhile, the Resistance prepares to do battle with the First Order."
-      poster_path="https: //image.tmdb.org/t/p/w500/kOVEVeg59E0wsnXmF9nrh6OmWII.jpg"
-      release_date="2017-12-13"
-      revenue={1325937250}
-      runtime={152}
-      tagline="The Saga Continues"
-      title="Star Wars:  The Last Jedi"
-      vote_average={7.1}
-      vote_count={4732}
-    />
-    <MovieItem
-      budget={200000000}
-      genres={
-        Array [
-          "Action",
-          "Adventure",
-          "Fantasy",
-          "Science Fiction",
-        ]
-      }
-      id={284054}
-      onSelectMovie={[MockFunction]}
-      overview="King T'Challa returns home from America to the reclusive, technologically advanced African nation of Wakanda to serve as his country's new leader. However, T'Challa soon finds that he is challenged for the throne by factions within his own country as well as without.  Using powers reserved to Wakandan kings, T'Challa assumes the Black Panther mantel to join with girlfriend Nakia, the queen-mother, his princess-kid sister,  members of the Dora Milaje (the Wakandan 'special forces'), and an American secret agent, to prevent Wakanda from being dragged into a world war."
-      poster_path="https: //image.tmdb.org/t/p/w500/uxzzxijgPIY7slzFvMotPv8wjKA.jpg"
-      release_date="2018-02-13"
-      revenue={1245257672}
-      runtime={134}
-      tagline="Long live the king"
-      title="Black Panther"
-      vote_average={7.3}
-      vote_count={3788}
-    />
-    <MovieItem
-      budget={175000000}
-      genres={
-        Array [
-          "Adventure",
-          "Comedy",
-          "Family",
-          "Animation",
-        ]
-      }
-      id={354912}
-      onSelectMovie={[MockFunction]}
-      overview="Despite his family’s baffling generations-old ban on music, Miguel dreams of becoming an accomplished musician like his idol, Ernesto de la Cruz. Desperate to prove his talent, Miguel finds himself in the stunning and colorful Land of the Dead following a mysterious chain of events. Along the way, he meets charming trickster Hector, and together, they set off on an extraordinary journey to unlock the real story behind Miguel's family history."
-      poster_path="https: //image.tmdb.org/t/p/w500/eKi8dIrr8voobbaGzDpe8w0PVbC.jpg"
-      release_date="2017-10-27"
-      revenue={700920729}
-      runtime={105}
-      tagline="The celebration of a lifetime"
-      title="Coco"
-      vote_average={7.8}
-      vote_count={3619}
-    />
-    <MovieItem
-      budget={175000000}
-      genres={
-        Array [
-          "Adventure",
-          "Science Fiction",
-          "Action",
-        ]
-      }
-      id={333339}
-      onSelectMovie={[MockFunction]}
-      overview="When the creator of a popular video game system dies, a virtual contest is created to compete for his fortune."
-      poster_path="https: //image.tmdb.org/t/p/w500/pU1ULUq8D3iRxl1fdX2lZIzdHuI.jpg"
-      release_date="2018-03-28"
-      revenue={0}
-      runtime={140}
-      tagline="A better reality awaits."
-      title="Ready Player One"
-      vote_average={8.1}
-      vote_count={617}
-    />
-    <MovieItem
-      budget={94000000}
-      genres={
-        Array [
-          "Action",
-          "Adventure",
-        ]
-      }
-      id={338970}
-      onSelectMovie={[MockFunction]}
-      overview="Lara Croft, the fiercely independent daughter of a missing adventurer, must push herself beyond her limits when she finds herself on the island where her father disappeared."
-      poster_path="https: //image.tmdb.org/t/p/w500/ePyN2nX9t8SOl70eRW47Q29zUFO.jpg"
-      release_date="2018-03-08"
-      revenue={126025000}
-      runtime={118}
-      tagline="Her legend begins"
-      title="Tomb Raider"
-      vote_average={6.2}
-      vote_count={817}
-    />
-    <MovieItem
-      budget={180000000}
-      genres={
-        Array [
-          "Action",
-          "Adventure",
-          "Fantasy",
-        ]
-      }
-      id={284053}
-      onSelectMovie={[MockFunction]}
-      overview="Thor is imprisoned on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela."
-      poster_path="https: //image.tmdb.org/t/p/w500/rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg"
-      release_date="2017-10-25"
-      revenue={854229371}
-      runtime={130}
-      tagline="No Hammer. No Problem."
-      title="Thor:  Ragnarok"
-      vote_average={7.4}
-      vote_count={5349}
-    />
-    <MovieItem
-      budget={160000000}
-      genres={
-        Array [
-          "Family",
-          "Fantasy",
-          "Romance",
-        ]
-      }
-      id={321612}
-      onSelectMovie={[MockFunction]}
-      overview="A live-action adaptation of Disney's version of the classic tale of a cursed prince and a beautiful young woman who helps him break the spell."
-      poster_path="https: //image.tmdb.org/t/p/w500/tWqifoYuwLETmmasnGHO7xBjEtt.jpg"
-      release_date="2017-03-16"
-      revenue={1263521126}
-      runtime={129}
-      tagline="Be our guest."
-      title="Beauty and the Beast"
-      vote_average={6.8}
-      vote_count={7861}
-    />
-    <MovieItem
-      budget={19500000}
-      genres={
-        Array [
-          "Drama",
-          "Fantasy",
-          "Romance",
-        ]
-      }
-      id={399055}
-      onSelectMovie={[MockFunction]}
-      overview="An other-worldly story, set against the backdrop of Cold War era America circa 1962, where a mute janitor working at a lab falls in love with an amphibious man being held captive there and devises a plan to help him escape."
-      poster_path="https: //image.tmdb.org/t/p/w500/k4FwHlMhuRR5BISY2Gm2QZHlH5Q.jpg"
-      release_date="2017-12-01"
-      revenue={185545281}
-      runtime={123}
-      tagline="A Fairy Tale for Troubled Times"
-      title="The Shape of Water"
-      vote_average={7.3}
-      vote_count={3200}
-    />
-  </div>
+  <MovieItem
+    budget={55000000}
+    genres={
+      Array [
+        "Drama",
+        "Romance",
+      ]
+    }
+    id={337167}
+    onSelectMovie={[MockFunction]}
+    overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
+    poster_path="https://image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
+    release_date="2018-02-07"
+    revenue={136906000}
+    runtime={106}
+    tagline="Don't miss the climax"
+    title="Fifty Shades Freed"
+    vote_average={6.1}
+    vote_count={1195}
+  />
+  <MovieItem
+    budget={150000000}
+    genres={
+      Array [
+        "Animation",
+        "Adventure",
+        "Family",
+        "Comedy",
+      ]
+    }
+    id={269149}
+    onSelectMovie={[MockFunction]}
+    overview="Determined to prove herself, Officer Judy Hopps, the first bunny on Zootopia's police force, jumps at the chance to crack her first case - even if it means partnering with scam-artist fox Nick Wilde to solve the mystery."
+    poster_path="https://image.tmdb.org/t/p/w500/sM33SANp9z6rXW8Itn7NnG1GOEs.jpg"
+    release_date="2016-02-11"
+    revenue={1023784195}
+    runtime={108}
+    tagline="Welcome to the urban jungle."
+    title="Zootopia"
+    vote_average={7.7}
+    vote_count={6795}
+  />
+  <MovieItem
+    budget={200000000}
+    genres={
+      Array [
+        "Fantasy",
+        "Adventure",
+        "Science Fiction",
+      ]
+    }
+    id={181808}
+    onSelectMovie={[MockFunction]}
+    overview="Rey develops her newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength of her powers. Meanwhile, the Resistance prepares to do battle with the First Order."
+    poster_path="https://image.tmdb.org/t/p/w500/kOVEVeg59E0wsnXmF9nrh6OmWII.jpg"
+    release_date="2017-12-13"
+    revenue={1325937250}
+    runtime={152}
+    tagline="The Saga Continues"
+    title="Star Wars:  The Last Jedi"
+    vote_average={7.1}
+    vote_count={4732}
+  />
+  <MovieItem
+    budget={200000000}
+    genres={
+      Array [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Science Fiction",
+      ]
+    }
+    id={284054}
+    onSelectMovie={[MockFunction]}
+    overview="King T'Challa returns home from America to the reclusive, technologically advanced African nation of Wakanda to serve as his country's new leader. However, T'Challa soon finds that he is challenged for the throne by factions within his own country as well as without.  Using powers reserved to Wakandan kings, T'Challa assumes the Black Panther mantel to join with girlfriend Nakia, the queen-mother, his princess-kid sister,  members of the Dora Milaje (the Wakandan 'special forces'), and an American secret agent, to prevent Wakanda from being dragged into a world war."
+    poster_path="https://image.tmdb.org/t/p/w500/uxzzxijgPIY7slzFvMotPv8wjKA.jpg"
+    release_date="2018-02-13"
+    revenue={1245257672}
+    runtime={134}
+    tagline="Long live the king"
+    title="Black Panther"
+    vote_average={7.3}
+    vote_count={3788}
+  />
+  <MovieItem
+    budget={175000000}
+    genres={
+      Array [
+        "Adventure",
+        "Comedy",
+        "Family",
+        "Animation",
+      ]
+    }
+    id={354912}
+    onSelectMovie={[MockFunction]}
+    overview="Despite his family’s baffling generations-old ban on music, Miguel dreams of becoming an accomplished musician like his idol, Ernesto de la Cruz. Desperate to prove his talent, Miguel finds himself in the stunning and colorful Land of the Dead following a mysterious chain of events. Along the way, he meets charming trickster Hector, and together, they set off on an extraordinary journey to unlock the real story behind Miguel's family history."
+    poster_path="https://image.tmdb.org/t/p/w500/eKi8dIrr8voobbaGzDpe8w0PVbC.jpg"
+    release_date="2017-10-27"
+    revenue={700920729}
+    runtime={105}
+    tagline="The celebration of a lifetime"
+    title="Coco"
+    vote_average={7.8}
+    vote_count={3619}
+  />
+  <MovieItem
+    budget={175000000}
+    genres={
+      Array [
+        "Adventure",
+        "Science Fiction",
+        "Action",
+      ]
+    }
+    id={333339}
+    onSelectMovie={[MockFunction]}
+    overview="When the creator of a popular video game system dies, a virtual contest is created to compete for his fortune."
+    poster_path="https://image.tmdb.org/t/p/w500/pU1ULUq8D3iRxl1fdX2lZIzdHuI.jpg"
+    release_date="2018-03-28"
+    revenue={0}
+    runtime={140}
+    tagline="A better reality awaits."
+    title="Ready Player One"
+    vote_average={8.1}
+    vote_count={617}
+  />
+  <MovieItem
+    budget={94000000}
+    genres={
+      Array [
+        "Action",
+        "Adventure",
+      ]
+    }
+    id={338970}
+    onSelectMovie={[MockFunction]}
+    overview="Lara Croft, the fiercely independent daughter of a missing adventurer, must push herself beyond her limits when she finds herself on the island where her father disappeared."
+    poster_path="https://image.tmdb.org/t/p/w500/ePyN2nX9t8SOl70eRW47Q29zUFO.jpg"
+    release_date="2018-03-08"
+    revenue={126025000}
+    runtime={118}
+    tagline="Her legend begins"
+    title="Tomb Raider"
+    vote_average={6.2}
+    vote_count={817}
+  />
+  <MovieItem
+    budget={180000000}
+    genres={
+      Array [
+        "Action",
+        "Adventure",
+        "Fantasy",
+      ]
+    }
+    id={284053}
+    onSelectMovie={[MockFunction]}
+    overview="Thor is imprisoned on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela."
+    poster_path="https://image.tmdb.org/t/p/w500/rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg"
+    release_date="2017-10-25"
+    revenue={854229371}
+    runtime={130}
+    tagline="No Hammer. No Problem."
+    title="Thor:  Ragnarok"
+    vote_average={7.4}
+    vote_count={5349}
+  />
+  <MovieItem
+    budget={160000000}
+    genres={
+      Array [
+        "Family",
+        "Fantasy",
+        "Romance",
+      ]
+    }
+    id={321612}
+    onSelectMovie={[MockFunction]}
+    overview="A live-action adaptation of Disney's version of the classic tale of a cursed prince and a beautiful young woman who helps him break the spell."
+    poster_path="https://image.tmdb.org/t/p/w500/tWqifoYuwLETmmasnGHO7xBjEtt.jpg"
+    release_date="2017-03-16"
+    revenue={1263521126}
+    runtime={129}
+    tagline="Be our guest."
+    title="Beauty and the Beast"
+    vote_average={6.8}
+    vote_count={7861}
+  />
+  <MovieItem
+    budget={19500000}
+    genres={
+      Array [
+        "Drama",
+        "Fantasy",
+        "Romance",
+      ]
+    }
+    id={399055}
+    onSelectMovie={[MockFunction]}
+    overview="An other-worldly story, set against the backdrop of Cold War era America circa 1962, where a mute janitor working at a lab falls in love with an amphibious man being held captive there and devises a plan to help him escape."
+    poster_path="https://image.tmdb.org/t/p/w500/k4FwHlMhuRR5BISY2Gm2QZHlH5Q.jpg"
+    release_date="2017-12-01"
+    revenue={185545281}
+    runtime={123}
+    tagline="A Fairy Tale for Troubled Times"
+    title="The Shape of Water"
+    vote_average={7.3}
+    vote_count={3200}
+  />
+  <MovieItem
+    budget={0}
+    genres={
+      Array [
+        "Action",
+        "Adventure",
+        "Science Fiction",
+      ]
+    }
+    id={447365}
+    onSelectMovie={[MockFunction]}
+    overview="The third film based on Marvel's Guardians of the Galaxy."
+    poster_path="https://image.tmdb.org/t/p/w500/ldoY4fTZkGISMidNw60GHoNdgP8.jpg"
+    release_date="2020-05-01"
+    revenue={0}
+    runtime={null}
+    tagline=""
+    title="Guardians of the Galaxy Vol. 3"
+    vote_average={0}
+    vote_count={9}
+  />
+  <MovieItem
+    budget={0}
+    genres={
+      Array [
+        "Science Fiction",
+        "Action",
+        "Adventure",
+      ]
+    }
+    id={424785}
+    onSelectMovie={[MockFunction]}
+    overview="Plot unknown."
+    poster_path="https://image.tmdb.org/t/p/w500/432BowXw7a4fWXSONxBaFKqvW4f.jpg"
+    release_date="2019-06-26"
+    revenue={0}
+    runtime={null}
+    tagline=""
+    title="Transformers 7"
+    vote_average={0}
+    vote_count={0}
+  />
+  <MovieItem
+    budget={0}
+    genres={
+      Array [
+        "Action",
+        "Adventure",
+        "Science Fiction",
+      ]
+    }
+    id={299534}
+    onSelectMovie={[MockFunction]}
+    overview="The culmination of the Marvel Cinematic Universe."
+    poster_path="https://image.tmdb.org/t/p/w500/aMETsaNNcDc6g5ZatQtVbySnSaA.jpg"
+    release_date="2019-04-24"
+    revenue={0}
+    runtime={null}
+    tagline=""
+    title="Untitled Avengers"
+    vote_average={0}
+    vote_count={9}
+  />
+  <MovieItem
+    budget={0}
+    genres={
+      Array [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Science Fiction",
+      ]
+    }
+    id={287947}
+    onSelectMovie={[MockFunction]}
+    overview="We all have a superhero inside us, it just takes a bit of magic to bring it out. In Billy Batson's case, by shouting out one word--SHAZAM!--this streetwise 14-year-old foster kid can turn into the adult superhero Shazam, courtesy of an ancient wizard.Still a kid at heart--inside a ripped, godlike body--Shazam revels in this adult version of himself by doing what any teen would do with superpowers: have fun with them! Can he fly? Does he have X-ray vision? Can he shoot lightning out of his hands? Can he skip his social studies test? Shazam sets out to test the limits of his abilities with the joyful recklessness of a child. But he'll need to master these powers quickly in order to fight the deadly forces of evil controlled by Doctor Thaddeus Sivana."
+    poster_path="https://image.tmdb.org/t/p/w500/yUOJHa9XmB1H0iYodG9Kb3YCc9T.jpg"
+    release_date="2019-04-05"
+    revenue={0}
+    runtime={null}
+    tagline=""
+    title="Shazam!"
+    vote_average={0}
+    vote_count={5}
+  />
+  <MovieItem
+    budget={0}
+    genres={
+      Array [
+        "Action",
+        "Science Fiction",
+      ]
+    }
+    id={320288}
+    onSelectMovie={[MockFunction]}
+    overview="Gathered together by Professor Charles Xavier to protect a world that fears and hates them, the X-Men had fought many battles, been on adventures that spanned galaxies, grappled enemies of limitless might, but none of this could prepare them for the most shocking struggle they would ever face. One of their own members, Jean Grey, has gained power beyond all comprehension, and that power has corrupted her absolutely! Now, they must decide if the life of the woman they cherish is worth the existence of the entire universe!"
+    poster_path="https://image.tmdb.org/t/p/w500/6qmsupE0opYPIaBGe7T5D2FBzLs.jpg"
+    release_date="2019-02-14"
+    revenue={0}
+    runtime={null}
+    tagline=""
+    title="X-Men: Dark Phoenix"
+    vote_average={0}
+    vote_count={0}
+  />
+  <MovieItem
+    budget={0}
+    genres={
+      Array [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Science Fiction",
+      ]
+    }
+    id={181790}
+    onSelectMovie={[MockFunction]}
+    overview="Sean and Hank go on their biggest adventure yet, to the moon."
+    poster_path="https://image.tmdb.org/t/p/w500/98tbNloMBztAVnWpAznKKVUdi2O.jpg"
+    release_date="2018-12-31"
+    revenue={0}
+    runtime={null}
+    tagline=""
+    title="Journey 3: From the Earth to the Moon"
+    vote_average={0}
+    vote_count={7}
+  />
+  <MovieItem
+    budget={160000000}
+    genres={
+      Array [
+        "Action",
+        "Fantasy",
+        "Science Fiction",
+      ]
+    }
+    id={297802}
+    onSelectMovie={[MockFunction]}
+    overview="Following the events of Justice League, Arthur Curry, the reluctant ruler of the underwater kingdom of Atlantis, is caught between surface dwellers and his own people who are ready to lash out and invade the surface."
+    poster_path="https://image.tmdb.org/t/p/w500/sshNRCbtU2ON8SiWLycQzr05doX.jpg"
+    release_date="2018-12-19"
+    revenue={0}
+    runtime={null}
+    tagline=""
+    title="Aquaman"
+    vote_average={0}
+    vote_count={0}
+  />
+  <MovieItem
+    budget={0}
+    genres={
+      Array [
+        "Adventure",
+        "Action",
+        "Thriller",
+      ]
+    }
+    id={353081}
+    onSelectMovie={[MockFunction]}
+    overview="The sixth installment in the 'Mission: Impossible'. When an IMF mission ends badly, the world is faced with dire consequences. As Ethan Hunt takes it upon himself to fulfil his original briefing, the CIA begin to question his loyalty and his motives. The IMF team find themselves in a race against time, hunted by assassins while trying to prevent a global catastrophe."
+    poster_path="https://image.tmdb.org/t/p/w500/A2W75CVz9l8gEeWhQiiftlOCkgi.jpg"
+    release_date="2018-07-26"
+    revenue={0}
+    runtime={null}
+    tagline=""
+    title="Mission: Impossible - Fallout"
+    vote_average={0}
+    vote_count={3}
+  />
+  <MovieItem
+    budget={0}
+    genres={
+      Array [
+        "Action",
+        "Adventure",
+        "Drama",
+        "Science Fiction",
+        "Thriller",
+      ]
+    }
+    id={351286}
+    onSelectMovie={[MockFunction]}
+    overview="A volcanic eruption threatens the remaining dinosaurs on the island of Isla Nublar, where the creatures have freely roamed for several years after the demise of an animal theme park known as Jurassic World. Claire Dearing, the former park manager, has now founded the Dinosaur Protection Group, an organization dedicated to protecting the dinosaurs. To help with her cause, Claire has recruited Owen Grady, a former dinosaur trainer who worked at the park, to prevent the extinction of the dinosaurs once again."
+    poster_path="https://image.tmdb.org/t/p/w500/ln6d5Okr6VK5vfQVobJTiYxeD0l.jpg"
+    release_date="2018-06-01"
+    revenue={0}
+    runtime={null}
+    tagline="Life finds a way"
+    title="Jurassic World: Fallen Kingdom"
+    vote_average={0}
+    vote_count={28}
+  />
+  <MovieItem
+    budget={0}
+    genres={
+      Array [
+        "Action",
+        "Adventure",
+        "Family",
+        "Science Fiction",
+      ]
+    }
+    id={348350}
+    onSelectMovie={[MockFunction]}
+    overview="Through a series of daring escapades deep within a dark and dangerous criminal underworld, Han Solo meets his mighty future copilot Chewbacca and encounters the notorious gambler Lando Calrissian."
+    poster_path="https://image.tmdb.org/t/p/w500/uJ6OnE3CzGWq6buLINAbdBqa0gV.jpg"
+    release_date="2018-05-23"
+    revenue={0}
+    runtime={null}
+    tagline=""
+    title="Solo: A Star Wars Story"
+    vote_average={0}
+    vote_count={2}
+  />
+  <MovieItem
+    budget={0}
+    genres={
+      Array [
+        "Action",
+        "Comedy",
+        "Science Fiction",
+      ]
+    }
+    id={383498}
+    onSelectMovie={[MockFunction]}
+    overview="Wisecracking mercenary Deadpool battles the evil and powerful Cable and other bad guys to save a boy's life."
+    poster_path="https://image.tmdb.org/t/p/w500/qjiPP4FhTV3UAGa1Dbf2qEqTvu5.jpg"
+    release_date="2018-05-16"
+    revenue={0}
+    runtime={null}
+    tagline="Prepare for the Second Coming."
+    title="Deadpool 2"
+    vote_average={0}
+    vote_count={1}
+  />
+  <MovieItem
+    budget={500000000}
+    genres={
+      Array [
+        "Adventure",
+        "Science Fiction",
+        "Fantasy",
+        "Action",
+      ]
+    }
+    id={299536}
+    onSelectMovie={[MockFunction]}
+    overview="As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment - the fate of Earth and existence itself has never been more uncertain."
+    poster_path="https://image.tmdb.org/t/p/w500/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg"
+    release_date="2018-04-25"
+    revenue={0}
+    runtime={156}
+    tagline="An entire universe. Once and for all."
+    title="Avengers: Infinity War"
+    vote_average={0}
+    vote_count={0}
+  />
+  <MovieItem
+    budget={0}
+    genres={
+      Array [
+        "Thriller",
+      ]
+    }
+    id={505177}
+    onSelectMovie={[MockFunction]}
+    overview="Lewis is an outwardly ordinary guy, but in reality he is hiding an obsession - revenge - against Cathy. Lewis kidnaps Cathy in broad daylight and takes her to his home, where he locks her in a soundproof cell and attempt to extract a dark secret from her past."
+    poster_path="https://image.tmdb.org/t/p/w500/egMETBYual2JtfFGigXTA0tGkME.jpg"
+    release_date="2018-04-13"
+    revenue={0}
+    runtime={86}
+    tagline="There are some secrets we cannot escape"
+    title="10x10"
+    vote_average={0}
+    vote_count={0}
+  />
+  <MovieItem
+    budget={0}
+    genres={
+      Array [
+        "Action",
+        "Adventure",
+        "Science Fiction",
+      ]
+    }
+    id={427641}
+    onSelectMovie={[MockFunction]}
+    overview="Primatologist Davis Okoye shares an unshakable bond with George, the extraordinarily intelligent, silverback gorilla who has been in his care since birth.  But a rogue genetic experiment gone awry mutates this gentle ape into a raging creature of enormous size.  To make matters worse, it’s soon discovered there are other similarly altered animals.  As these newly created alpha predators tear across North America, destroying everything in their path, Okoye teams with a discredited genetic engineer to secure an antidote, fighting his way through an ever-changing battlefield, not only to halt a global catastrophe but to save the fearsome creature that was once his friend."
+    poster_path="https://image.tmdb.org/t/p/w500/30oXQKwibh0uANGMs0Sytw3uN22.jpg"
+    release_date="2018-04-12"
+    revenue={0}
+    runtime={null}
+    tagline="Big meets bigger"
+    title="Rampage"
+    vote_average={0}
+    vote_count={0}
+  />
 </div>
 `;
 
 exports[`MoviesList renders correctly with more items to show 1`] = `
 <div
-  className="movies"
+  className="sc-bdVaJa ettvwi"
 >
-  <div
-    className="moviesList"
+  <MovieItem
+    budget={55000000}
+    genres={
+      Array [
+        "Drama",
+        "Romance",
+      ]
+    }
+    id={337167}
+    onSelectMovie={[MockFunction]}
+    overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
+    poster_path="https://image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
+    release_date="2018-02-07"
+    revenue={136906000}
+    runtime={106}
+    tagline="Don't miss the climax"
+    title="Fifty Shades Freed"
+    vote_average={6.1}
+    vote_count={1195}
+  />
+  <MovieItem
+    budget={55000000}
+    genres={
+      Array [
+        "Drama",
+        "Romance",
+      ]
+    }
+    id={337167}
+    onSelectMovie={[MockFunction]}
+    overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
+    poster_path="https://image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
+    release_date="2018-02-07"
+    revenue={136906000}
+    runtime={106}
+    tagline="Don't miss the climax"
+    title="Fifty Shades Freed"
+    vote_average={6.1}
+    vote_count={1195}
+  />
+  <MovieItem
+    budget={55000000}
+    genres={
+      Array [
+        "Drama",
+        "Romance",
+      ]
+    }
+    id={337167}
+    onSelectMovie={[MockFunction]}
+    overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
+    poster_path="https://image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
+    release_date="2018-02-07"
+    revenue={136906000}
+    runtime={106}
+    tagline="Don't miss the climax"
+    title="Fifty Shades Freed"
+    vote_average={6.1}
+    vote_count={1195}
+  />
+  <MovieItem
+    budget={55000000}
+    genres={
+      Array [
+        "Drama",
+        "Romance",
+      ]
+    }
+    id={337167}
+    onSelectMovie={[MockFunction]}
+    overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
+    poster_path="https://image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
+    release_date="2018-02-07"
+    revenue={136906000}
+    runtime={106}
+    tagline="Don't miss the climax"
+    title="Fifty Shades Freed"
+    vote_average={6.1}
+    vote_count={1195}
+  />
+  <MovieItem
+    budget={55000000}
+    genres={
+      Array [
+        "Drama",
+        "Romance",
+      ]
+    }
+    id={337167}
+    onSelectMovie={[MockFunction]}
+    overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
+    poster_path="https://image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
+    release_date="2018-02-07"
+    revenue={136906000}
+    runtime={106}
+    tagline="Don't miss the climax"
+    title="Fifty Shades Freed"
+    vote_average={6.1}
+    vote_count={1195}
+  />
+  <MovieItem
+    budget={55000000}
+    genres={
+      Array [
+        "Drama",
+        "Romance",
+      ]
+    }
+    id={337167}
+    onSelectMovie={[MockFunction]}
+    overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
+    poster_path="https://image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
+    release_date="2018-02-07"
+    revenue={136906000}
+    runtime={106}
+    tagline="Don't miss the climax"
+    title="Fifty Shades Freed"
+    vote_average={6.1}
+    vote_count={1195}
+  />
+  <MovieItem
+    budget={55000000}
+    genres={
+      Array [
+        "Drama",
+        "Romance",
+      ]
+    }
+    id={337167}
+    onSelectMovie={[MockFunction]}
+    overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
+    poster_path="https://image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
+    release_date="2018-02-07"
+    revenue={136906000}
+    runtime={106}
+    tagline="Don't miss the climax"
+    title="Fifty Shades Freed"
+    vote_average={6.1}
+    vote_count={1195}
+  />
+  <MovieItem
+    budget={55000000}
+    genres={
+      Array [
+        "Drama",
+        "Romance",
+      ]
+    }
+    id={337167}
+    onSelectMovie={[MockFunction]}
+    overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
+    poster_path="https://image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
+    release_date="2018-02-07"
+    revenue={136906000}
+    runtime={106}
+    tagline="Don't miss the climax"
+    title="Fifty Shades Freed"
+    vote_average={6.1}
+    vote_count={1195}
+  />
+  <MovieItem
+    budget={55000000}
+    genres={
+      Array [
+        "Drama",
+        "Romance",
+      ]
+    }
+    id={337167}
+    onSelectMovie={[MockFunction]}
+    overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
+    poster_path="https://image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
+    release_date="2018-02-07"
+    revenue={136906000}
+    runtime={106}
+    tagline="Don't miss the climax"
+    title="Fifty Shades Freed"
+    vote_average={6.1}
+    vote_count={1195}
+  />
+  <MovieItem
+    budget={55000000}
+    genres={
+      Array [
+        "Drama",
+        "Romance",
+      ]
+    }
+    id={337167}
+    onSelectMovie={[MockFunction]}
+    overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
+    poster_path="https://image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
+    release_date="2018-02-07"
+    revenue={136906000}
+    runtime={106}
+    tagline="Don't miss the climax"
+    title="Fifty Shades Freed"
+    vote_average={6.1}
+    vote_count={1195}
+  />
+  <MovieItem
+    budget={55000000}
+    genres={
+      Array [
+        "Drama",
+        "Romance",
+      ]
+    }
+    id={337167}
+    onSelectMovie={[MockFunction]}
+    overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
+    poster_path="https://image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
+    release_date="2018-02-07"
+    revenue={136906000}
+    runtime={106}
+    tagline="Don't miss the climax"
+    title="Fifty Shades Freed"
+    vote_average={6.1}
+    vote_count={1195}
+  />
+  <MovieItem
+    budget={55000000}
+    genres={
+      Array [
+        "Drama",
+        "Romance",
+      ]
+    }
+    id={337167}
+    onSelectMovie={[MockFunction]}
+    overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
+    poster_path="https://image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
+    release_date="2018-02-07"
+    revenue={136906000}
+    runtime={106}
+    tagline="Don't miss the climax"
+    title="Fifty Shades Freed"
+    vote_average={6.1}
+    vote_count={1195}
+  />
+  <MovieItem
+    budget={55000000}
+    genres={
+      Array [
+        "Drama",
+        "Romance",
+      ]
+    }
+    id={337167}
+    onSelectMovie={[MockFunction]}
+    overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
+    poster_path="https://image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
+    release_date="2018-02-07"
+    revenue={136906000}
+    runtime={106}
+    tagline="Don't miss the climax"
+    title="Fifty Shades Freed"
+    vote_average={6.1}
+    vote_count={1195}
+  />
+  <MovieItem
+    budget={55000000}
+    genres={
+      Array [
+        "Drama",
+        "Romance",
+      ]
+    }
+    id={337167}
+    onSelectMovie={[MockFunction]}
+    overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
+    poster_path="https://image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
+    release_date="2018-02-07"
+    revenue={136906000}
+    runtime={106}
+    tagline="Don't miss the climax"
+    title="Fifty Shades Freed"
+    vote_average={6.1}
+    vote_count={1195}
+  />
+  <MovieItem
+    budget={55000000}
+    genres={
+      Array [
+        "Drama",
+        "Romance",
+      ]
+    }
+    id={337167}
+    onSelectMovie={[MockFunction]}
+    overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
+    poster_path="https://image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
+    release_date="2018-02-07"
+    revenue={136906000}
+    runtime={106}
+    tagline="Don't miss the climax"
+    title="Fifty Shades Freed"
+    vote_average={6.1}
+    vote_count={1195}
+  />
+  <MovieItem
+    budget={55000000}
+    genres={
+      Array [
+        "Drama",
+        "Romance",
+      ]
+    }
+    id={337167}
+    onSelectMovie={[MockFunction]}
+    overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
+    poster_path="https://image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
+    release_date="2018-02-07"
+    revenue={136906000}
+    runtime={106}
+    tagline="Don't miss the climax"
+    title="Fifty Shades Freed"
+    vote_average={6.1}
+    vote_count={1195}
+  />
+  <MovieItem
+    budget={55000000}
+    genres={
+      Array [
+        "Drama",
+        "Romance",
+      ]
+    }
+    id={337167}
+    onSelectMovie={[MockFunction]}
+    overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
+    poster_path="https://image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
+    release_date="2018-02-07"
+    revenue={136906000}
+    runtime={106}
+    tagline="Don't miss the climax"
+    title="Fifty Shades Freed"
+    vote_average={6.1}
+    vote_count={1195}
+  />
+  <MovieItem
+    budget={55000000}
+    genres={
+      Array [
+        "Drama",
+        "Romance",
+      ]
+    }
+    id={337167}
+    onSelectMovie={[MockFunction]}
+    overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
+    poster_path="https://image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
+    release_date="2018-02-07"
+    revenue={136906000}
+    runtime={106}
+    tagline="Don't miss the climax"
+    title="Fifty Shades Freed"
+    vote_average={6.1}
+    vote_count={1195}
+  />
+  <MovieItem
+    budget={55000000}
+    genres={
+      Array [
+        "Drama",
+        "Romance",
+      ]
+    }
+    id={337167}
+    onSelectMovie={[MockFunction]}
+    overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
+    poster_path="https://image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
+    release_date="2018-02-07"
+    revenue={136906000}
+    runtime={106}
+    tagline="Don't miss the climax"
+    title="Fifty Shades Freed"
+    vote_average={6.1}
+    vote_count={1195}
+  />
+  <MovieItem
+    budget={55000000}
+    genres={
+      Array [
+        "Drama",
+        "Romance",
+      ]
+    }
+    id={337167}
+    onSelectMovie={[MockFunction]}
+    overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
+    poster_path="https://image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
+    release_date="2018-02-07"
+    revenue={136906000}
+    runtime={106}
+    tagline="Don't miss the climax"
+    title="Fifty Shades Freed"
+    vote_average={6.1}
+    vote_count={1195}
+  />
+  <MovieItem
+    budget={55000000}
+    genres={
+      Array [
+        "Drama",
+        "Romance",
+      ]
+    }
+    id={337167}
+    onSelectMovie={[MockFunction]}
+    overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
+    poster_path="https://image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
+    release_date="2018-02-07"
+    revenue={136906000}
+    runtime={106}
+    tagline="Don't miss the climax"
+    title="Fifty Shades Freed"
+    vote_average={6.1}
+    vote_count={1195}
+  />
+  <MovieItem
+    budget={55000000}
+    genres={
+      Array [
+        "Drama",
+        "Romance",
+      ]
+    }
+    id={337167}
+    onSelectMovie={[MockFunction]}
+    overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
+    poster_path="https://image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
+    release_date="2018-02-07"
+    revenue={136906000}
+    runtime={106}
+    tagline="Don't miss the climax"
+    title="Fifty Shades Freed"
+    vote_average={6.1}
+    vote_count={1195}
+  />
+  <MovieItem
+    budget={55000000}
+    genres={
+      Array [
+        "Drama",
+        "Romance",
+      ]
+    }
+    id={337167}
+    onSelectMovie={[MockFunction]}
+    overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
+    poster_path="https://image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
+    release_date="2018-02-07"
+    revenue={136906000}
+    runtime={106}
+    tagline="Don't miss the climax"
+    title="Fifty Shades Freed"
+    vote_average={6.1}
+    vote_count={1195}
+  />
+  <MovieItem
+    budget={55000000}
+    genres={
+      Array [
+        "Drama",
+        "Romance",
+      ]
+    }
+    id={337167}
+    onSelectMovie={[MockFunction]}
+    overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
+    poster_path="https://image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
+    release_date="2018-02-07"
+    revenue={136906000}
+    runtime={106}
+    tagline="Don't miss the climax"
+    title="Fifty Shades Freed"
+    vote_average={6.1}
+    vote_count={1195}
+  />
+  <button
+    className="sc-htpNat gTNjPc"
   >
-    <MovieItem
-      budget={55000000}
-      genres={
-        Array [
-          "Drama",
-          "Romance",
-        ]
-      }
-      id={337167}
-      onSelectMovie={[MockFunction]}
-      overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
-      poster_path="https: //image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
-      release_date="2018-02-07"
-      revenue={136906000}
-      runtime={106}
-      tagline="Don't miss the climax"
-      title="Fifty Shades Freed"
-      vote_average={6.1}
-      vote_count={1195}
-    />
-    <MovieItem
-      budget={55000000}
-      genres={
-        Array [
-          "Drama",
-          "Romance",
-        ]
-      }
-      id={337167}
-      onSelectMovie={[MockFunction]}
-      overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
-      poster_path="https: //image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
-      release_date="2018-02-07"
-      revenue={136906000}
-      runtime={106}
-      tagline="Don't miss the climax"
-      title="Fifty Shades Freed"
-      vote_average={6.1}
-      vote_count={1195}
-    />
-    <MovieItem
-      budget={55000000}
-      genres={
-        Array [
-          "Drama",
-          "Romance",
-        ]
-      }
-      id={337167}
-      onSelectMovie={[MockFunction]}
-      overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
-      poster_path="https: //image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
-      release_date="2018-02-07"
-      revenue={136906000}
-      runtime={106}
-      tagline="Don't miss the climax"
-      title="Fifty Shades Freed"
-      vote_average={6.1}
-      vote_count={1195}
-    />
-    <MovieItem
-      budget={55000000}
-      genres={
-        Array [
-          "Drama",
-          "Romance",
-        ]
-      }
-      id={337167}
-      onSelectMovie={[MockFunction]}
-      overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
-      poster_path="https: //image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
-      release_date="2018-02-07"
-      revenue={136906000}
-      runtime={106}
-      tagline="Don't miss the climax"
-      title="Fifty Shades Freed"
-      vote_average={6.1}
-      vote_count={1195}
-    />
-    <MovieItem
-      budget={55000000}
-      genres={
-        Array [
-          "Drama",
-          "Romance",
-        ]
-      }
-      id={337167}
-      onSelectMovie={[MockFunction]}
-      overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
-      poster_path="https: //image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
-      release_date="2018-02-07"
-      revenue={136906000}
-      runtime={106}
-      tagline="Don't miss the climax"
-      title="Fifty Shades Freed"
-      vote_average={6.1}
-      vote_count={1195}
-    />
-    <MovieItem
-      budget={55000000}
-      genres={
-        Array [
-          "Drama",
-          "Romance",
-        ]
-      }
-      id={337167}
-      onSelectMovie={[MockFunction]}
-      overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
-      poster_path="https: //image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
-      release_date="2018-02-07"
-      revenue={136906000}
-      runtime={106}
-      tagline="Don't miss the climax"
-      title="Fifty Shades Freed"
-      vote_average={6.1}
-      vote_count={1195}
-    />
-    <MovieItem
-      budget={55000000}
-      genres={
-        Array [
-          "Drama",
-          "Romance",
-        ]
-      }
-      id={337167}
-      onSelectMovie={[MockFunction]}
-      overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
-      poster_path="https: //image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
-      release_date="2018-02-07"
-      revenue={136906000}
-      runtime={106}
-      tagline="Don't miss the climax"
-      title="Fifty Shades Freed"
-      vote_average={6.1}
-      vote_count={1195}
-    />
-    <MovieItem
-      budget={55000000}
-      genres={
-        Array [
-          "Drama",
-          "Romance",
-        ]
-      }
-      id={337167}
-      onSelectMovie={[MockFunction]}
-      overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
-      poster_path="https: //image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
-      release_date="2018-02-07"
-      revenue={136906000}
-      runtime={106}
-      tagline="Don't miss the climax"
-      title="Fifty Shades Freed"
-      vote_average={6.1}
-      vote_count={1195}
-    />
-    <MovieItem
-      budget={55000000}
-      genres={
-        Array [
-          "Drama",
-          "Romance",
-        ]
-      }
-      id={337167}
-      onSelectMovie={[MockFunction]}
-      overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
-      poster_path="https: //image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
-      release_date="2018-02-07"
-      revenue={136906000}
-      runtime={106}
-      tagline="Don't miss the climax"
-      title="Fifty Shades Freed"
-      vote_average={6.1}
-      vote_count={1195}
-    />
-    <MovieItem
-      budget={55000000}
-      genres={
-        Array [
-          "Drama",
-          "Romance",
-        ]
-      }
-      id={337167}
-      onSelectMovie={[MockFunction]}
-      overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
-      poster_path="https: //image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
-      release_date="2018-02-07"
-      revenue={136906000}
-      runtime={106}
-      tagline="Don't miss the climax"
-      title="Fifty Shades Freed"
-      vote_average={6.1}
-      vote_count={1195}
-    />
-    <MovieItem
-      budget={55000000}
-      genres={
-        Array [
-          "Drama",
-          "Romance",
-        ]
-      }
-      id={337167}
-      onSelectMovie={[MockFunction]}
-      overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
-      poster_path="https: //image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
-      release_date="2018-02-07"
-      revenue={136906000}
-      runtime={106}
-      tagline="Don't miss the climax"
-      title="Fifty Shades Freed"
-      vote_average={6.1}
-      vote_count={1195}
-    />
-    <MovieItem
-      budget={55000000}
-      genres={
-        Array [
-          "Drama",
-          "Romance",
-        ]
-      }
-      id={337167}
-      onSelectMovie={[MockFunction]}
-      overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
-      poster_path="https: //image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
-      release_date="2018-02-07"
-      revenue={136906000}
-      runtime={106}
-      tagline="Don't miss the climax"
-      title="Fifty Shades Freed"
-      vote_average={6.1}
-      vote_count={1195}
-    />
-    <MovieItem
-      budget={55000000}
-      genres={
-        Array [
-          "Drama",
-          "Romance",
-        ]
-      }
-      id={337167}
-      onSelectMovie={[MockFunction]}
-      overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
-      poster_path="https: //image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
-      release_date="2018-02-07"
-      revenue={136906000}
-      runtime={106}
-      tagline="Don't miss the climax"
-      title="Fifty Shades Freed"
-      vote_average={6.1}
-      vote_count={1195}
-    />
-    <MovieItem
-      budget={55000000}
-      genres={
-        Array [
-          "Drama",
-          "Romance",
-        ]
-      }
-      id={337167}
-      onSelectMovie={[MockFunction]}
-      overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
-      poster_path="https: //image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
-      release_date="2018-02-07"
-      revenue={136906000}
-      runtime={106}
-      tagline="Don't miss the climax"
-      title="Fifty Shades Freed"
-      vote_average={6.1}
-      vote_count={1195}
-    />
-    <MovieItem
-      budget={55000000}
-      genres={
-        Array [
-          "Drama",
-          "Romance",
-        ]
-      }
-      id={337167}
-      onSelectMovie={[MockFunction]}
-      overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
-      poster_path="https: //image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
-      release_date="2018-02-07"
-      revenue={136906000}
-      runtime={106}
-      tagline="Don't miss the climax"
-      title="Fifty Shades Freed"
-      vote_average={6.1}
-      vote_count={1195}
-    />
-    <MovieItem
-      budget={55000000}
-      genres={
-        Array [
-          "Drama",
-          "Romance",
-        ]
-      }
-      id={337167}
-      onSelectMovie={[MockFunction]}
-      overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
-      poster_path="https: //image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
-      release_date="2018-02-07"
-      revenue={136906000}
-      runtime={106}
-      tagline="Don't miss the climax"
-      title="Fifty Shades Freed"
-      vote_average={6.1}
-      vote_count={1195}
-    />
-    <MovieItem
-      budget={55000000}
-      genres={
-        Array [
-          "Drama",
-          "Romance",
-        ]
-      }
-      id={337167}
-      onSelectMovie={[MockFunction]}
-      overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
-      poster_path="https: //image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
-      release_date="2018-02-07"
-      revenue={136906000}
-      runtime={106}
-      tagline="Don't miss the climax"
-      title="Fifty Shades Freed"
-      vote_average={6.1}
-      vote_count={1195}
-    />
-    <MovieItem
-      budget={55000000}
-      genres={
-        Array [
-          "Drama",
-          "Romance",
-        ]
-      }
-      id={337167}
-      onSelectMovie={[MockFunction]}
-      overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
-      poster_path="https: //image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
-      release_date="2018-02-07"
-      revenue={136906000}
-      runtime={106}
-      tagline="Don't miss the climax"
-      title="Fifty Shades Freed"
-      vote_average={6.1}
-      vote_count={1195}
-    />
-    <MovieItem
-      budget={55000000}
-      genres={
-        Array [
-          "Drama",
-          "Romance",
-        ]
-      }
-      id={337167}
-      onSelectMovie={[MockFunction]}
-      overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
-      poster_path="https: //image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
-      release_date="2018-02-07"
-      revenue={136906000}
-      runtime={106}
-      tagline="Don't miss the climax"
-      title="Fifty Shades Freed"
-      vote_average={6.1}
-      vote_count={1195}
-    />
-    <MovieItem
-      budget={55000000}
-      genres={
-        Array [
-          "Drama",
-          "Romance",
-        ]
-      }
-      id={337167}
-      onSelectMovie={[MockFunction]}
-      overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
-      poster_path="https: //image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
-      release_date="2018-02-07"
-      revenue={136906000}
-      runtime={106}
-      tagline="Don't miss the climax"
-      title="Fifty Shades Freed"
-      vote_average={6.1}
-      vote_count={1195}
-    />
-    <MovieItem
-      budget={55000000}
-      genres={
-        Array [
-          "Drama",
-          "Romance",
-        ]
-      }
-      id={337167}
-      onSelectMovie={[MockFunction]}
-      overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
-      poster_path="https: //image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
-      release_date="2018-02-07"
-      revenue={136906000}
-      runtime={106}
-      tagline="Don't miss the climax"
-      title="Fifty Shades Freed"
-      vote_average={6.1}
-      vote_count={1195}
-    />
-    <MovieItem
-      budget={55000000}
-      genres={
-        Array [
-          "Drama",
-          "Romance",
-        ]
-      }
-      id={337167}
-      onSelectMovie={[MockFunction]}
-      overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
-      poster_path="https: //image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
-      release_date="2018-02-07"
-      revenue={136906000}
-      runtime={106}
-      tagline="Don't miss the climax"
-      title="Fifty Shades Freed"
-      vote_average={6.1}
-      vote_count={1195}
-    />
-    <MovieItem
-      budget={55000000}
-      genres={
-        Array [
-          "Drama",
-          "Romance",
-        ]
-      }
-      id={337167}
-      onSelectMovie={[MockFunction]}
-      overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
-      poster_path="https: //image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
-      release_date="2018-02-07"
-      revenue={136906000}
-      runtime={106}
-      tagline="Don't miss the climax"
-      title="Fifty Shades Freed"
-      vote_average={6.1}
-      vote_count={1195}
-    />
-    <MovieItem
-      budget={55000000}
-      genres={
-        Array [
-          "Drama",
-          "Romance",
-        ]
-      }
-      id={337167}
-      onSelectMovie={[MockFunction]}
-      overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
-      poster_path="https: //image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
-      release_date="2018-02-07"
-      revenue={136906000}
-      runtime={106}
-      tagline="Don't miss the climax"
-      title="Fifty Shades Freed"
-      vote_average={6.1}
-      vote_count={1195}
-    />
-    <button
-      className="moreBtn"
-    >
-      Show more
-    </button>
-  </div>
+    Show more
+  </button>
 </div>
 `;
 
 exports[`MoviesList renders correctly with no data 1`] = `
 <div
-  className="movies"
+  className="sc-bdVaJa ettvwi"
 >
   <div
-    className="moviesList"
+    className="sc-bwzfXH kKtWnj"
   >
-    <div
-      className="noMovies"
-    >
-      No films found
-    </div>
+    No films found
   </div>
 </div>
 `;

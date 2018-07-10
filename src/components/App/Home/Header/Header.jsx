@@ -1,9 +1,20 @@
-import React from 'react'
+/* @flow */
 
-import PropTypes from 'prop-types'
+import * as React from 'react'
 
 import SearchBar from './SearchBar'
 import SortInfo from './SortInfo'
+
+type Props = {
+  count: number,
+  onSearch: () => void,
+  onSearchMoviesByGenre: () => void,
+  onSearchMoviesByTitle: () => void,
+  onSortMoviesByRating: () => void,
+  onSortMoviesByRelaseDate: () => void,
+  searchBy: string,
+  sortBy: string
+}
 
 const Header = ({
   count,
@@ -14,8 +25,8 @@ const Header = ({
   onSortMoviesByRelaseDate,
   searchBy,
   sortBy
-}) => (
-  <header className="header">
+}: Props): React.Node => (
+  <header>
     <SearchBar
       onSearch={onSearch}
       onSearchMoviesByGenre={onSearchMoviesByGenre}
@@ -30,16 +41,5 @@ const Header = ({
     />
   </header>
 )
-
-Header.propTypes = {
-  count: PropTypes.number.isRequired,
-  onSearch: PropTypes.func.isRequired,
-  onSearchMoviesByGenre: PropTypes.func.isRequired,
-  onSearchMoviesByTitle: PropTypes.func.isRequired,
-  onSortMoviesByRating: PropTypes.func.isRequired,
-  onSortMoviesByRelaseDate: PropTypes.func.isRequired,
-  searchBy: PropTypes.string.isRequired,
-  sortBy: PropTypes.string.isRequired
-}
 
 export default Header

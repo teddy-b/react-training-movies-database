@@ -2,9 +2,13 @@
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
+    "plugin:flowtype/recommended",
     "airbnb"
   ],
   "parser": "babel-eslint",
+  "plugins": [
+    "flowtype"
+  ],
   "env": {
     "browser": true,
     "node": true,
@@ -20,7 +24,7 @@
     "no-trailing-spaces": "error",
     "comma-dangle": ["error", "never"],
     "object-curly-newline": ["error", {
-      "ObjectExpression": { "multiline": true },
+      "ObjectExpression": "always",
       "ObjectPattern": { "multiline": true },
       "ImportDeclaration": { "multiline": true },
       "ExportDeclaration": { "multiline": true }
@@ -31,6 +35,20 @@
       "components": ["Link"],
       "specialLink": ["hrefLeft", "hrefRight", "to"],
       "aspects": ["noHref", "invalidHref", "preferButton"]
-    }]
+    }],
+    "jsx-a11y/click-events-have-key-events": false,
+    "jsx-a11y/no-noninteractive-element-interactions": false,
+    "flowtype/require-parameter-type": [
+      "error"
+    ],
+    "flowtype/require-return-type": [
+      "error",
+      "always"
+    ]
+  },
+  "settings": {
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": true
+    }
   }
 }

@@ -1,4 +1,6 @@
-import React from 'react'
+/* @flow */
+
+import * as React from 'react'
 
 import { mount } from 'enzyme'
 import renderer from 'react-test-renderer'
@@ -7,7 +9,7 @@ import ErrorBoundary from './ErrorBoundary'
 
 describe('ErrorBoundary', () => {
   it('renders correctly without errors', () => {
-    const SomeComponent = () => (
+    const SomeComponent = (): React.Node => (
       <div>Some data</div>
     )
     const component = renderer.create(

@@ -1,3 +1,7 @@
+/* @flow */
+
+import { Map, List } from 'immutable'
+
 import {
   FETCH_MOVIES_START,
   FETCH_MOVIES_SUCCESS,
@@ -11,21 +15,46 @@ import {
   SEARCH_MOVIES_BY_GENRE
 } from '../constants/actionTypes'
 import { SEARCH_BY, SORT_BY } from '../constants/global'
-import INITIAL_STATE from '../constants/initialState'
+import initialState from '../store/initialState'
 
-export const movies = (state = INITIAL_STATE.movies, action) => {
+import type {
+  FetchMoviesStartAction,
+  FetchMoviesSuccessAction,
+  FetchMoviesFailAction,
+  FetchSingleMovieStartAction,
+  FetchSingleMovieSuccessAction,
+  FetchSingleMovieFailAction,
+  SortMoviesByRelaseDateAction,
+  SortMoviesByRatingAction,
+  SearchMoviesByTitleAction,
+  SearchMoviesByGenreAction,
+  State
+} from '../types'
+
+export const movies = (
+  state: State.movies = initialState.movies,
+  action: FetchMoviesSuccessAction
+): State.movies => {
   switch (action.type) {
     case FETCH_MOVIES_SUCCESS:
-      return {
-        data: action.payload.data,
+      return Map({
+        data: List(action.payload.data),
         total: action.payload.total
-      }
+      })
     default:
       return state
   }
 }
 
-export const fetching = (state = INITIAL_STATE.fetching, action) => {
+export const fetching = (
+  state: State.fetching = initialState.fetching,
+  action: FetchMoviesStartAction
+  | FetchMoviesSuccessAction
+  | FetchMoviesFailAction
+  | FetchSingleMovieStartAction
+  | FetchSingleMovieSuccessAction
+  | FetchSingleMovieFailAction
+): State.fetching => {
   switch (action.type) {
     case FETCH_MOVIES_START:
     case FETCH_SINGLE_MOVIE_START:
@@ -40,7 +69,10 @@ export const fetching = (state = INITIAL_STATE.fetching, action) => {
   }
 }
 
-export const sortBy = (state = INITIAL_STATE.sortBy, action) => {
+export const sortBy = (
+  state: State.sortBy = initialState.sortBy,
+  action: SortMoviesByRelaseDateAction | SortMoviesByRatingAction,
+): State.sortBy => {
   switch (action.type) {
     case SORT_MOVIES_BY_RELEASE_DATE:
       return SORT_BY.releaseDate
@@ -51,7 +83,10 @@ export const sortBy = (state = INITIAL_STATE.sortBy, action) => {
   }
 }
 
-export const searchBy = (state = INITIAL_STATE.searchBy, action) => {
+export const searchBy = (
+  state: State.searchBy = initialState.searchBy,
+  action: SearchMoviesByTitleAction | SearchMoviesByGenreAction,
+): State.searchBy => {
   switch (action.type) {
     case SEARCH_MOVIES_BY_TITLE:
       return SEARCH_BY.title
@@ -62,26 +97,32 @@ export const searchBy = (state = INITIAL_STATE.searchBy, action) => {
   }
 }
 
-export const selectedMovie = (state = INITIAL_STATE.selectedMovie, action) => {
+export const selectedMovie = (
+  state: State.selectedMovie = initialState.selectedMovie,
+  action: FetchSingleMovieSuccessAction
+): State.selectedMovie => {
   switch (action.type) {
     case FETCH_SINGLE_MOVIE_SUCCESS:
-      return action.payload
+      return Map(action.payload)
     default:
       return state
   }
 }
 
-export const errors = (state = INITIAL_STATE.errors, action) => {
+export const errors = (
+  state: State.errors = initialState.errors,
+  action: FetchMoviesSuccessAction
+  | FetchMoviesFailAction
+  | FetchSingleMovieSuccessAction
+  | FetchSingleMovieFailAction
+): State.errors => {
   switch (action.type) {
     case FETCH_MOVIES_FAIL:
     case FETCH_SINGLE_MOVIE_FAIL:
-      return [
-        ...state,
-        action.payload
-      ]
+      return state.push(Map(action.payload))
     case FETCH_MOVIES_SUCCESS:
     case FETCH_SINGLE_MOVIE_SUCCESS:
-      return []
+      return List()
     default:
       return state
   }

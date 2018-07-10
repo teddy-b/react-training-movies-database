@@ -1,4 +1,6 @@
-import React from 'react'
+/* @flow */
+
+import * as React from 'react'
 
 import renderer from 'react-test-renderer'
 
@@ -6,8 +8,8 @@ import MoviesList from './MoviesList'
 import { ITEMS_TO_SHOW } from '../../../constants/global'
 import moviesMock from '../../../mocks/movies-mocks'
 
-jest.mock('../Loading', () => 'Loading')
-jest.mock('./MovieItem', () => 'MovieItem')
+jest.mock('../Loading', (): string => 'Loading')
+jest.mock('./MovieItem', (): string => 'MovieItem')
 
 describe('MoviesList', () => {
   const props = {
@@ -39,7 +41,9 @@ describe('MoviesList', () => {
 
   it('renders correctly with more items to show', () => {
     const movies = []
-    Array.from({ length: ITEMS_TO_SHOW + 1 }).forEach((v, i) => {
+    Array.from({
+      length: ITEMS_TO_SHOW + 1
+    }).forEach((v: void, i: number) => {
       movies.push({
         key: i,
         ...moviesMock.data[0]

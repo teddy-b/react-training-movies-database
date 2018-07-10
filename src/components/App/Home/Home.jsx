@@ -1,14 +1,33 @@
-import React, { Component } from 'react'
+/* @flow */
 
-import PropTypes from 'prop-types'
+import * as React from 'react'
 
 import Header from './Header'
 import ErrorBoundary from '../../shared/ErrorBoundary'
 import MoviesList from '../../shared/MoviesList'
+import StyledPage from '../../shared/styled/StyledPage'
 
-import './Home.scss'
+import type { MoviesData } from '../../../types'
 
-class Home extends Component {
+type Props = {
+  count: number,
+  fetching: boolean,
+  match: { params: {
+    query?: string,
+    searchBy?: string
+  }},
+  movies: MoviesData,
+  onSearch: (query?: string, searchBy?: string) => void,
+  onSearchMoviesByGenre: () => void,
+  onSearchMoviesByTitle: () => void,
+  onSelectMovie: () => void,
+  onSortMoviesByRating: () => void,
+  onSortMoviesByRelaseDate: () => void,
+  searchBy: string,
+  sortBy: string
+}
+
+class Home extends React.Component<Props> {
   componentDidMount() {
     const { match: { params: { query, searchBy } }, onSearch } = this.props
     if (query) {
@@ -16,7 +35,7 @@ class Home extends Component {
     }
   }
 
-  render() {
+  render(): React.Node {
     const {
       count,
       fetching,
@@ -32,7 +51,7 @@ class Home extends Component {
     } = this.props
 
     return (
-      <div className="home">
+      <StyledPage>
         <ErrorBoundary>
           <Header
             count={count}
@@ -53,37 +72,8 @@ class Home extends Component {
             onSelectMovie={onSelectMovie}
           />
         </ErrorBoundary>
-      </div>
+      </StyledPage>
     )
-  }
-}
-
-Home.propTypes = {
-  count: PropTypes.number.isRequired,
-  fetching: PropTypes.bool.isRequired,
-  match: PropTypes.shape({
-    params: PropTypes.shape({
-      query: PropTypes.string,
-      searchBy: PropTypes.string
-    })
-  }),
-  movies: PropTypes.arrayOf(PropTypes.object).isRequired,
-  onSearch: PropTypes.func.isRequired,
-  onSearchMoviesByGenre: PropTypes.func.isRequired,
-  onSearchMoviesByTitle: PropTypes.func.isRequired,
-  onSelectMovie: PropTypes.func.isRequired,
-  onSortMoviesByRating: PropTypes.func.isRequired,
-  onSortMoviesByRelaseDate: PropTypes.func.isRequired,
-  searchBy: PropTypes.string.isRequired,
-  sortBy: PropTypes.string.isRequired
-}
-
-Home.defaultProps = {
-  match: {
-    params: {
-      query: '',
-      searchBy: ''
-    }
   }
 }
 

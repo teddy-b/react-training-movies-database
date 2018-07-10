@@ -1,5 +1,9 @@
+/* @flow */
+
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
+
+import type { Dispatch } from 'redux'
 
 import {
   searchMovies,
@@ -13,16 +17,35 @@ import {
 import Home from '../../components/App/Home'
 import { SORT_BY } from '../../constants/global'
 
-const mapStateToProps = state => ({
-  count: state.movies.total,
+import type { MoviesAction, MoviesData, State } from '../../types'
+
+type StateToProps = {
+  count: number,
+  fetching: boolean,
+  movies: MoviesData,
+  searchBy: string,
+  sortBy: string
+}
+
+type DispatchToProps = {
+  onSearch: (query?: string, searchBy?: string) => void,
+  onSearchMoviesByGenre: () => void,
+  onSearchMoviesByTitle: () => void,
+  onSelectMovie: (id: number) => void,
+  onSortMoviesByRating: () => void,
+  onSortMoviesByRelaseDate: () => void,
+}
+
+const mapStateToProps = (state: State): StateToProps => ({
+  count: state.movies.toJS().total,
   fetching: state.fetching,
-  movies: state.movies.data,
+  movies: state.movies.toJS().data,
   searchBy: state.searchBy,
   sortBy: state.sortBy
 })
 
-const mapDispatchToProps = dispatch => ({
-  onSearch(query, searchBy) {
+const mapDispatchToProps = (dispatch: Dispatch<MoviesAction>): DispatchToProps => ({
+  onSearch(query?: string, searchBy?: string) {
     dispatch(searchMovies(query, searchBy))
   },
   onSearchMoviesByGenre() {
@@ -31,7 +54,7 @@ const mapDispatchToProps = dispatch => ({
   onSearchMoviesByTitle() {
     dispatch(searchMoviesByTitle())
   },
-  onSelectMovie(movieId) {
+  onSelectMovie(movieId: number) {
     dispatch(selectMovie(movieId))
   },
   onSortMoviesByRating() {

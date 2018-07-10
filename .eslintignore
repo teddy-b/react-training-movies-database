@@ -1,0 +1,13 @@
+# dependencies
+/node_modules
+/typings
+/flow-typed
+
+# production
+/dist
+
+# code coverage
+/coverage
+
+# storybook
+/storybook-static

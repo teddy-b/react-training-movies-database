@@ -1,9 +1,24 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+/* @flow */
 
-import PropTypes from 'prop-types'
+import * as React from 'react'
 
-import './MovieItem.scss'
+import {
+  StyledMovieItem,
+  StyledMovieYear,
+  StyledMovieTitle,
+  StyledMovieGenre
+} from './StyledMovieItem'
+import StyledImg from '../../styled/StyledImg'
+import StyledLink from '../../styled/StyledLink'
+
+type Props = {
+  genres: Array<string>,
+  id: number,
+  onSelectMovie: (id: number) => void,
+  poster_path: ?string,
+  release_date: string,
+  title: string
+}
 
 const MovieItem = ({
   genres,
@@ -12,32 +27,17 @@ const MovieItem = ({
   poster_path: posterPath,
   release_date: releaseDate,
   title
-}) => (
-  <Link
-    to={`/film/${id}`}
-    style={{ textDecoration: 'none' }}
-    onClick={() => onSelectMovie(id)}
-  >
-    <figure className="movieItem">
-      {posterPath && <img className="poster" src={posterPath} alt={title} />}
-      <figcaption className="movieInfo">
-        <div className="movieYear">{new Date(releaseDate).getFullYear()}</div>
-        <div className="movieTitle">{title}</div>
-        <div className="movieGenre">{genres.join(', ')}</div>
+}: Props): React.Node => (
+  <StyledLink to={`/film/${id}`} onClick={(): void => onSelectMovie(id)}>
+    <StyledMovieItem>
+      {posterPath && <StyledImg src={posterPath} alt={title} />}
+      <figcaption>
+        <StyledMovieYear>{new Date(releaseDate).getFullYear()}</StyledMovieYear>
+        <StyledMovieTitle>{title}</StyledMovieTitle>
+        <StyledMovieGenre>{genres.join(', ')}</StyledMovieGenre>
       </figcaption>
-    </figure>
-  </Link>
+    </StyledMovieItem>
+  </StyledLink>
 )
-
-MovieItem.propTypes = {
-  genres: PropTypes.arrayOf(PropTypes.string).isRequired,
-  id: PropTypes.number.isRequired,
-  onSelectMovie: PropTypes.func.isRequired,
-  poster_path: PropTypes.string,
-  release_date: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired
-}
-
-MovieItem.defaultProps = { poster_path: '' }
 
 export default MovieItem

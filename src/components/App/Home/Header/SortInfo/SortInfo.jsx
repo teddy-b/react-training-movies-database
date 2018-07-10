@@ -1,38 +1,42 @@
-import React from 'react'
+/* @flow */
 
-import PropTypes from 'prop-types'
+import * as React from 'react'
 
+import { StyledSortInfo, StyledButton } from './StyledSortInfo'
 import { SORT_BY } from '../../../../../constants/global'
 
-import './SortInfo.scss'
+type Props = {
+  count: number,
+  onSortMoviesByRating: () => void,
+  onSortMoviesByRelaseDate: () => void,
+  sortBy: string
+}
 
-const SortInfo = ({ count, onSortMoviesByRelaseDate, onSortMoviesByRating, sortBy }) => (
-  <div className="sortInfo">
+const SortInfo = ({
+  count,
+  onSortMoviesByRelaseDate,
+  onSortMoviesByRating,
+  sortBy
+}: Props): React.Node => (
+  <StyledSortInfo>
     {count > 0 && <div>{count} movies found</div>}
     {count > 0 &&
       <div>
         <span>Sort by </span>
-        <button
-          className={`${sortBy === SORT_BY.releaseDate && 'selected'}`}
-          onClick={() => onSortMoviesByRelaseDate()}
+        <StyledButton
+          selected={sortBy === SORT_BY.releaseDate}
+          onClick={(): void => onSortMoviesByRelaseDate()}
         >
           Release date
-        </button>
-        <button
-          className={`${sortBy === SORT_BY.rating && 'selected'}`}
-          onClick={() => onSortMoviesByRating()}
+        </StyledButton>
+        <StyledButton
+          selected={sortBy === SORT_BY.rating}
+          onClick={(): void => onSortMoviesByRating()}
         >
           Rating
-        </button>
+        </StyledButton>
       </div>}
-  </div>
+  </StyledSortInfo>
 )
-
-SortInfo.propTypes = {
-  count: PropTypes.number.isRequired,
-  onSortMoviesByRating: PropTypes.func.isRequired,
-  onSortMoviesByRelaseDate: PropTypes.func.isRequired,
-  sortBy: PropTypes.string.isRequired
-}
 
 export default SortInfo

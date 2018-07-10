@@ -2,10 +2,32 @@
 
 exports[`NotFound renders correctly 1`] = `
 <div
-  className="notFound"
+  className="sc-bwzfXH kipmsM"
 >
-  <h1>
-    404 Not Found
-  </h1>
+  <div
+    className="sc-htpNat haKytP"
+  >
+    404
+  </div>
+  <div
+    className="sc-bxivhb ftdpTF"
+  >
+    Oops, the page you're looking for doesn't exist.
+  </div>
+  <div
+    className="sc-ifAKCX dUCqIB"
+  >
+    <a
+      className="sc-bdVaJa hodkNv"
+      href="/"
+      onClick={[Function]}
+    >
+      <span
+        className="sc-EHOje hBrwpy"
+      >
+        Go to homepage
+      </span>
+    </a>
+  </div>
 </div>
 `;

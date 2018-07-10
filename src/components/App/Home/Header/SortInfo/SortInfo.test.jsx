@@ -1,20 +1,28 @@
-import React from 'react'
+/* @flow */
 
-import { shallow } from 'enzyme'
+import * as React from 'react'
+
+import { mount } from 'enzyme'
 import renderer from 'react-test-renderer'
 
 import SortInfo from './SortInfo'
+import { SORT_BY } from '../../../../../constants/global'
 
 describe('SortInfo', () => {
   const props = {
-    count: 10,
+    count: 24,
     onSortMoviesByRating: jest.fn(),
     onSortMoviesByRelaseDate: jest.fn(),
-    sortBy: 'release_date'
+    sortBy: SORT_BY.releaseDate
   }
 
   it('renders correctly with sort by release_date', () => {
-    const component = renderer.create(<SortInfo {...props} />)
+    const component = renderer.create(
+      <SortInfo
+        {...props}
+        sortBy={SORT_BY.releaseDate}
+      />
+    )
     const tree = component.toJSON()
 
     expect(tree).toMatchSnapshot()
@@ -24,7 +32,7 @@ describe('SortInfo', () => {
     const component = renderer.create(
       <SortInfo
         {...props}
-        sortBy="vote_average"
+        sortBy={SORT_BY.rating}
       />
     )
     const tree = component.toJSON()
@@ -34,11 +42,11 @@ describe('SortInfo', () => {
 
   it('should trigger onSortMoviesByRelaseDate onClick', () => {
     const onSortMoviesByRelaseDateMock = jest.fn()
-    const component = shallow(
+    const component = mount(
       <SortInfo
         {...props}
         onSortMoviesByRelaseDate={onSortMoviesByRelaseDateMock}
-        sortBy="vote_average"
+        sortBy={SORT_BY.rating}
       />
     )
 
@@ -49,7 +57,7 @@ describe('SortInfo', () => {
 
   it('should trigger onSortMoviesByRating onClick', () => {
     const onSortMoviesByRatingMock = jest.fn()
-    const component = shallow(
+    const component = mount(
       <SortInfo
         {...props}
         onSortMoviesByRating={onSortMoviesByRatingMock}

@@ -1,9 +1,11 @@
-import React from 'react'
+/* @flow */
 
-import './Logo.scss'
+import * as React from 'react'
 
-const Logo = () => (
-  <p className="logo">netflixroulette</p>
+import StyledLogo from './StyledLogo'
+
+const Logo = (): React.Node => (
+  <StyledLogo>netflixroulette</StyledLogo>
 )
 
 export default Logo

@@ -1,13 +1,14 @@
-import React from 'react'
+/* @flow */
+
+import * as React from 'react'
 
 import Logo from '../../shared/Logo'
+import StyledFooter from './StyledFooter'
 
-import './Footer.scss'
-
-const Footer = () => (
-  <footer className="footer">
+const Footer = (): React.Node => (
+  <StyledFooter>
     <Logo />
-  </footer>
+  </StyledFooter>
 )
 
 export default Footer

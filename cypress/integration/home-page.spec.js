@@ -1,3 +1,5 @@
+/* global cy */
+
 describe('Home page', () => {
   beforeEach(() => {
     cy.visit('http://localhost:9000/')

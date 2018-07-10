@@ -1,12 +1,32 @@
-import React from 'react'
+/* @flow */
 
-import PropTypes from 'prop-types'
+import * as React from 'react'
 
+import {
+  StyledMovieSection,
+  StyledMovie,
+  StyledMoviePoster,
+  StyledMovieDetails,
+  StyledDetailsHeader,
+  StyledHeading,
+  StyledVoteAverage,
+  StyledYear
+} from './StyledMovie'
 import Logo from '../../../shared/Logo'
+import StyledImg from '../../../shared/styled/StyledImg'
+import StyledLink from '../../../shared/styled/StyledLink'
 
-import './Movie.scss'
+type Props = {
+  overview: string,
+  poster_path: ?string,
+  release_date: string,
+  runtime: ?number,
+  tagline: string,
+  title: string,
+  vote_average: number
+}
 
-const Movie = (props) => {
+const Movie = (props: Props): React.Node => {
   const {
     overview,
     poster_path: posterPath,
@@ -18,42 +38,29 @@ const Movie = (props) => {
   } = props
   const year = new Date(releaseDate).getFullYear() || ''
   return (
-    <div className="movieSection">
-      <Logo />
-      <figure className="movie">
+    <StyledMovieSection>
+      <StyledLink to="/search/title">
+        <Logo />
+      </StyledLink>
+      <StyledMovie>
         {posterPath &&
-          <div className="moviePoster">
-            <img src={posterPath} alt={title} />
-          </div>
+          <StyledMoviePoster>
+            <StyledImg src={posterPath} alt={title} />
+          </StyledMoviePoster>
         }
-        <figcaption className="movieDetails">
-          <div className="heading">
-            <h2>{title}</h2>
-            <span className="voteAverage">{voteAverage}</span>
-          </div>
+        <StyledMovieDetails>
+          <StyledDetailsHeader>
+            <StyledHeading>{title}</StyledHeading>
+            <StyledVoteAverage>{voteAverage}</StyledVoteAverage>
+          </StyledDetailsHeader>
           <h4>{tagline}</h4>
-          <span>{year}</span>
+          <StyledYear>{year}</StyledYear>
           {runtime && <span>{runtime} min</span>}
           <p>{overview}</p>
-        </figcaption>
-      </figure>
-    </div>
+        </StyledMovieDetails>
+      </StyledMovie>
+    </StyledMovieSection>
   )
-}
-
-Movie.propTypes = {
-  overview: PropTypes.string.isRequired,
-  poster_path: PropTypes.string,
-  release_date: PropTypes.string.isRequired,
-  runtime: PropTypes.number,
-  tagline: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  vote_average: PropTypes.number.isRequired
-}
-
-Movie.defaultProps = {
-  poster_path: '',
-  runtime: 0
 }
 
 export default Movie
