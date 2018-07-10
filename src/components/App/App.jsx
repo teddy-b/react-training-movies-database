@@ -11,7 +11,7 @@ import ConnectedHome from '../../containers/ConnectedHome'
 
 const App = (): React.Node => (
   <ErrorBoundary>
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route path="/" exact component={ConnectedHome} />
         <Route path="/search/:searchBy/:query?" component={ConnectedHome} />
